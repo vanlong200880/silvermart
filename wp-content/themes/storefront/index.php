@@ -13,21 +13,17 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+  <?php get_template_part('block/menu'); ?>
+  <?php get_template_part('block/home-page'); ?>
 		<?php if ( have_posts() ) : ?>
 
-			<?php get_template_part( 'loop' ); ?>
+			<?php //get_template_part( 'loop' ); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php //get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
-<?php do_action( 'storefront_sidebar' ); ?>
 <?php get_footer(); ?>

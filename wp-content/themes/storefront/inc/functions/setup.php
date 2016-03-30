@@ -146,6 +146,17 @@ function storefront_scripts() {
 	wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
 
 	wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
+  
+  wp_enqueue_style( 'storefront-style-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', '', $storefront_version );
+	wp_style_add_data( 'storefront-style-bootstrap', 'rtl', 'replace' );
+  
+  wp_enqueue_style( 'storefront-style-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', '', $storefront_version );
+	wp_style_add_data( 'storefront-style-awesome', 'rtl', 'replace' );
+  wp_enqueue_style( 'storefront-style-icon', get_template_directory_uri() . '/css/font-icon.css', '', $storefront_version );
+	wp_style_add_data( 'storefront-style-icon', 'rtl', 'replace' );
+  
+  wp_enqueue_style( 'storefront-style-main', get_template_directory_uri() . '/css/main.css', '', $storefront_version );
+	wp_style_add_data( 'storefront-style-main', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/js/navigation.min.js', array( 'jquery' ), '20120206', true );
 
