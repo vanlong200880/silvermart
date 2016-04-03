@@ -3,16 +3,29 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/Postview/styles.css</file>
+            <file>file:/E:/wamp/www/silvermart/scss/main.scss</file>
             <file>file:/E:/wamp/www/silvermart/wp-content/themes/storefront/include/uni-functions.php</file>
+            <file>file:/E:/wamp/www/silvermart/scss/layout/_header.scss</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/themes/storefront/block/menu.php</file>
             <file>file:/E:/wamp/www/silvermart/scss/layout/_masterpage.scss</file>
-            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/templates/loop/sale-flash.php</file>
-            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php</file>
-            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/includes/wc-template-hooks.php</file>
-            <file>file:/E:/wamp/www/silvermart/wp-content/themes/storefront/block/tab.php</file>
-            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/includes/wc-formatting-functions.php</file>
-            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/includes/wc-template-functions.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/templates/single-product/related.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/templates/content-product-related.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/themes/storefront/block/menu_list.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/templates/content-single-product.php</file>
             <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/templates/archive-product.php</file>
-            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/templates/single-product/price.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/themes/storefront/block/home-page.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/themes/storefront/header.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/Postview/plugins.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/templates/single-product/add-to-cart/variable.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/templates/single-product/product-image-scroll.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/templates/loop/add-to-cart.php</file>
+            <file>file:/E:/wamp/www/silvermart/scss/layout/_details.scss</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/includes/wc-template-hooks.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/templates/single-product.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/themes/storefront/block/tab.php</file>
+            <file>file:/E:/wamp/www/silvermart/wp-content/plugins/woocommerce/includes/wc-template-functions.php</file>
         </group>
     </open-files>
 </project-private>
