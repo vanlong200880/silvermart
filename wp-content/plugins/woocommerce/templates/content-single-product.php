@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <div class="col-md-12">
-  brum
+  <div class="breadcrumb-detail">sdfs</div>
 </div>
 <div class="col-md-12">
   <?php
@@ -72,65 +72,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div>
 
 <div class="col-md-12">
-  <div class="row">
-    <div class="col-md-7">
-      sdfsdf
+  <div class="row page-single-content">
+    <div class="col-md-8">
+      <div class="title-detail-content">
+        <h3>Chi tiết sản phẩm</h3>
+        <h4> <a href="#comment-single">Bình luận</a></h4>
+      </div>
+      
+      <div class="content-single">
+        <?php the_content(); ?>
+      </div>
+      <div id="comment-single">
+        <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=1624371511157699";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));</script>
+          <div class="fb-comments" data-href="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-width="100%" data-numposts="5"></div>
+      </div>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-4">
       <?php do_action( 'woocommerce_after_single_product_summary_related' ); ?>
     </div>
   </div>
 </div>
 
-
-
-
-
-
-<div style="float: left;" itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php
-		/**
-		 * woocommerce_before_single_product_summary hook.
-		 *
-		 * @hooked woocommerce_show_product_sale_flash - 10
-		 * @hooked woocommerce_show_product_images - 20
-		 */
-		do_action( 'woocommerce_before_single_product_summary' );
-	?>
-
-	<div class="summary entry-summary">
-
-		<?php
-			/**
-			 * woocommerce_single_product_summary hook.
-			 *
-			 * @hooked woocommerce_template_single_title - 5
-			 * @hooked woocommerce_template_single_rating - 10
-			 * @hooked woocommerce_template_single_price - 10
-			 * @hooked woocommerce_template_single_excerpt - 20
-			 * @hooked woocommerce_template_single_add_to_cart - 30
-			 * @hooked woocommerce_template_single_meta - 40
-			 * @hooked woocommerce_template_single_sharing - 50
-			 */
-			do_action( 'woocommerce_single_product_summary' );
-		?>
-
-	</div><!-- .summary -->
-
-	<?php
-		/**
-		 * woocommerce_after_single_product_summary hook.
-		 *
-		 * @hooked woocommerce_output_product_data_tabs - 10
-		 * @hooked woocommerce_upsell_display - 15
-		 * @hooked woocommerce_output_related_products - 20
-		 */
-		//do_action( 'woocommerce_after_single_product_summary' );
-	?>
-
-	<meta itemprop="url" content="<?php the_permalink(); ?>" />
-
-</div><!-- #product-<?php the_ID(); ?> -->
-
-<?php //do_action( 'woocommerce_after_single_product' ); ?>

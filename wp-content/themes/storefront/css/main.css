@@ -587,7 +587,8 @@ ul.menu-left {
   .detail-page .item-list-option a {
     float: left; }
 .detail-page .quantity {
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  padding-top: 10px; }
   .detail-page .quantity input {
     width: 100px;
     height: 30px;
@@ -610,6 +611,44 @@ ul.menu-left {
 .detail-page .share-post {
   padding: 10px 0;
   border-bottom: 1px solid #F1F1F1; }
+
+.related h2 {
+  border-bottom: 3px solid #ff0000;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px; }
+
+.title-detail-content {
+  border-bottom: 3px solid #7dad23; }
+  .title-detail-content h4,
+  .title-detail-content h3 {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px; }
+  .title-detail-content h3:before {
+    content: " ";
+    position: absolute;
+    border-bottom: 5px solid #7dad23;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    right: 50%;
+    bottom: 0; }
+  .title-detail-content h4 {
+    margin-left: 30px; }
+
+.page-single-content {
+  margin-top: 30px; }
+
+.content-single {
+  padding: 15px 0; }
+
+.breadcrumb-detail {
+  border-bottom: 2px solid #7dad23;
+  margin: 15px 0; }
 
 /*@import "layout/login";
 @import "layout/masterpage";

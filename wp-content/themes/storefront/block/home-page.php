@@ -39,12 +39,20 @@
               $category_id = $cat->term_id;
               $icon = get_field('icon', $cat);
               $link = get_field('link', $cat);
+              $color = get_field('color', $cat);
               $thumbnail_id = get_woocommerce_term_meta($category_id, 'thumbnail_id', true);
               $image = wp_get_attachment_url($thumbnail_id); ?>
-              <div class="page-home-title">
-                <div class="tabs-home">
+        <div class="page-home-title" style="border-bottom-color: <?php echo $color; ?>">
+          <?php $html = ".page-home-title .tabs-home.tab-color-$cat->term_id"; ?>
+          <style>
+             <?php echo $html; ?> ul li.tab-list:hover a:before,
+             <?php echo $html; ?> ul li.tab-list.active a:before{
+              border-bottom-color: <?php echo $color; ?>
+            }
+          </style>
+                <div class="tabs-home tab-color-<?php echo $cat->term_id; ?>">
                   <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class=" home-tabs-default active"><a href="#home-<?php echo $cat->term_id; ?>" aria-controls="home-<?php echo $cat->term_id; ?>" role="tab" data-toggle="tab"><?php echo $icon; ?><?php echo $cat->name; ?></a></li>
+                    <li role="presentation" class=" home-tabs-default active"><a href="#home-<?php echo $cat->term_id; ?>" style="background: <?php echo $color; ?>" aria-controls="home-<?php echo $cat->term_id; ?>" role="tab" data-toggle="tab"><?php echo $icon; ?><?php echo $cat->name; ?></a></li>
                     <li role="presentation" class="tab-list"><a href="#newest-<?php echo $cat->term_id; ?>" aria-controls="newest-<?php echo $cat->term_id; ?>" role="tab" data-toggle="tab">Mới nhất</a></li>
                     <li role="presentation" class="tab-list"><a href="#hot-<?php echo $cat->term_id; ?>" aria-controls="hot-<?php echo $cat->term_id; ?>" role="tab" data-toggle="tab">Bán chạy</a></li>
                   </ul>

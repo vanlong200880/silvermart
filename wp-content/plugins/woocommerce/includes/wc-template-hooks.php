@@ -162,7 +162,7 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_s
 // custom
 add_action( 'woocommerce_single_product_price', 'woocommerce_template_single_price', 10 );
 add_action( 'woocommerce_single_product_cart', 'woocommerce_simple_add_to_cart', 30 );
-add_action( 'woocommerce_single_product_single_cart', 'woocommerce_variable_add_to_cart', 30 );
+add_action( 'woocommerce_single_product_single_cart', 'woocommerce_simple_add_to_cart', 30 );
 
 /**
  * Product Add to cart.
