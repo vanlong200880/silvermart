@@ -20,8 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-
-<?php
+<div class="col-md-12">
+  brum
+</div>
+<div class="col-md-12">
+  <?php
 	/**
 	 * woocommerce_before_single_product hook.
 	 *
@@ -34,8 +37,57 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 	return;
 	 }
 ?>
+</div>
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="row">
+        <div class="col-md-2">
+          <?php do_action( 'woocommerce_product_thumbnails' ); ?>
+        </div>
+        <div class="col-md-10"><?php do_action('woocommerce_before_single_product_detail_img_silvermart'); ?></div>
+      </div>
+    </div>
+    <div class="col-md-7">
+      <h1><?php do_action('woocommerce_shop_loop_item_title_silvermart'); ?></h1>
+      
+      <div class="share-post">
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50dd5241008a00cc" async="async"></script>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <div class="addthis_sharing_toolbox"></div>
+      </div>
+      <div class="price-detail">
+        <?php do_action('woocommerce_single_product_price'); ?>
+        <p class="sale"><?php do_action('woocommerce_after_shop_loop_item_sale'); ?></p>
+      </div>
+      <div class="single">
+        <?php do_action('woocommerce_single_product_single_cart'); ?>
+      </div>
+      <div class="description">
+        <?php do_action('woocommerce_single_product_excerpt'); ?>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-7">
+      sdfsdf
+    </div>
+    <div class="col-md-5">
+      <?php do_action( 'woocommerce_after_single_product_summary_related' ); ?>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div style="float: left;" itemscope itemtype="<?php echo woocommerce_get_product_schema(); ?>" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php
 		/**
@@ -74,11 +126,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * @hooked woocommerce_upsell_display - 15
 		 * @hooked woocommerce_output_related_products - 20
 		 */
-		do_action( 'woocommerce_after_single_product_summary' );
+		//do_action( 'woocommerce_after_single_product_summary' );
 	?>
 
 	<meta itemprop="url" content="<?php the_permalink(); ?>" />
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+<?php //do_action( 'woocommerce_after_single_product' ); ?>

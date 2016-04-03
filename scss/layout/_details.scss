@@ -1,111 +1,119 @@
-.details{
-	.content-details{
-		.info-top-details{
-			margin-bottom: 20px;
-			background: $color-grey;
-			.show-info-dt{
-				padding:15px 30px 15px 15px;
-				h5{
-					font-size: 18px;
-					margin-bottom: 3px;
-				}
-				p{
-					margin-bottom: 5px;
-					span{
-						font-style: italic;
-						font-size: 12px;
-						color: $color-dark-grey;
-					}
-					span.fa{
-						font-size: 14px;
-						font-style: normal;
-					}
-					&:first-of-type{
-						margin-bottom: 10px;
-					}
-				}
-				p.vote-details{
-					padding:5px 0;
-					margin: 5px 0 10px;
-					border-top:1px solid #d5d5d5;
-					border-bottom:1px solid #d5d5d5;
-				}
-			}
-		}
-		.tab-content{
-			padding: 15px 30px;
-			.show-dt-editor{
-				p{
-					padding-bottom: 10px;
-				}
-				img{
-					text-align: center;
-				}
-				ul, ol{
-					list-style: inherit;
-					margin: 0 0 10px;
-	   				padding: 0 0 0 45px;
-
-				}	
-			}
-			.load-map{
-
-			}
-			.other-location{
-				.page-header{
-					margin: 20px 0 10px;
-					padding-bottom: 0;
-					h2{
-						font-size: 18px;
-					}
-				}
-				.more-location{
-					li{
-						span.fa{
-							color: $color-map;
-						}
-						a{
-							color:#000;
-							font-size: 12px;
-							&:hover{
-								color: $color-base;
-							}
-						}
-					}
-				}
-			}
-			.vote-top{
-				border:1px solid #d5d5d5;
-				margin-bottom: 30px;
-				h5{
-					border-bottom:1px solid #d5d5d5;
-					padding: 5px 10px;
-					margin-bottom: 0;
-					
-					background: $color-grey;
-				}
-				.ct-vote{
-					padding: 10px;
-					background:#fff;
-				}
-			}	
-		}
-	}
-	.title-details{
-		h2{
-			font-size: 16px;
-			background: $color-dark-grey;
-			width: 100%;
-			height: 30px;
-			line-height: 30px;
-			color: #fff;
-			padding-left: 10px;
-		}
-	}
-	.adv-details{
-		img{
-			width: 100%;
-			height: 227px;
-		}
-	}
+.detail-page{
+  h1{
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #F1F1F1;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  .price-detail{
+    border-bottom: 1px solid #F1F1F1;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    div{
+      display: inline-block;
+    }
+    p.cost{
+      font-size: 28px;
+      color: red;
+      font-weight: bold;
+      var{
+        font-size: 22px;
+        font-weight: normal;
+        font-style: normal;
+        position: relative;
+        top: -15px;
+      }
+      
+    }
+    p.old{
+      font-size: 18px;
+      display: inline-block;
+      text-decoration: line-through;
+    }
+    p.sale{
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+      span{
+        background: red;
+        color: #FFF;
+        @include border-radius(5px);
+        padding: 3px 15px;
+        text-align: center;
+        font-weight: normal;
+        font-size: 18px;
+        position: relative;
+        margin-left: 10px;
+        top: 4px;
+        &:before{
+          content: " ";
+          border-right: 12px solid red;
+          border-top: 7px solid transparent;
+          border-bottom: 7px solid transparent;
+          position: absolute;
+          left: -10px;
+          top:  6px;
+        }
+      }
+    }
+    
+  }
+  .description{
+    padding: 10px 0;
+    text-align: justify;
+  }
+  .item-list-option{
+    padding: 10px 0;
+    border-bottom: 1px solid #F1F1F1;
+    display: inline-block;
+    width: 100%;
+    .list-op{
+      width: 49%;
+      margin-right: 1%;
+      float: left;
+    }
+    .label{
+      color: #000;
+      font-size: 14px;
+      padding: 0;
+      display: inline-block;
+    }
+    .form-control{
+      width: 170px;
+      @include border-radius(0);
+      @include box-shadow(none);
+      display: inline-block;
+      float: left;
+    }
+    a{
+      float: left;
+    }
+  }
+  .quantity{
+    padding-bottom: 10px;
+    input{
+      width: 100px;
+      height: 30px;
+      max-width: 100%;
+    }
+  }
+  .single_add_to_cart_button{
+    background: red;
+    padding: 10px 50px;
+    border: none;
+    cursor: pointer;
+    @include border-radius(5px);
+    &:hover{
+      background: $color-default;
+    }
+  }
+  .single_variation_wrap{
+    border-bottom: 1px solid #F1F1F1;
+    padding-bottom: 10px;
+  }
+  .share-post{
+    padding: 10px 0;
+    border-bottom: 1px solid #F1F1F1;
+  }
 }

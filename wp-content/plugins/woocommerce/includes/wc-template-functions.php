@@ -534,7 +534,7 @@ if (  ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
 	 * Show the product title in the product loop. By default this is an H3.
 	 */
 	function woocommerce_template_loop_product_title() {
-		echo '<h3>' . get_the_title() . '</h3>';
+		echo  get_the_title();
 	}
 }
 if (  ! function_exists( 'woocommerce_template_loop_category_title' ) ) {
@@ -813,6 +813,19 @@ if ( ! function_exists( 'woocommerce_show_product_images' ) ) {
 		wc_get_template( 'single-product/product-image.php' );
 	}
 }
+
+if ( ! function_exists( 'woocommerce_show_product_images_scroll' ) ) {
+
+	/**
+	 * Output the product image before the single product summary.
+	 *
+	 * @subpackage	Product
+	 */
+	function woocommerce_show_product_images_scroll() {
+		wc_get_template( 'single-product/product-image-scroll.php' );
+	}
+}
+
 if ( ! function_exists( 'woocommerce_show_product_thumbnails' ) ) {
 
 	/**

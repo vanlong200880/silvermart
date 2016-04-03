@@ -148,6 +148,7 @@ ul.menu-left{
             position: absolute;
             right: -16px;
             top: 0;
+            z-index: 999;
           }
         }
         .menu-item{
@@ -232,14 +233,13 @@ ul.menu-left{
     li{
       .item{
         border: 1px solid #DDD;
-        padding: 5px;
         margin-bottom: 16px;
         .image{
           position:relative;
           span{
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 5px;
+            left: 5px;
             @include border-radius(50%);
             width: 40px;
             height: 40px;
@@ -268,6 +268,7 @@ ul.menu-left{
         .title{
           padding-left: 10px;
           padding-right: 10px;
+          margin-top: 5px;
           p{
             height: 46px;
             line-height: 20px;
@@ -279,6 +280,9 @@ ul.menu-left{
           padding-left: 10px;
           padding-right: 10px;
           margin-top: 10px;
+          height: 45px;
+          overflow: hidden;
+          position:relative;
           p.cost{
             font-size: 20px;
             color: red;
@@ -292,12 +296,19 @@ ul.menu-left{
           p.old{
             text-decoration: line-through;
             color: #878787;
+            display: inline-block;
+            width: 100%;
             var{
               font-style: normal;
             }
             span{
               float: right;
             }
+          }
+          p.views{
+            position: absolute;
+            right: 10px;
+            bottom: 5px;
           }
         }
       }
@@ -359,9 +370,20 @@ ul.menu-left{
         }
       }
       li.home-tabs-default{
+        height: 40px;
+        line-height: 40px;
         a{
           background: $color-default;
           color: #FFF;
+          padding: 0 15px;
+          height: 40px;
+          line-height: 40px;
+          span{
+            font-size: 20px;
+            position: relative;
+            top: 3px;
+            padding-right: 5px;
+          }
         }
       }
       li.active{
@@ -448,20 +470,23 @@ ul.menu-left{
   z-index: 99;
   display: none;
 }
-ul.menu-left {
-  background: #FFF;
-  li{
-    &:hover{
-      .menu-item{
-        top: -1px;
-        height: 362px;
-        img{
-          max-height: 340px;
+.header-sroll{
+  ul.menu-left {
+    background: #FFF;
+    li{
+      &:hover{
+        .menu-item{
+          top: -1px;
+          height: 362px;
+          img{
+            max-height: 340px;
+          }
         }
       }
     }
   }
 }
+
 .header-navigation{
   ul.menu-left{
     z-index: 999;
