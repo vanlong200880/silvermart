@@ -62,7 +62,7 @@
             </div>
           </div>
           <div class="col-md-2 shoppingcart">
-            <span class="icon icon-shopping"><var class="shoping-number">1</var></span> Giỏ hàng
+            <span class="icon icon-shopping"><var class="shoping-number">0</var></span> Giỏ hàng
           </div>
         </div>
       </div>
@@ -113,12 +113,15 @@
             </div>
           </div>
           <div class="col-md-2 shoppingcart">
-            
-            <span class="icon icon-shopping"><var class="shoping-number">1</var></span> Giỏ hàng
+            <?php 
+            global $woocommerce;
+            ?>
+            <span class="icon icon-shopping"><var class="shoping-number"><?php echo $woocommerce->cart->cart_contents_count; ?></var></span> <a href="<?php echo home_url() ?>/gio-hang/">Giỏ hàng</a>
           </div>
         </div>
       </div>
     </header>
+  
   
   
   

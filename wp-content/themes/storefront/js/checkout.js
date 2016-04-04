@@ -15,21 +15,21 @@ jQuery( window ).load( function() {
 		var checkoutPosition 	= jQuery( 'form.woocommerce-checkout' ).offset();
 
 		// If we're in desktop orientation...
-		if ( jQuery( window ).width() > 768 ) {
-
-			// When we reach the order review element during scroll...
-		   	if ( topDistance > checkoutPosition.top ) {
-				jQuery( '#order_review' ).addClass( 'payment-fixed' );
-				jQuery( '#order_review' ).css({
-					'margin-left':		paymentOffset,
-					'width':			paymentWidth
-				});
-		   	} else {
-				jQuery( '#order_review' ).removeAttr( 'style' ).removeClass( 'payment-fixed' );
-		   	}
-		} else {
-			jQuery( '#order_review' ).removeAttr( 'style' ).removeClass( 'payment-fixed' );
-		}
+//		if ( jQuery( window ).width() > 768 ) {
+//
+//			// When we reach the order review element during scroll...
+//		   	if ( topDistance > checkoutPosition.top ) {
+//				jQuery( '#order_review' ).addClass( 'payment-fixed' );
+//				jQuery( '#order_review' ).css({
+//					'margin-left':		paymentOffset,
+//					'width':			paymentWidth
+//				});
+//		   	} else {
+//				jQuery( '#order_review' ).removeAttr( 'style' ).removeClass( 'payment-fixed' );
+//		   	}
+//		} else {
+//			jQuery( '#order_review' ).removeAttr( 'style' ).removeClass( 'payment-fixed' );
+//		}
 	}
 
 	// Only execute the sticky function if the window is large enough to accomodate the order review element

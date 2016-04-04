@@ -162,7 +162,7 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_s
 // custom
 add_action( 'woocommerce_single_product_price', 'woocommerce_template_single_price', 10 );
 add_action( 'woocommerce_single_product_cart', 'woocommerce_simple_add_to_cart', 30 );
-add_action( 'woocommerce_single_product_single_cart', 'woocommerce_simple_add_to_cart', 30 );
+add_action( 'woocommerce_single_product_single_cart', 'woocommerce_template_single_add_to_cart', 30 );
 
 /**
  * Product Add to cart.
@@ -220,6 +220,8 @@ add_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment',
 add_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
 add_action( 'woocommerce_cart_collaterals', 'woocommerce_cart_totals', 10 );
 add_action( 'woocommerce_proceed_to_checkout', 'woocommerce_button_proceed_to_checkout', 20 );
+// custom 
+add_action( 'woocommerce_cart_collaterals_cart_total', 'woocommerce_cart_totals', 10 );
 
 /**
  * Footer.
