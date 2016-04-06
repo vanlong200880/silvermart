@@ -93,6 +93,9 @@ header{
           a{
             padding: 5px 15px 5px 0;
             color: #FFF;
+            &:hover{
+              color: red;
+            }
           }
           &:last-child{
             a{
@@ -229,6 +232,7 @@ ul.menu-left{
   
 .slider-home{
   margin-top: 16px;
+  position: relative;
 }
 
 .list-category{

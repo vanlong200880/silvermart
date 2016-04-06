@@ -70,21 +70,21 @@
             <div class="col-md-3">
               <h2>HỖ TRỢ KHÁCH HÀNG</h2>
               <ul>
-                <li><a href="#">Hướng dẫn đặt hàng</a></li>
-                <li><a href="#">Hướng dẫn thanh toán</a></li>
-                <li><a href="#">Qui định đổi mới sản phẩm</a></li>
-                <li><a href="#">Quy định bảo hành - đổi trả</a></li>
-                <li><a href="#">Quy định giao hàng</a></li>
+                <li><a href="<?php echo home_url() ?>/huong-dan-dat-hang/">Hướng dẫn đặt hàng</a></li>
+                <li><a href="<?php echo home_url() ?>/huong-dan-thanh-toan/">Hướng dẫn thanh toán</a></li>
+                <li><a href="<?php echo home_url() ?>/quy-dinh-doi-moi-san-pham/">Quy định đổi mới sản phẩm</a></li>
+                <li><a href="<?php echo home_url() ?>/quy-dinh-bao-hanh/">Quy định bảo hành - đổi trả</a></li>
+                <li><a href="<?php echo home_url() ?>/quy-dinh-giao-hang/">Quy định giao hàng</a></li>
               </ul>
             </div>
             
             <div class="col-md-3">
               <h2>VỀ SILVERMART</h2>
               <ul>
-                <li><a href="#">Về chúng tôi</a></li>
-                <li><a href="#">Điều khoản sử dụng</a></li>
-                <li><a href="#">Chính sách chất lượng</a></li>
-                <li><a href="#">Bảo mật thông tin</a></li>
+                <li><a href="<?php echo home_url() ?>/ve-chung-toi/">Về chúng tôi</a></li>
+                <li><a href="<?php echo home_url() ?>/dien-khoan-su-dung/">Điều khoản sử dụng</a></li>
+                <li><a href="<?php echo home_url() ?>/chinh-sach-chat-luong/">Chính sách chất lượng</a></li>
+                <li><a href="<?php echo home_url() ?>/bao-mat-thong-tin/">Bảo mật thông tin</a></li>
               </ul>
             </div>
             

@@ -24,7 +24,7 @@ get_header( 'shop' ); ?>
 
 <div class="detail-page">
   <div class="container">
-    <div class="row">
+    <div class="row posts-selector-infinite-scroll">
       
     
 	<?php

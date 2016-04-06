@@ -173,8 +173,6 @@ header {
     header .menu-news ul li a {
       padding: 5px 15px 5px 0;
       color: #FFF; }
-      header .menu-news ul li a:hover {
-        color: red; }
     header .menu-news ul li:last-child a {
       color: red; }
 
@@ -274,8 +272,7 @@ ul.menu-left {
       border-bottom: none; }
 
 .slider-home {
-  margin-top: 16px;
-  position: relative; }
+  margin-top: 16px; }
 
 .list-category ul li .item {
   border: 1px solid #DDD;
@@ -704,14 +701,6 @@ ul.menu-left {
   margin-top: 30px;
   font-weight: bold;
   margin-bottom: 15px; }
-
-.emty-data {
-  text-align: center;
-  color: #DDD;
-  line-height: 100px; }
-
-.owl-carousel-item-imgoverlay {
-  display: none; }
 
 .detail-page h1 {
   font-size: 14px;

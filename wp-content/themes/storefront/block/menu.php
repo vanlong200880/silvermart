@@ -7,7 +7,8 @@
       </div>
       <div class="col-md-9">
         <div class="slider-home">
-          <a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/slider.png" alt=""></a>
+          <?php echo do_shortcode('[owl-carousel category="slider-home" items="1" autoPlay="true" itemsDesktop="1000,2"]'); ?>
+          <!--<a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/slider.png" alt=""></a>-->
         </div>
       </div>
     </div>

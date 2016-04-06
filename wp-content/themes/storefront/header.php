@@ -73,7 +73,7 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-md-2"><img src="<?php echo get_template_directory_uri() ?>/images/silvermart.png"></div>
+          <div class="col-md-2"><a href="<?php echo home_url() ?>" title="Silvermart"><img src="<?php echo get_template_directory_uri() ?>/images/silvermart.png"></a></div>
           <div class="col-md-8">
             <div class="form input-group">
               <div class="input-group-btn hidden-sm hidden-xs">
@@ -107,8 +107,10 @@
             </div>
             <div class="form menu-news">
               <ul>
-                <li><a href="#">Sản phẩm mới</a></li>
-                <li><a href="#">Khuyến mãi HOT</a></li>
+                <li><a href="<?php echo home_url() ?>/san-pham-moi/">Sản phẩm mới</a></li>
+                <li><a href="<?php echo home_url() ?>/khuyen-mai-hot/">Khuyến mãi HOT</a></li>
+                <li><a href="<?php echo home_url() ?>/gia-re-moi-ngay/">Giá rẻ mỗi ngày</a></li>
+                  <li><a href="<?php echo home_url() ?>/silver-club/">Silver Club</a></li>
               </ul>
             </div>
           </div>
