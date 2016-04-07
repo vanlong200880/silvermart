@@ -30,30 +30,16 @@
             
           </div>
           <div class="col-md-7">
-            <div class="form input-group">
+            <div class="form input-group form-search-mb">
               <div class="input-group-btn hidden-sm hidden-xs">
                 <button type="button" class="btn btn-default dropdown-toggle show-all-button" data-toggle="dropdown" aria-expanded="false">
-                  <span class="filter_box" data-category="Thiết Bị Số - Phụ Kiện Số">Tất cả</span><span class="caret"></span>
+                  <span class="filter_box_mb" data-category="all">Tất cả</span><span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu">
-                  <li data-category=""><a>Tất cả</a></li>
-                  <li data-category="Sách"><a>Sách Tiếng Việt</a></li>
-                  <li data-category="English Books"><a>Sách Tiếng Anh</a></li>
-                  <li data-category="Điện Thoại - Máy Tính Bảng"><a>Điện Thoại - Máy Tính Bảng</a></li>
-                  <li data-category="Thiết Bị Số - Phụ Kiện Số"><a>Thiết Bị Số - Phụ Kiện Số</a></li>
-                  <li data-category="Điện Gia Dụng"><a>Điện Gia Dụng</a></li>
-                  <li data-category="Nhà Cửa - Đời Sống"><a>Nhà Cửa Đời Sống</a></li>
-                  <li data-category="Làm đẹp - Sức khỏe"><a>Làm Đẹp - Sức Khỏe</a></li>
-                  <li data-category="Thiết Bị Văn Phòng Phẩm"><a>Thiết Bị Văn Phòng Phẩm</a></li>
-                  <li data-category="Mẹ Và Bé"><a>Mẹ Và Bé</a></li>
-                  <li data-category="Đồ Chơi - Quà Tặng"><a>Đồ Chơi - Đồ Lưu Niệm</a></li>
-                  <li data-category="Thể Thao &amp; Dã Ngoại"><a>Thể Thao - Dã Ngoại</a></li>
-                  <li data-category="Máy Ảnh - Máy Quay Phim"><a>Máy Ảnh - Máy Quay Phim</a></li>
-              </ul>
+                <?php get_template_part('block/menu-search'); ?>
               </div>
-              <input type="text" class="form-control" name="search" value="" placeholder="Tìm kiếm sản phẩm, danh mục hay thương hiệu mong muốn...">
+              <input type="text" id="search-mb" class="form-control" name="search" value="" placeholder="Tìm kiếm sản phẩm, danh mục hay thương hiệu mong muốn...">
               <span class="input-group-btn">
-                <button class="btn btn-default" type="submit">
+                <button class="btn btn-default" id="submit-mb" type="submit">
                   <span class="hidden-sm hidden-xs">Tìm</span>
                   <i class="fa fa-search hidden-lg hidden-md"></i>
                 </button>
@@ -75,28 +61,14 @@
         <div class="row">
           <div class="col-md-2"><a href="<?php echo home_url() ?>" title="Silvermart"><img src="<?php echo get_template_directory_uri() ?>/images/silvermart.png"></a></div>
           <div class="col-md-8">
-            <div class="form input-group">
+            <div class="form input-group form-search-pc">
               <div class="input-group-btn hidden-sm hidden-xs">
                 <button type="button" class="btn btn-default dropdown-toggle show-all-button" data-toggle="dropdown" aria-expanded="false">
-                  <span class="filter_box" data-category="Thiết Bị Số - Phụ Kiện Số">Tất cả</span><span class="caret"></span>
+                  <span class="filter_box_pc" data-category="all">Tất cả</span><span class="caret"></span>
                 </button>
-                <ul class="dropdown-menu">
-                  <li data-category=""><a>Tất cả</a></li>
-                  <li data-category="Sách"><a>Sách Tiếng Việt</a></li>
-                  <li data-category="English Books"><a>Sách Tiếng Anh</a></li>
-                  <li data-category="Điện Thoại - Máy Tính Bảng"><a>Điện Thoại - Máy Tính Bảng</a></li>
-                  <li data-category="Thiết Bị Số - Phụ Kiện Số"><a>Thiết Bị Số - Phụ Kiện Số</a></li>
-                  <li data-category="Điện Gia Dụng"><a>Điện Gia Dụng</a></li>
-                  <li data-category="Nhà Cửa - Đời Sống"><a>Nhà Cửa Đời Sống</a></li>
-                  <li data-category="Làm đẹp - Sức khỏe"><a>Làm Đẹp - Sức Khỏe</a></li>
-                  <li data-category="Thiết Bị Văn Phòng Phẩm"><a>Thiết Bị Văn Phòng Phẩm</a></li>
-                  <li data-category="Mẹ Và Bé"><a>Mẹ Và Bé</a></li>
-                  <li data-category="Đồ Chơi - Quà Tặng"><a>Đồ Chơi - Đồ Lưu Niệm</a></li>
-                  <li data-category="Thể Thao &amp; Dã Ngoại"><a>Thể Thao - Dã Ngoại</a></li>
-                  <li data-category="Máy Ảnh - Máy Quay Phim"><a>Máy Ảnh - Máy Quay Phim</a></li>
-              </ul>
+                <?php get_template_part('block/menu-search'); ?>
               </div>
-              <input type="text" class="form-control" name="search" value="" placeholder="Tìm kiếm sản phẩm, danh mục hay thương hiệu mong muốn...">
+              <input type="text"  class="form-control" id="search-pc" name="search" placeholder="Tìm kiếm sản phẩm, danh mục hay thương hiệu mong muốn...">
               <span class="input-group-btn">
                 <button class="btn btn-default" type="submit">
                   <span class="hidden-sm hidden-xs">Tìm</span>
@@ -105,6 +77,53 @@
               </span>
               
             </div>
+            <script type="text/javascript">
+             jQuery(document).ready(function($){
+               $(".form-search-pc ul.dropdown-menu > li").on('click', function(){
+                 $value = $(this).text();
+                 $data = $(this).attr('data-category');
+                 $('.filter_box_pc').empty().append($value);
+                 $('.filter_box_pc').attr('data-category', $data);
+               });
+
+                $('#search-pc').keypress(function(event){
+                  var keycode = (event.keyCode ? event.keyCode : event.which);
+                  if (keycode == '13') {
+                    $("button[type='submit']").trigger('click');
+                  }
+                });
+                
+               $(".form-search-pc").on('click',"button[type='submit']" ,function(){
+                 $key = $(".filter_box_pc").attr('data-category');
+                 $val = $("#search-pc").val();
+                 window.location.href = "<?php echo home_url(); ?>/tim-kiem/?type="+$key+'&keyword='+$val;
+               });
+               
+               // mobile 
+               
+                $(".form-search-mb ul.dropdown-menu > li").on('click', function(){
+                 $value = $(this).text();
+                 $data = $(this).attr('data-category');
+                 $('.filter_box_mb').empty().append($value);
+                 $('.filter_box_mb').attr('data-category', $data);
+               });
+               
+               $('#search-mb').keypress(function(event){
+                  var keycode = (event.keyCode ? event.keyCode : event.which);
+                  if (keycode == '13') {
+                     $("#submit-mb").trigger('click');
+                  }
+                });
+                
+
+               $(".form-search-mb").on('click',"#submit-mb" ,function(){
+                 $key = $(".filter_box_mb").attr('data-category');
+                 $val = $("#search-mb").val();
+                 window.location.href = "<?php echo home_url(); ?>/tim-kiem/?type="+$key+'&keyword='+$val;
+               });
+               
+             });
+            </script>
             <div class="form menu-news">
               <ul>
                 <li><a href="<?php echo home_url() ?>/san-pham-moi/">Sản phẩm mới</a></li>
