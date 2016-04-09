@@ -1,6 +1,6 @@
 
 <ul class="menu-left">
-  <li><a href="<?php echo home_url(); ?>/danh-muc/thoi-trang-phu-kien/"><span class="icon icon-clothes"></span> Thời trang - Phụ kiện</a>
+  <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/thoi-trang-phu-kien/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-clothes"></span> Thời trang - Phụ kiện</a>
     <div class="menu-item">
       <div class="list-cate">
         <div class="list-item">
@@ -19,7 +19,7 @@
           </ul>
         </div>
         <div class="list-item">
-          <h4><a href="<?php echo home_url(); ?>/danh-muc//">Ví - Túi xách</a></h4>
+          <h4><a href="<?php echo home_url(); ?>/danh-muc/vi-tui-xach/">Ví - Túi xách</a></h4>
           <ul>
             <li><a href="<?php echo home_url(); ?>/danh-muc/vi-nam/">Ví Nam</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/vi-nu/">Ví Nữ</a></li>
@@ -52,12 +52,12 @@
           </ul>
         </div>
       </div>
-      <div class="list-ads">
-        <a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/banner.png"></a>
-      </div>
+      <?php if(wpmd_is_notdevice()): ?>
+      <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'thoi-trang-phu-kien') ); ?>
+      <?php endif; ?>
     </div>
   </li>
-  <li><a href="<?php echo home_url(); ?>/danh-muc/lam-dep-suc-khoe/"><span class="icon icon-woman"></span> Làm đẹp & Sức khỏe</a>
+  <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/lam-dep-suc-khoe/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-woman"></span> Làm đẹp & Sức khỏe</a>
     <div class="menu-item">
       <div class="list-cate">
         <div class="list-item">
@@ -89,14 +89,14 @@
           </ul>
         </div>
         <div class="list-item">
-          <h4><a href="<?php echo home_url(); ?>/danh-muc//">Thiết bị làm đẹp</a></h4>
+          <h4><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-lam-dep/">Thiết bị làm đẹp</a></h4>
           <ul>
-            <li><a href="<?php echo home_url(); ?>/danh-muc//">Máy Massage</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc//">Máy rửa mặt</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc//">Thiết bị y tế</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc//">Thiết bị tẩy lông</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/may-massage/">Máy Massage</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/may-rua-mat/">Máy rửa mặt</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-y-te/">Thiết bị y tế</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-tay-long/">Thiết bị tẩy lông</a></li>
           </ul>
-          <h4><a href="<?php echo home_url(); ?>/danh-muc//">Thực phẩm chức năng</a></h4>
+          <h4><a href="<?php echo home_url(); ?>/danh-muc/thuc-pham-chuc-nang/">Thực phẩm chức năng</a></h4>
           <ul>
             <li><a href="<?php echo home_url(); ?>/danh-muc/thuc-pham-chuc-nang-vitamin/">Thực phẩm chức năng & Vitamin</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/collagen-san-pham-tu-tao/">Collagen - sản phẩm từ tảo</a></li>
@@ -106,12 +106,12 @@
           </ul>
         </div>
       </div>
-      <div class="list-ads">
-        <a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/banner.png"></a>
-      </div>
+      <?php if(wpmd_is_notdevice()): ?>
+      <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'lam-dep-suc-khoe') ); ?>
+      <?php endif; ?>
     </div>
   </li>
-  <li><a href="<?php echo home_url(); ?>/danh-muc/dien-gia-dung/"><span class="icon icon-electricity"></span> Điện gia dụng</a>
+  <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/dien-gia-dung/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-electricity"></span> Điện gia dụng</a>
     <div class="menu-item">
       <div class="list-cate">
         <div class="list-item">
@@ -128,50 +128,148 @@
         <div class="list-item">
           <h4><a href="#">Thương hiệu</a></h4>
           <ul>
-            <li><a href="#">Wilton</a></li>
-            <li><a href="#">Bosch</a></li>
-            <li><a href="#">Fissler</a></li>
-            <li><a href="#">WMF</a></li>
-            <li><a href="#">Caso</a></li>
-            <li><a href="#">Miele</a></li>
-            <li><a href="#">AEG</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/wilton/">Wilton</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/bosch/">Bosch</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/fissler/">Fissler</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/wmf/">WMF</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/caso/">Caso</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/miele">Miele</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/aeg/">AEG</a></li>
+          </ul>
+        </div>
+      </div>
+      <?php if(wpmd_is_notdevice()): ?>
+      <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'dien-gia-dung') ); ?>
+      <?php endif; ?>
+    </div>
+  </li>
+  <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/me-va-be/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-food"></span> Mẹ và bé</a>
+    <div class="menu-item">
+      <div class="list-cate">
+        <div class="list-item">
+          <h4><a href="#">Danh mục</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/sua/">Sữa</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/thuc-pham-bo-xung/">Thực phẩm bổ sung</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/do-choi-tre-em/">Đồ chơi trẻ em</a></li>
           </ul>
         </div>
         <div class="list-item">
-
+          <h4><a href="#">Thương hiệu</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/siemens/">Siemens</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/fisher/">Fisher</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/price/">Price</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/v-tech/">V-Tech</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/telefon/">Telefon</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/autos/">Autos</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/meiji/">Meiji</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/hippo">Hippo</a></li>
+          </ul>
         </div>
       </div>
-      <div class="list-ads">
-        <a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/banner.png"></a>
+      <?php if(wpmd_is_notdevice()): ?>
+      <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'me-va-be') ); ?>
+      <?php endif; ?>
+    </div>
+  </li>
+  <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/cam-trai-du-lich/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-tool"></span> Cắm trại - du lịch</a>
+    <div class="menu-item">
+      <div class="list-cate">
+        <div class="list-item">
+          <h4><a href="#">Danh mục</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/leu/">Lều</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/tui-ngu/">Túi ngủ</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-da-nang/">Thiết bị đa năng</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/vali/">Vali</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/xe-dap/">Xe đạp</a></li>
+          </ul>
+        </div>
+        <div class="list-item">
+          <h4><a href="#">Thương hiệu</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/coleman/">Coleman</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/cube/">Cube</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/bikes/">Bikes</a></li>
+          </ul>
+        </div>
       </div>
+      <?php if(wpmd_is_notdevice()): ?>
+      <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'cam-trai-du-lich') ); ?>
+      <?php endif; ?>
     </div>
   </li>
-  <li><a href="<?php echo home_url(); ?>/danh-muc/me-va-be/"><span class="icon icon-food"></span> Mẹ và bé</a>
+  <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/phu-kien-thiet-bi-so/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-cellphone"></span> Phụ kiện - thiết bị số</a>
     <div class="menu-item">
-
+      <div class="list-cate">
+        <div class="list-item">
+          <h4><a href="#">Danh mục</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/tai-nghe/">Tai nghe</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/pin-sac-du-phong/">Pin sạc dự phòng</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/bao-da-op-lung/">Bao da- ốp lưng</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/phu-kien-khac/">Phụ Kiện khác</a></li>
+          </ul>
+        </div>
+        <div class="list-item">
+          <h4><a href="#">Thương hiệu</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/canon/">Canon</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/sony/">Sony</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/samsung/">Samsung</a></li>
+          </ul>
+        </div>
+      </div>
+      <?php if(wpmd_is_notdevice()): ?>
+      <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'phu-kien-thiet-bi-so') ); ?>
+      <?php endif; ?>
     </div>
   </li>
-  <li><a href="<?php echo home_url(); ?>/danh-muc/cam-trai-du-lich/"><span class="icon icon-tool"></span> Cắm trại - du lịch</a>
+  <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/hang-cong-nghe/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-computer"></span> Hàng công nghệ</a>
     <div class="menu-item">
-
+      <div class="list-cate">
+        <div class="list-item">
+          <h4><a href="#">Danh mục</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-theo-doi-hoat-dong/">Thiết bị theo dõi hoạt động</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-thuc-te-ao-vr/">Thiết bị thực tế ảo (VR)</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/drone/">Drone</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-khac/">Thiết bị khác</a></li>
+          </ul>
+        </div>
+        <div class="list-item">
+          <h4><a href="#">Thương hiệu</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/canton/">Canton</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/logitech/">Logitech</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/seninigher/">Seninigher</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/philip/">Philip</a></li>
+          </ul>
+        </div>
+      </div>
+      <?php if(wpmd_is_notdevice()): ?>
+      <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'hang-cong-nghe') ); ?>
+      <?php endif; ?>
     </div>
   </li>
-  <li><a href="<?php echo home_url(); ?>/danh-muc/phu-kien-thiet-bi-so/"><span class="icon icon-cellphone"></span> Phụ kiện - thiết bị số</a>
+  <li><a href="<?php if(wpmd_is_notdevice()){?> <?php echo home_url(); ?>/danh-muc/tuoi-moi-moi-ngay/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-two"></span> Tươi mới mỗi ngày</a>
     <div class="menu-item">
-
-    </div>
-  </li>
-  <li><a href="<?php echo home_url(); ?>/danh-muc/hang-cong-nghe/"><span class="icon icon-computer"></span> Hàng công nghệ</a>
-    <div class="menu-item">
-
-    </div>
-  </li>
-  <li><a href="<?php echo home_url(); ?>/danh-muc/tuoi-moi-moi-ngay/"><span class="icon icon-two"></span> Tươi mới mỗi ngày</a>
-    <div class="menu-item">
-
+      <div class="list-cate">
+        <div class="list-item">
+          <h4><a href="#">Danh mục</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/banh-ngot/">Bánh ngọt</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/day-tay-dalat/">Dâu Tây Dalat</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/yaout/">Yaout</a></li>
+          </ul>
+        </div>
+      </div>
+      <?php if(wpmd_is_notdevice()): ?>
+      <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'tuoi-moi-moi-ngay') ); ?>
+      <?php endif; ?>
     </div>
   </li>
   <li><a href="<?php echo home_url(); ?>/danh-muc/silver-unique/"><span class="icon icon-trophy"></span> Silver Unique</a>
-    <div class="menu-item"></div>
   </li>
 </ul>

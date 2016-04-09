@@ -35,7 +35,7 @@ $the_query_new = new WP_Query( $args );
       <?php 
         while ( $the_query->have_posts() ) {
           $the_query->the_post(); ?>
-            <li class="col-md-3">
+            <li class="col-md-3 col-sm-4 col-xs-6">
               <div class="item">
                 <div class="image">
                   <?php do_action('woocommerce_after_shop_loop_item_sale'); ?>
@@ -72,7 +72,7 @@ $the_query_new = new WP_Query( $args );
           <?php 
             while ( $the_query->have_posts() ) {
               $the_query->the_post(); ?>
-                <li class="col-md-3">
+                <li class="col-md-3 col-sm-4 col-xs-6">
                   <div class="item">
                     <div class="image">
                       <?php do_action('woocommerce_after_shop_loop_item_sale'); ?>
@@ -109,7 +109,7 @@ $the_query_new = new WP_Query( $args );
           <?php 
             while ( $the_query->have_posts() ) {
               $the_query->the_post(); ?>
-                <li class="col-md-3">
+                <li class="col-md-3 col-sm-4 col-xs-6">
                   <div class="item">
                     <div class="image">
                       <?php do_action('woocommerce_after_shop_loop_item_sale'); ?>

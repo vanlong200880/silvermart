@@ -22,16 +22,16 @@
     <header class="header-sroll">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-3">
             
             <nav class="header-navigation"> <h2><i class="fa fa-bars"></i> Danh mục</h2>
               <?php get_template_part('/block/menu_list'); ?>
             </nav>
             
           </div>
-          <div class="col-md-7">
+          <div class="col-md-7 col-sm-7">
             <div class="form input-group form-search-mb">
-              <div class="input-group-btn hidden-sm hidden-xs">
+              <div class="input-group-btn hidden-xs">
                 <button type="button" class="btn btn-default dropdown-toggle show-all-button" data-toggle="dropdown" aria-expanded="false">
                   <span class="filter_box_mb" data-category="all">Tất cả</span><span class="caret"></span>
                 </button>
@@ -47,7 +47,7 @@
               
             </div>
           </div>
-          <div class="col-md-2 shoppingcart">
+          <div class="col-md-2 col-sm-2 shoppingcart">
             <span class="icon icon-shopping"><var class="shoping-number">0</var></span> Giỏ hàng
           </div>
         </div>
@@ -59,10 +59,10 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-md-2"><a href="<?php echo home_url() ?>" title="Silvermart"><img src="<?php echo get_template_directory_uri() ?>/images/silvermart.png"></a></div>
-          <div class="col-md-8">
+          <div class="col-md-2 col-sm-2"><a href="<?php echo home_url() ?>" title="Silvermart"><img src="<?php echo get_template_directory_uri() ?>/images/silvermart.png"></a></div>
+          <div class="col-md-8 col-sm-8">
             <div class="form input-group form-search-pc">
-              <div class="input-group-btn hidden-sm hidden-xs">
+              <div class="input-group-btn hidden-xs">
                 <button type="button" class="btn btn-default dropdown-toggle show-all-button" data-toggle="dropdown" aria-expanded="false">
                   <span class="filter_box_pc" data-category="all">Tất cả</span><span class="caret"></span>
                 </button>
@@ -133,7 +133,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-2 shoppingcart">
+          <div class="col-md-2 col-sm-2 shoppingcart">
             <?php 
             global $woocommerce;
             ?>

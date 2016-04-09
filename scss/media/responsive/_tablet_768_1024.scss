@@ -1,0 +1,26 @@
+footer {
+  .footer-top {
+    div.col-sm-3{
+      text-align: center;
+    }
+    .icon-text{
+      float: none;
+    }
+    .icon-logo{
+      float: none;
+      display: inline-block;
+    }
+  }
+}
+ul.menu-left {
+  li{
+    &:hover {
+      .menu-item{
+        width: 563px;
+        .list-cate{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

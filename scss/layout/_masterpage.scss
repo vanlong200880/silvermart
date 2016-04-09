@@ -16,3 +16,10 @@
 .owl-carousel-item-imgoverlay{
   display: none;
 }
+.slider-home{
+  .owl-controls{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}

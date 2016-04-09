@@ -1,0 +1,12 @@
+ul.menu-left {
+  li{
+    &:hover {
+      .menu-item{
+        width: 728px;
+        .list-cate{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -33,28 +33,28 @@
       <div class="footer-top">
         <div class="container">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-3 col-xs-6">
               <div class="icon-logo"><img src="<?php echo get_template_directory_uri() ?>/images/home_06.png"></div>
               <div class="icon-text">
                 <h2>Sản phẩm</h2>
                 <p>Chính hãng</p>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-3 col-xs-6">
               <div class="icon-logo"><img src="<?php echo get_template_directory_uri() ?>/images/home_08.png"></div>
               <div class="icon-text">
                 <h2>Giao hàng tận nơi</h2>
                 <p>63 TỈNH THÀNH</p>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-3 col-xs-6">
               <div class="icon-logo"><img src="<?php echo get_template_directory_uri() ?>/images/home_10.png"></div>
               <div class="icon-text">
                 <h2>Tư vấn miễn phí</h2>
                 <p>096 666 0127</p>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-3 col-xs-6">
               <div class="icon-logo"><img src="<?php echo get_template_directory_uri() ?>/images/home_03.png"></div>
               <div class="icon-text">
                 <h2>Chính sách đổi trả</h2>
@@ -67,7 +67,7 @@
       <div class="footer-page">
         <div class="container">
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-12">
               <h2>HỖ TRỢ KHÁCH HÀNG</h2>
               <ul>
                 <li><a href="<?php echo home_url() ?>/huong-dan-dat-hang/">Hướng dẫn đặt hàng</a></li>
@@ -78,7 +78,7 @@
               </ul>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-12">
               <h2>VỀ SILVERMART</h2>
               <ul>
                 <li><a href="<?php echo home_url() ?>/ve-chung-toi/">Về chúng tôi</a></li>
@@ -88,7 +88,7 @@
               </ul>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-12">
               <h2>KẾT NỐI VỚI SILVERMART</h2>
               <ul class="connect">
                 <li><a href="#"><span class="icon icon-social-2"></span></a></li>
@@ -98,7 +98,7 @@
               </ul>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6 col-xs-12">
               <h2>TRUNG TÂM KHÁCH HÀNG</h2>
               <p>294 Hòa bình, P. Hiệp Tân, Q. Tân Phú, TP.HCM</p>
               <p>Email: vanlong200880@gmail.com</p>

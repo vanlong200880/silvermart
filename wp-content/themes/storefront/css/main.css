@@ -439,7 +439,7 @@ ul.menu-left {
   height: 50px;
   position: absolute;
   width: 100%;
-  top: -100px; }
+  top: -200px; }
   .header-sroll h2 {
     color: #FFF;
     height: 50px;
@@ -713,6 +713,11 @@ ul.menu-left {
 .owl-carousel-item-imgoverlay {
   display: none; }
 
+.slider-home .owl-controls {
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
 .detail-page h1 {
   font-size: 14px;
   font-weight: bold;
@@ -956,6 +961,24 @@ footer .coppyright {
   .btn-user:hover {
     background-color: #000; }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  footer .footer-top div.col-sm-3 {
+    text-align: center; }
+  footer .footer-top .icon-text {
+    float: none; }
+  footer .footer-top .icon-logo {
+    float: none;
+    display: inline-block; }
+
+  ul.menu-left li:hover .menu-item {
+    width: 563px; }
+    ul.menu-left li:hover .menu-item .list-cate {
+      width: 100%; } }
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  ul.menu-left li:hover .menu-item {
+    width: 728px; }
+    ul.menu-left li:hover .menu-item .list-cate {
+      width: 100%; } }
 @media (max-width: 767px) {
   #wrapp-adv-full, #wrapp-adv-device, #header .top-adv {
     margin: 0; }
