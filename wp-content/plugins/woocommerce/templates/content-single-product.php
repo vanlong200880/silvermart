@@ -51,12 +51,6 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="col-md-7 col-sm-7 col-xs-12">
       <h1><?php do_action('woocommerce_shop_loop_item_title_silvermart'); ?></h1>
       
-      <div class="share-post">
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50dd5241008a00cc" async="async"></script>
-        <!-- Go to www.addthis.com/dashboard to customize your tools -->
-        <div class="addthis_sharing_toolbox"></div>
-      </div>
       <div class="price-detail">
         <?php do_action('woocommerce_single_product_price'); ?>
         <p class="sale"><?php do_action('woocommerce_after_shop_loop_item_sale'); ?></p>
@@ -67,6 +61,16 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="description">
         <?php do_action('woocommerce_single_product_excerpt'); ?>
       </div>
+      <div class="views-detail"><i class="fa fa-angle-double-down"></i> Xem chi tiết</div>
+      <script type="text/javascript">
+        jQuery(document).ready(function($){
+          $(".views-detail").click(function() {
+            $('html, body').animate({
+              scrollTop: $(".title-detail-content").offset().top -50
+            }, 1000);
+          });
+        });
+      </script>
     </div>
   </div>
 </div>

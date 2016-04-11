@@ -19,7 +19,6 @@
     if ( !empty( $regular_price ) && !empty( $sale_price ) && $regular_price > $sale_price ) :
     $sale = ceil(( ($regular_price - $sale_price) / $regular_price ) * 100);
     endif;
-    $sale = 10;
 ?>
 <?php if ( !empty( $regular_price ) && !empty( $sale_price ) && $regular_price > $sale_price ) : ?>
     <?php echo

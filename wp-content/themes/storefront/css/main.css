@@ -812,7 +812,7 @@ ul.menu-left {
     height: 30px;
     max-width: 100%; }
 .detail-page .single_add_to_cart_button {
-  background: red;
+  background: #7dad23;
   padding: 10px 50px;
   border: none;
   cursor: pointer;
@@ -822,7 +822,7 @@ ul.menu-left {
   -o-border-radius: 5px;
   -ms-border-radius: 5px; }
   .detail-page .single_add_to_cart_button:hover {
-    background: #7dad23; }
+    background: red; }
 .detail-page .single_variation_wrap {
   border-bottom: 1px solid #F1F1F1;
   padding-bottom: 10px; }
@@ -867,6 +867,11 @@ ul.menu-left {
 .breadcrumb-detail {
   border-bottom: 2px solid #7dad23;
   margin: 15px 0; }
+
+.views-detail {
+  cursor: pointer;
+  font-style: italic;
+  display: inline-block; }
 
 /*@import "layout/login";
 @import "layout/masterpage";
