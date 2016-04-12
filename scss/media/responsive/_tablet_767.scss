@@ -161,12 +161,12 @@ footer{
       ul{
         li{
           a{
-            padding-left: 20px;
+            padding-left: 15px;
           }
           ul{
             li{
               a{
-                padding-left: 40px;
+                padding-left: 30px;
               }
             }
           }
@@ -214,5 +214,11 @@ footer{
       font-size: 16px;
     }
   }
+}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, 
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+  background-color: rgb(125, 173, 35);
 }
 
