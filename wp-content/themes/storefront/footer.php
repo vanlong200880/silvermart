@@ -121,10 +121,16 @@
     <div class="support">
       <p><span class="icon icon-technology"></span> Tư vấn bán hàng <span>096 666 0127 </span></p>
     </div>
+</div>
 <script src="<?php echo get_template_directory_uri() ?>/js/jquery.js"></script>
 <!-- Bootstrap JavaScript -->
 <script src="<?php echo get_template_directory_uri() ?>/js/bootstrap.min.js"></script>
 <script src="<?php echo get_template_directory_uri() ?>/js/owl.carousel.js"></script>
+
+<?php if (wpmd_is_phone()): ?>
+<script src="<?php echo get_template_directory_uri() ?>/js/jquery.mCustomScrollbar.js"></script>
+<?php endif; ?>
+
 <script type="text/javascript">
   $(document).ready(function() {
 //    $(".slider-home").owlCarousel({
@@ -164,6 +170,30 @@
     }); 
   });
 </script>
+
+<script type="text/javascript">
+			jQuery(document).ready(function($){
+				$(".menu-sp-left").css('height',$(window).height()-40);
+				$(".mobile-list i").on('click', function(){
+					$(".menu-mobile-cat").addClass('site-page-frame');
+					$(".wmp").addClass('page-frame');
+					$("#side-menu-overlay").addClass('on');
+					$('body').css('position', 'fixed');
+				});
+        
+				$("#side-menu-overlay").on('click', function(){
+					$(this).removeClass('on');
+					$(".menu-mobile-cat").removeClass('site-page-frame');
+					$(".wmp").removeClass('page-frame');
+					$('body').removeAttr('style');
+				});
+        
+        $(".close-menu").on('click', function(){
+					$("#side-menu-overlay").trigger('click');
+				});
+			});
+		</script> 
+    
 
 
 <?php wp_footer(); ?>

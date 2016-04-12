@@ -48,7 +48,7 @@ get_header();
                   <?php
 									$attachment_id = get_post_thumbnail_id(get_the_ID());
 									if (!empty($attachment_id)) :
-										the_post_thumbnail(array(280, 280)); ?>
+										the_post_thumbnail(array(315, 315)); ?>
                   <?php else: ?>
                   <?php endif; ?>
                   <a href="<?php the_permalink(); ?>">Xem ngay</a>

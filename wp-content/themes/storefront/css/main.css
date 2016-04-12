@@ -985,107 +985,181 @@ footer .coppyright {
     ul.menu-left li:hover .menu-item .list-cate {
       width: 100%; } }
 @media (max-width: 767px) {
-  #wrapp-adv-full, #wrapp-adv-device, #header .top-adv {
-    margin: 0; }
-    #wrapp-adv-full img, #wrapp-adv-device img, #header .top-adv img {
-      display: none; }
+  .header-for-mobile {
+    background: #232f3e; }
+    .header-for-mobile .shoppingcart {
+      color: #FFF;
+      text-align: center;
+      padding-top: 20px; }
+      .header-for-mobile .shoppingcart a {
+        color: #FFF; }
+      .header-for-mobile .shoppingcart span {
+        position: relative;
+        font-size: 22px; }
+        .header-for-mobile .shoppingcart span var {
+          background: red;
+          padding: 0px 10px;
+          position: absolute;
+          display: inline-block;
+          top: -17px;
+          left: 13px;
+          font-size: 12px;
+          border-radius: 3px; }
+          .header-for-mobile .shoppingcart span var:before {
+            content: " ";
+            width: 0;
+            height: 0;
+            border-top: 5px solid red;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
+            position: absolute;
+            bottom: -5px;
+            left: 2px; }
 
-  .wrap-new-adv .top-sub-adv {
-    display: none; }
+  .mobile-list {
+    text-align: right;
+    padding-top: 10px; }
+    .mobile-list i {
+      color: #FFF;
+      font-size: 35px; }
 
-  .tab-vote .nav-tabs li {
-    height: 35px;
-    line-height: 35px;
-    position: relative;
-    margin-bottom: 0; }
-    .tab-vote .nav-tabs li a {
-      font-size: 14px;
-      padding: 0 10px; }
+  .menu-mobile {
+    border-top: 1px solid #52657D; }
+    .menu-mobile .form-search-pc {
+      padding-bottom: 5px;
+      padding-top: 5px; }
+      .menu-mobile .form-search-pc .btn-default {
+        background: #c3c3c3;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        outline: none; }
+    .menu-mobile span.input-group-btn .btn.btn-default {
+      background: #ff0000;
+      border-color: #ff0000;
+      box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      outline: none;
+      margin-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      color: #FFF;
+      text-transform: uppercase;
+      font-weight: bold; }
+      .menu-mobile span.input-group-btn .btn.btn-default i {
+        font-size: 14px; }
 
-  .all-article .show-large.show-large-2 figure a {
-    width: 100%;
-    margin-right: 0;
-    float: none; }
-  .all-article .show-large.show-large-2 figure figcaption {
-    float: none;
-    width: 100%; }
-  .all-article .show-sub.show-sub-2 {
-    width: 100%;
-    display: inline-block;
-    margin-bottom: 5px;
-    margin-right: 0; }
-    .all-article .show-sub.show-sub-2 figure a {
-      float: left;
-      width: 47%;
-      margin-right: 3%; }
-    .all-article .show-sub.show-sub-2 figure figcaption {
-      width: 50%;
-      float: left; }
-      .all-article .show-sub.show-sub-2 figure figcaption p, .all-article .show-sub.show-sub-2 figure figcaption span {
-        font-size: 11px;
-        color: #6f6f6e; }
-      .all-article .show-sub.show-sub-2 figure figcaption p a {
-        font-size: 13px;
-        color: #000;
-        font-weight: bold;
-        display: block;
-        overflow: hidden;
-        height: 20px;
-        line-height: 20px;
-        width: 100%;
-        margin-bottom: 5px; }
-        .all-article .show-sub.show-sub-2 figure figcaption p a:hover {
-          color: #e30513; }
-      .all-article .show-sub.show-sub-2 figure figcaption p.address {
-        margin-bottom: 5px;
-        display: inline-block; }
+  .page-home-title a.all {
+    font-size: 12px; }
+  .page-home-title .tabs-home ul li a {
+    font-size: 9px;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px; }
+  .page-home-title .tabs-home ul li.home-tabs-default a {
+    font-size: 9px;
+    padding: 0 5px; }
 
-  #footer .title-footer {
-    padding: 15px 0 0; }
-  #footer .title-footer.infomation ul li {
-    width: 100%;
+  footer .footer-top {
+    padding: 15px 0; }
+    footer .footer-top .col-xs-6 {
+      text-align: center;
+      margin-bottom: 15px; }
+      footer .footer-top .col-xs-6 .icon-text,
+      footer .footer-top .col-xs-6 .icon-logo {
+        float: none;
+        display: inline-block;
+        padding-top: 5px; }
+
+  .menu-mobile-cat {
+    width: 250px;
+    float: left;
+    background: #f2f2f2;
+    height: 100%;
+    position: fixed;
+    z-index: 9999;
+    -webkit-transition: margin-left 0.35s ease;
+    -moz-transition: margin-left 0.35s ease;
+    -o-transition: margin-left 0.35s ease;
+    -ms-transition: margin-left 0.35s ease;
+    transition: margin-left 0.35s ease;
+    margin-left: -250px;
     display: block;
-    float: none; } }
-@media (min-width: 481px) and (max-width: 639px) {
-  .all-article .show-sub {
-    width: 50%;
-    float: left;
+    top: 0; }
+    .menu-mobile-cat h2 {
+      background: #7dad23;
+      color: #FFF;
+      text-transform: uppercase;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 5px;
+      font-size: 18px; }
+      .menu-mobile-cat h2 i {
+        font-size: 25px;
+        position: relative;
+        top: 2px; }
+
+  .menu-mobile-cat.site-page-frame {
+    margin-left: 0; }
+
+  .menu-sp-left ul li {
     display: inline-block;
-    margin-bottom: 5px;
-    padding-right: 6px;
-    padding-left: 6px; }
-    .all-article .show-sub figure a {
-      width: 100%;
-      float: none;
-      display: block;
-      margin-right: 0; }
-    .all-article .show-sub figure figcaption {
-      width: 100%;
-      margin-bottom: 10px; }
-    .all-article .show-sub:nth-child(2n+1) {
-      padding-left: 0; }
-    .all-article .show-sub:nth-child(2n+2) {
-      padding-right: 0; }
-  .all-article .show-large.show-large-2 figure figcaption .wrapp-info {
     width: 100%; }
-  .all-article .show-sub.show-sub-2 {
-    width: 50%;
-    float: left;
-    display: inline-block;
-    margin-bottom: 5px;
-    padding-right: 6px;
-    padding-left: 6px; }
-    .all-article .show-sub.show-sub-2 figure a {
+    .menu-sp-left ul li a {
+      display: inline-block;
+      padding: 5px;
       width: 100%;
-      float: none;
-      display: block;
-      margin-right: 0; }
-    .all-article .show-sub.show-sub-2 figure figcaption {
-      width: 100%;
-      margin-bottom: 10px; }
-    .all-article .show-sub.show-sub-2:nth-child(2n+1) {
-      padding-left: 0; }
-    .all-article .show-sub.show-sub-2:nth-child(2n+2) {
-      padding-right: 0; } }
+      border-bottom: 1px solid #DDD; }
+    .menu-sp-left ul li ul li a {
+      padding-left: 20px; }
+    .menu-sp-left ul li ul li ul li a {
+      padding-left: 40px; }
+
+  .wmp {
+    width: 100%;
+    position: relative;
+    margin-left: 0;
+    -webkit-transition: margin-left 0.35s ease;
+    -moz-transition: margin-left 0.35s ease;
+    -o-transition: margin-left 0.35s ease;
+    -ms-transition: margin-left 0.35s ease;
+    transition: margin-left 0.35s ease; }
+
+  .page-frame {
+    margin-left: 250px !important;
+    -webkit-transition: margin-left 0.35s ease;
+    -moz-transition: margin-left 0.35s ease;
+    -o-transition: margin-left 0.35s ease;
+    -ms-transition: margin-left 0.35s ease;
+    transition: margin-left 0.35s ease; }
+
+  .wmp #side-menu-overlay {
+    bottom: 0;
+    display: none;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5); }
+
+  .wmp #side-menu-overlay.on {
+    display: block; }
+
+  .menu-mobile-cat .close-menu {
+    float: right; }
+    .menu-mobile-cat .close-menu i {
+      font-size: 16px; } }
+@media (min-width: 481px) and (max-width: 767px) {
+  .page-home-title a.all {
+    font-size: 14px; }
+  .page-home-title .tabs-home ul li.home-tabs-default a {
+    font-size: 14px; }
+  .page-home-title .tabs-home ul li a {
+    font-size: 14px; } }
+@media (max-width: 320px) {
+  .page-home-title .tabs-home ul li a {
+    padding: 0 3px; } }
 
 /*# sourceMappingURL=main.css.map */
