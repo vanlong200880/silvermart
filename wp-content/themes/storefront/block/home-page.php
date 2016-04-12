@@ -33,9 +33,11 @@
        });
 
        foreach ($sorted_cats as $cat) { ?>
+      
+      <?php
+          if($cat->category_parent == 0) { ?>
       <div class="col-md-12">
       <?php
-          if($cat->category_parent == 0) {
               $category_id = $cat->term_id;
               $icon = get_field('icon', $cat);
               $link = get_field('link', $cat);
@@ -60,8 +62,9 @@
                 <a class="all pull-right" href="<?php echo get_term_link($cat->slug, 'product_cat') ?>">Tất cả</a>
               </div>
               <?php getTemplatePart('block/tab',  null, array('product_cat' => $cat->slug , 'term_id' => $cat->term_id)); ?>
+        </div>
          <?php } ?>
-      </div>
+      
     <?php  }
       ?>
     </div>
