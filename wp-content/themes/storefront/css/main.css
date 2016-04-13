@@ -275,13 +275,23 @@ ul.menu-left {
 
 .slider-home {
   margin-top: 16px;
-  position: relative; }
+  position: relative;
+  height: 386px;
+  overflow: hidden; }
 
 .list-category ul li .item {
+  position: relative;
   border: 1px solid #DDD;
   margin-bottom: 16px; }
+  .list-category ul li .item a.full-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9; }
   .list-category ul li .item .image {
     position: relative; }
+    .list-category ul li .item .image img {
+      height: 275px; }
     .list-category ul li .item .image span {
       position: absolute;
       top: 5px;
@@ -331,7 +341,10 @@ ul.menu-left {
     margin-top: 10px;
     height: 45px;
     overflow: hidden;
-    position: relative; }
+    position: relative;
+    font-size: 20px;
+    color: red;
+    font-weight: bold; }
     .list-category ul li .item .price p.cost {
       font-size: 20px;
       color: red;
@@ -343,8 +356,9 @@ ul.menu-left {
     .list-category ul li .item .price p.old {
       text-decoration: line-through;
       color: #878787;
-      display: inline-block;
-      width: 100%; }
+      width: 100%;
+      font-size: 14px;
+      font-weight: normal; }
       .list-category ul li .item .price p.old var {
         font-style: normal; }
       .list-category ul li .item .price p.old span {
@@ -352,7 +366,10 @@ ul.menu-left {
     .list-category ul li .item .price p.views {
       position: absolute;
       right: 10px;
-      bottom: 5px; }
+      bottom: 5px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #000; }
 .list-category ul li:hover .item {
   border-color: #7dad23; }
   .list-category ul li:hover .item .image a {
@@ -860,6 +877,12 @@ ul.menu-left {
 
 .page-single-content {
   margin-top: 30px; }
+  .page-single-content img {
+    max-width: 100%; }
+  .page-single-content table {
+    max-width: 100%; }
+  .page-single-content iframe {
+    max-width: 100%; }
 
 .content-single {
   padding: 15px 0; }
@@ -978,12 +1001,33 @@ footer .coppyright {
   ul.menu-left li:hover .menu-item {
     width: 563px; }
     ul.menu-left li:hover .menu-item .list-cate {
-      width: 100%; } }
+      width: 100%; }
+
+  ul.menu-left li {
+    height: 30px;
+    line-height: 30px; }
+    ul.menu-left li a span.icon {
+      font-size: 13px; }
+
+  #menu h2 {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   ul.menu-left li:hover .menu-item {
     width: 728px; }
     ul.menu-left li:hover .menu-item .list-cate {
-      width: 100%; } }
+      width: 100%; }
+
+  ul.menu-left li {
+    height: 33px;
+    line-height: 33px; }
+    ul.menu-left li a span.icon {
+      font-size: 15px; }
+
+  #menu h2 {
+    height: 36px;
+    line-height: 36px; } }
 @media (max-width: 767px) {
   .header-for-mobile {
     background: #232f3e; }
@@ -1156,7 +1200,10 @@ footer .coppyright {
   .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
   .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
   .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
-    background-color: #7dad23; } }
+    background-color: #7dad23; }
+
+  .slider-home {
+    height: auto; } }
 @media (min-width: 481px) and (max-width: 767px) {
   .page-home-title a.all {
     font-size: 14px; }

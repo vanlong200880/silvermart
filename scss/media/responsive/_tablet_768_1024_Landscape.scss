@@ -10,3 +10,20 @@ ul.menu-left {
     }
   }
 }
+ul.menu-left {
+  li{
+    height: 33px;
+    line-height: 33px;
+    a{
+      span.icon{
+        font-size: 15px;
+      }
+    }
+  }
+}
+#menu {
+  h2{
+    height: 36px;
+    line-height: 36px;
+  }
+}

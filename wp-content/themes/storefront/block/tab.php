@@ -37,6 +37,7 @@ $the_query_new = new WP_Query( $args );
           $the_query->the_post(); ?>
             <li class="col-md-3 col-sm-4 col-xs-6">
               <div class="item">
+                <a  class="full-link" href="<?php the_permalink(); ?>"></a>
                 <div class="image">
                   <?php do_action('woocommerce_after_shop_loop_item_sale'); ?>
 
@@ -74,6 +75,7 @@ $the_query_new = new WP_Query( $args );
               $the_query->the_post(); ?>
                 <li class="col-md-3 col-sm-4 col-xs-6">
                   <div class="item">
+                    <a  class="full-link" href="<?php the_permalink(); ?>"></a>
                     <div class="image">
                       <?php do_action('woocommerce_after_shop_loop_item_sale'); ?>
 
@@ -111,6 +113,7 @@ $the_query_new = new WP_Query( $args );
               $the_query->the_post(); ?>
                 <li class="col-md-3 col-sm-4 col-xs-6">
                   <div class="item">
+                    <a  class="full-link" href="<?php the_permalink(); ?>"></a>
                     <div class="image">
                       <?php do_action('woocommerce_after_shop_loop_item_sale'); ?>
 

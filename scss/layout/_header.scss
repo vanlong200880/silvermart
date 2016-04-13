@@ -233,16 +233,28 @@ ul.menu-left{
 .slider-home{
   margin-top: 16px;
   position: relative;
+  height: 386px;
+  overflow: hidden;
 }
 
 .list-category{
   ul{
     li{
       .item{
+        position: relative;
+        a.full-link{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 9;
+        }
         border: 1px solid #DDD;
         margin-bottom: 16px;
         .image{
           position:relative;
+          img{
+            height: 275px;
+          }
           span{
             position: absolute;
             top: 5px;
@@ -290,6 +302,9 @@ ul.menu-left{
           height: 45px;
           overflow: hidden;
           position:relative;
+          font-size: 20px;
+          color: red;
+          font-weight: bold;
           p.cost{
             font-size: 20px;
             color: red;
@@ -303,8 +318,9 @@ ul.menu-left{
           p.old{
             text-decoration: line-through;
             color: #878787;
-            display: inline-block;
             width: 100%;
+            font-size: 14px;
+            font-weight: normal;
             var{
               font-style: normal;
             }
@@ -316,6 +332,9 @@ ul.menu-left{
             position: absolute;
             right: 10px;
             bottom: 5px;
+            font-size: 14px;
+            font-weight: normal;
+            color: #000;
           }
         }
       }

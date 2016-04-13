@@ -42,6 +42,7 @@ get_header();
             $the_query->the_post(); ?>
             <li class="col-md-3">
               <div class="item">
+                <a  class="full-link" href="<?php the_permalink(); ?>"></a>
                 <div class="image">
                   <?php do_action('woocommerce_after_shop_loop_item_sale'); ?>
 

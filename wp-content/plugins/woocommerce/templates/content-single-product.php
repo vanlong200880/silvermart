@@ -21,7 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <div class="col-md-12">
-  <div class="breadcrumb-detail"><?php the_title(); ?></div>
+  <div class="breadcrumb-detail">
+    
+  </div>
 </div>
 <div class="col-md-12">
   <?php

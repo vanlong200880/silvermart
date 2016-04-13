@@ -24,3 +24,22 @@ ul.menu-left {
     }
   }
 }
+ul.menu-left {
+  li{
+    height: 30px;
+    line-height: 30px;
+    a{
+      span.icon{
+        font-size: 13px;
+      }
+    }
+  }
+}
+#menu {
+  h2{
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+

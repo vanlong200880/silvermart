@@ -9,7 +9,7 @@
       <?php endif; ?>
       <div class="col-md-9 col-sm-9">
         <div class="slider-home">
-          <?php echo do_shortcode('[owl-carousel category="slider-home" items="1" autoPlay="true" itemsDesktop="1000,2"]'); ?>
+          <?php get_template_part('block/slider'); ?>
         </div>
       </div>
     </div>
