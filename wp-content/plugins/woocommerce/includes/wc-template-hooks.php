@@ -189,6 +189,7 @@ add_action( 'woocommerce_single_variation', 'woocommerce_single_variation_add_to
  * @see woocommerce_pagination()
  */
 add_action( 'woocommerce_after_shop_loop', 'woocommerce_pagination', 10 );
+add_action( 'woocommerce_after_shop_loop_paging', 'woocommerce_pagination', 10 );
 
 /**
  * Product page tabs.

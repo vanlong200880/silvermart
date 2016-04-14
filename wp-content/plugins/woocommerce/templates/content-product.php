@@ -54,6 +54,7 @@ $classes[] = 'col-md-3 col-sm-4 col-xs-6 product-item';
 <li <?php post_class( $classes ); ?>>
 
   <div class="item">
+    <a  class="full-link" href="<?php the_permalink(); ?>"></a>
     <div class="image">
       <?php do_action('woocommerce_after_shop_loop_item_sale'); ?>
 

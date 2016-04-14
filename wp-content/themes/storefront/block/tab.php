@@ -22,6 +22,9 @@ $args['meta_query'][0]['key'] = 'hot';
 $the_query_hot = new WP_Query( $args );
 $args['meta_query'][0]['key'] = 'new';
 $the_query_new = new WP_Query( $args );
+
+$args['meta_query'][0]['key'] = 'sale';
+$the_query_sale = new WP_Query( $args );
 //var_dump($loop);
 
 //?>
@@ -71,8 +74,8 @@ $the_query_new = new WP_Query( $args );
         <?php
           if ( $the_query_hot->have_posts() ) { ?>
           <?php 
-            while ( $the_query->have_posts() ) {
-              $the_query->the_post(); ?>
+            while ( $the_query_hot->have_posts() ) {
+              $the_query_hot->the_post(); ?>
                 <li class="col-md-3 col-sm-4 col-xs-6">
                   <div class="item">
                     <a  class="full-link" href="<?php the_permalink(); ?>"></a>
@@ -109,8 +112,8 @@ $the_query_new = new WP_Query( $args );
         <?php
           if ( $the_query_new->have_posts() ) { ?>
           <?php 
-            while ( $the_query->have_posts() ) {
-              $the_query->the_post(); ?>
+            while ( $the_query_new->have_posts() ) {
+              $the_query_new->the_post(); ?>
                 <li class="col-md-3 col-sm-4 col-xs-6">
                   <div class="item">
                     <a  class="full-link" href="<?php the_permalink(); ?>"></a>
@@ -142,5 +145,45 @@ $the_query_new = new WP_Query( $args );
           ?>
       </ul>
     </div>
+    
+    <div role="tabpanel" class="tab-pane" id="sale-<?php echo $term_id; ?>">
+      <ul class="row">
+        <?php
+          if ( $the_query_sale->have_posts() ) { ?>
+          <?php 
+            while ( $the_query_sale->have_posts() ) {
+              $the_query_sale->the_post(); ?>
+                <li class="col-md-3 col-sm-4 col-xs-6">
+                  <div class="item">
+                    <a  class="full-link" href="<?php the_permalink(); ?>"></a>
+                    <div class="image">
+                      <?php do_action('woocommerce_after_shop_loop_item_sale'); ?>
+
+                      <?php
+                      $attachment_id = get_post_thumbnail_id(get_the_ID());
+                      if (!empty($attachment_id)) :
+                        the_post_thumbnail(array(315, 315)); ?>
+                      <?php else: ?>
+                      <?php endif; ?>
+                      <a href="<?php the_permalink(); ?>">Xem ngay</a>
+                    </div>
+                    <div class="title">
+                      <p><a href="<?php the_permalink(); ?>" title="<?php the_title() ?>"><?php the_title() ?></a></p>
+                    </div>
+                    <div class="price">
+                      <?php do_action('woocommerce_single_product_price'); ?>
+                      <p class="views">
+                        <i class="fa fa-eye"></i> <?php echo getPostViews(get_the_ID()); ?>
+                      </p>
+
+                    </div>
+                  </div>
+                </li>
+           <?php  }
+          }
+          ?>
+      </ul>
+    </div>
+    
   </div>
 </div>

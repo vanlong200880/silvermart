@@ -57,6 +57,7 @@
                     <li role="presentation" class=" home-tabs-default active"><a href="#home-<?php echo $cat->term_id; ?>" style="background: <?php echo $color; ?>" aria-controls="home-<?php echo $cat->term_id; ?>" role="tab" data-toggle="tab"><?php echo $icon; ?><?php echo $cat->name; ?></a></li>
                     <li role="presentation" class="tab-list"><a href="#newest-<?php echo $cat->term_id; ?>" aria-controls="newest-<?php echo $cat->term_id; ?>" role="tab" data-toggle="tab">Mới nhất</a></li>
                     <li role="presentation" class="tab-list"><a href="#hot-<?php echo $cat->term_id; ?>" aria-controls="hot-<?php echo $cat->term_id; ?>" role="tab" data-toggle="tab">Bán chạy</a></li>
+                    <li role="presentation" class="tab-list"><a href="#sale-<?php echo $cat->term_id; ?>" aria-controls="sale-<?php echo $cat->term_id; ?>" role="tab" data-toggle="tab">Khuyến mãi</a></li>
                   </ul>
                 </div>
                 <a class="all pull-right" href="<?php echo get_term_link($cat->slug, 'product_cat') ?>">Tất cả</a>

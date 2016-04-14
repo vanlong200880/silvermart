@@ -80,26 +80,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="col-md-12">
   <div class="row page-single-content">
     <div class="col-md-8">
-      <div class="title-detail-content">
-        <h3>Chi tiết sản phẩm</h3>
-        <h4> <a href="#comment-single">Bình luận</a></h4>
-      </div>
-      
-      <div class="content-single">
-        <?php the_content(); ?>
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Chi tiết sản phẩm</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Thông tin thương hiệu</a></li>
+        <li role="presentation"><a href="#comment-single">Bình luận</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <div class="content-single">
+            <?php the_content(); ?>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="profile">
+          <?php echo get_field('thong-tin-thuong-hieu'); ?>
+          
+        </div>
       </div>
       <div id="comment-single">
-        <div id="fb-root"></div>
-          <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=1624371511157699";
-            fjs.parentNode.insertBefore(js, fjs);
-          }(document, 'script', 'facebook-jssdk'));</script>
-          <div class="fb-comments" data-href="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-width="100%" data-numposts="5"></div>
-      </div>
+            <div id="fb-root"></div>
+              <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=1624371511157699";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));</script>
+              <div class="fb-comments" data-href="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-width="100%" data-numposts="5"></div>
+          </div>
+      
     </div>
+    
     <div class="col-md-4">
       <?php do_action( 'woocommerce_after_single_product_summary_related' ); ?>
     </div>

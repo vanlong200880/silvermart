@@ -876,7 +876,8 @@ ul.menu-left {
     margin-left: 30px; }
 
 .page-single-content {
-  margin-top: 30px; }
+  margin-top: 30px;
+  margin-bottom: 15px; }
   .page-single-content img {
     max-width: 100%; }
   .page-single-content table {
@@ -895,6 +896,37 @@ ul.menu-left {
   cursor: pointer;
   font-style: italic;
   display: inline-block; }
+
+.page-single-content .nav-tabs {
+  border-bottom: 2px solid #7dad23; }
+  .page-single-content .nav-tabs li.active,
+  .page-single-content .nav-tabs li {
+    margin-bottom: 0; }
+    .page-single-content .nav-tabs li.active a,
+    .page-single-content .nav-tabs li a {
+      border: none;
+      border-radius: 0;
+      font-weight: bold;
+      position: relative;
+      padding: 10px 15px 10px 0; }
+      .page-single-content .nav-tabs li.active a:hover, .page-single-content .nav-tabs li.active a:focus, .page-single-content .nav-tabs li.active a:active,
+      .page-single-content .nav-tabs li a:hover,
+      .page-single-content .nav-tabs li a:focus,
+      .page-single-content .nav-tabs li a:active {
+        border: none;
+        border-radius: 0;
+        background: transparent; }
+  .page-single-content .nav-tabs li.active a:before {
+    content: " ";
+    position: absolute;
+    border-bottom: 5px solid #7dad23;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    right: 50%;
+    bottom: 0; }
+
+.tab-content .tab-pane {
+  margin-top: 15px; }
 
 /*@import "layout/login";
 @import "layout/masterpage";

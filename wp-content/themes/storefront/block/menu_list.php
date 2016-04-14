@@ -86,16 +86,10 @@
             <li><a href="<?php echo home_url(); ?>/danh-muc/chong-lao-hoa/">Chống lão hóa</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/san-pham-tri-mun/">Sản phẩm trị mụn</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/bo-san-pham/">Bộ sản phẩm</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/skll/">SKLL</a></li>
           </ul>
         </div>
         <div class="list-item">
-          <h4><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-lam-dep/">Thiết bị làm đẹp</a></h4>
-          <ul>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/may-massage/">Máy Massage</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/may-rua-mat/">Máy rửa mặt</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-y-te/">Thiết bị y tế</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-tay-long/">Thiết bị tẩy lông</a></li>
-          </ul>
           <h4><a href="<?php echo home_url(); ?>/danh-muc/thuc-pham-chuc-nang/">Thực phẩm chức năng</a></h4>
           <ul>
             <li><a href="<?php echo home_url(); ?>/danh-muc/thuc-pham-chuc-nang-vitamin/">Thực phẩm chức năng & Vitamin</a></li>
@@ -103,6 +97,13 @@
             <li><a href="<?php echo home_url(); ?>/danh-muc/thuc-pham-cham-soc-sac-dep/">Thực phẩm chăm sóc sắc đẹp</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/thuoc-giam-can/">Thuốc giảm cân</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/thuoc-lam-trang-da/">Thuốc làm trắng da</a></li>
+          </ul>
+          <h4><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-lam-dep/">Thiết bị làm đẹp</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/may-massage/">Máy Massage</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/may-rua-mat/">Máy rửa mặt</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-y-te/">Thiết bị y tế</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-tay-long/">Thiết bị tẩy lông</a></li>
           </ul>
         </div>
       </div>
@@ -150,6 +151,7 @@
           <h4><a href="#">Danh mục</a></h4>
           <ul>
             <li><a href="<?php echo home_url(); ?>/danh-muc/sua/">Sữa</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/ta-giay-uot-sua-tam/">Tã, giấy ướt, sửa tắm</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/thuc-pham-bo-xung/">Thực phẩm bổ sung</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/do-choi-tre-em/">Đồ chơi trẻ em</a></li>
           </ul>
