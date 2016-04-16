@@ -261,6 +261,8 @@
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
           <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/dac-san-vung-mien/">Đặc sản vùng, miền</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/thuy-hai-san/">Thủy hải sản</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/banh-ngot/">Bánh ngọt</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/day-tay-dalat/">Dâu Tây Dalat</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/yaout/">Yaout</a></li>

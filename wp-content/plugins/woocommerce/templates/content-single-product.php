@@ -95,7 +95,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         jQuery(document).ready(function($){
           $(".views-detail").click(function() {
             $('html, body').animate({
-              scrollTop: $(".title-detail-content").offset().top -50
+              scrollTop: $(".page-single-content").offset().top -50
             }, 1000);
           });
         });
@@ -126,7 +126,17 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
       </div>
       <div class="interest">
-        <?php get_template_part('block/product-interest'); ?>
+        <?php $category = get_the_terms( $post->ID, 'product_cat' );
+        if($category){
+          $key_slug = array();
+          foreach ($category as $val){
+            array_push($key_slug, $val->slug);
+          }
+        }
+//        var_dump(implode(',', $key_slug));
+        ?>
+        <?php //getTemplatePart('block/product-interest', null, array('slug' => 'abc')); ?>
+        <?php getTemplatePart('block/product-interest',  null, array('category_cat' => $key_slug)); ?>
       </div>
       <div id="comment-single">
             <div id="fb-root"></div>
@@ -134,7 +144,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 var js, fjs = d.getElementsByTagName(s)[0];
                 if (d.getElementById(id)) return;
                 js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5&appId=1624371511157699";
+                js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5&appId=1624371511157699";
                 fjs.parentNode.insertBefore(js, fjs);
               }(document, 'script', 'facebook-jssdk'));</script>
               <div class="fb-comments" data-href="<?php echo $_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>" data-width="100%" data-numposts="5"></div>

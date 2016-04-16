@@ -1,19 +1,16 @@
 <?php
-$product_cat  = isset($product_cat) ? $product_cat : 0;
-$term_id      = isset($term_id) ? $term_id : 0;
-//var_dump($product_cat);
+$category_cat = isset($category_cat) ? $category_cat : 0;
+
 //$args = array( 'post_type' => 'product', 'posts_per_page' => 1, 'product_cat' => 'thoi-trang-phu-kien', 'orderby' => 'rand' );
 $args = array (					 
   'post_status'    => 'publish',
   'order'          => 'DESC',
-  'orderby'        => 'menu_order',
+  'orderby'        => 'rand',
   'post_type'      => 'product',
-//  'product_cat'  =>$product_cat,
-  'posts_per_page' => 8,
+  'product_cat'  => implode(',', $category_cat),
+  'posts_per_page' => 12,
 );
-$the_query = new WP_Query( $args );
-//var_dump($loop);
-//?>
+$the_query = new WP_Query( $args ); ?>
 <div class="title-interest">Có thể bạn quan tâm</div>
 <div class="list-category">
   <ul class="row" id="interest-detail">

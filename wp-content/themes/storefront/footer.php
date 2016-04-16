@@ -51,7 +51,7 @@
               <div class="icon-logo"><img src="<?php echo get_template_directory_uri() ?>/images/home_10.png"></div>
               <div class="icon-text">
                 <h2>Tư vấn miễn phí</h2>
-                <p>096 666 0127</p>
+                <p>090 234 1587</p>
               </div>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-6">
@@ -100,9 +100,9 @@
             
             <div class="col-md-3 col-sm-6 col-xs-12">
               <h2>TRUNG TÂM KHÁCH HÀNG</h2>
-              <p>294 Hòa bình, P. Hiệp Tân, Q. Tân Phú, TP.HCM</p>
-              <p>Email: vanlong200880@gmail.com</p>
-              <p>ĐT: 096 666 0127</p>
+              <!--<p>294 Hòa bình, P. Hiệp Tân, Q. Tân Phú, TP.HCM</p>-->
+              <p>Email: silvermartvn@gmail.com</p>
+              <p>Điện thoại: 098 339 8387 </p>
               
             </div>
           </div>
@@ -112,14 +112,14 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <p>Coppyright © 2015 silvermart. All Rights Reserved. By design <a href="#">PhamLong</a></p>
+              <p>Coppyright © 2015 silvermart. All Rights Reserved. By design <a href="http://thietkechuyennghiep.net">PhamLong</a></p>
             </div>
           </div>
         </div>
       </div>
     </footer>
     <div class="support">
-      <p><span class="icon icon-technology"></span> Tư vấn bán hàng <span>096 666 0127 </span></p>
+      <p><span class="icon icon-technology"></span> Tư vấn bán hàng <span>090 234 1587 </span></p>
     </div>
 </div>
 <script src="<?php echo get_template_directory_uri() ?>/js/jquery.js"></script>
@@ -208,7 +208,7 @@
           loadingIcon: false,
           scrollZoom: true
         });
-        //pass the images to Fancybox $("#zoom_03").bind("click", function(e) { var ez = $('#zoom_03').data('elevateZoom');	$.fancybox(ez.getGalleryList()); return false; });
+       
       });
       </script>
       
