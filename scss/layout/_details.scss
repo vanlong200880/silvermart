@@ -1,6 +1,6 @@
 .detail-page{
   h1{
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     border-bottom: 1px solid #F1F1F1;
     padding-bottom: 5px;
@@ -106,7 +106,7 @@
     cursor: pointer;
     @include border-radius(5px);
     &:hover{
-      background: red;
+      background: #86B72B;
     }
   }
   .single_variation_wrap{
@@ -126,6 +126,8 @@
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
+    text-align: center;
+    margin-top: 30px;
   }
 }
 .title-detail-content{
@@ -218,4 +220,148 @@
   .tab-pane{
     margin-top: 15px;
   }
+}
+.elevatezoom-gallery{
+  border: 1px solid #DDD;
+  display: inline-block;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.elevatezoom-gallery.active{
+  border-color: $color-default;
+}
+div.images{
+  position: relative;
+  margin-top: 25px;
+}
+#gallery_01{
+  height: 395px;
+  overflow: hidden;
+  position: relative;
+  width: 65px;
+  padding: 25px 0;
+  .controls{
+    position: absolute;
+    z-index: 9;
+    width: 65px;
+    display: inline-block;
+    top: 0;
+    a{
+      display: inline-block;
+      width: 65px;
+      cursor: pointer;
+    }
+    a.nextPage.disabled,
+    a.prevPage.disabled{
+      visibility: hidden;
+    }
+  }
+  .bottom-control{
+    bottom: 0;
+    top: auto;
+  }
+}
+.trademark{
+  margin-bottom: 5px;
+  a{
+    font-weight: bold;
+    color: $color-default;
+  }
+}
+
+.frame {
+	width: 65px;
+	height: 346px;
+/*	overflow: hidden;
+  display: block;*/
+  .slidee {
+    padding: 20px 25px;
+    background: #fff;
+    ul.items {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      font-size: 24px;
+      line-height: 100px;
+      li {
+        float: left;
+        width: 100%;
+        height: 100px;
+        margin: 0 0 1px;
+        padding: 0;
+        background: #333;
+        color: #ddd;
+        text-align: center;
+        cursor: pointer;
+      }
+      li.active {
+        color: #fff;
+        background: #a03232;
+      }
+    }
+  }
+}
+
+/* Scrollbar */
+.scrollbar {
+	position: absolute;
+	right: 10px;
+	width: 2px;
+	height: 600px;
+	background: #ccc;
+	line-height: 0;
+}
+.scrollbar .handle {
+	width: 100%;
+	height: 100px;
+	background: #292a33;
+	cursor: pointer;
+}
+.scrollbar .handle .mousearea {
+	position: absolute;
+	top: 0;
+	left: -10px;
+	width: 22px;
+	height: 100%;
+}
+
+/* Controls */
+.controls { 
+  margin: 0 0; 
+  text-align: center;
+  font-size: 18px;
+}
+.interest{
+  .list-category{
+    padding: 0 15px 0 30px;
+    position: relative;
+    li{
+      width: 100%;
+    }
+    .owl-buttons{
+      div{
+        position: absolute;
+        top: 40%;
+      }
+      div.owl-prev{
+        left: -30px;
+      }
+      div.owl-next{
+        right: -30px;
+      }
+    }
+  }
+  
+}
+.title-interest{
+  border-bottom: 2px solid $color-default;
+  padding-bottom: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+a.remove{
+  font-size: 20px;
 }

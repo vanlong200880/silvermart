@@ -45,12 +45,39 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div class="col-md-5 col-sm-5 col-xs-12">
       <div class="row">
         <div class="col-md-2 col-sm-2 col-xs-2">
-          <?php do_action( 'woocommerce_product_thumbnails' ); ?>
+
+          <div id="gallery_01">
+            <div class="controls center">
+              <p>
+                <a class="prevPage"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+              </p>
+            </div>
+            <div id="smart" class="smart frame">
+              <ul>
+              <?php do_action( 'woocommerce_product_thumbnails' ); ?>
+             </ul>
+            </div>
+            <div class="controls bottom-control">
+              <p>
+                <a class="nextPage"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+              </p>
+            </div>
+            
+          </div>
         </div>
-        <div class="col-md-10 col-sm-10 col-xs-10"><?php do_action('woocommerce_before_single_product_detail_img_silvermart'); ?></div>
+        <div class="col-md-10 col-sm-10 col-xs-10">
+          <?php do_action('woocommerce_before_single_product_detail_img_silvermart'); ?></div>
       </div>
     </div>
     <div class="col-md-7 col-sm-7 col-xs-12">
+      <div class="trademark">
+        <?php 
+        $terms = get_the_terms( $post->ID, 'thuong-hieu' );
+        if($terms){ ?>
+        <p>Thương hiệu: <a href="<?php echo home_url(); ?>/thuong-hieu/<?php echo $terms[0]->slug; ?>"><?php echo $terms[0]->name; ?></a></p>
+      <?php } ?>
+      </div>
+      
       <h1><?php do_action('woocommerce_shop_loop_item_title_silvermart'); ?></h1>
       
       <div class="price-detail">
@@ -79,7 +106,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="col-md-12">
   <div class="row page-single-content">
-    <div class="col-md-8">
+    <div class="col-md-12">
       <ul class="nav nav-tabs" role="tablist">
         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Chi tiết sản phẩm</a></li>
         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Thông tin thương hiệu</a></li>
@@ -98,6 +125,9 @@ if ( ! defined( 'ABSPATH' ) ) {
           
         </div>
       </div>
+      <div class="interest">
+        <?php get_template_part('block/product-interest'); ?>
+      </div>
       <div id="comment-single">
             <div id="fb-root"></div>
               <script>(function(d, s, id) {
@@ -112,7 +142,7 @@ if ( ! defined( 'ABSPATH' ) ) {
       
     </div>
     
-    <div class="col-md-4">
+    <div class="col-md-12">
       <?php do_action( 'woocommerce_after_single_product_summary_related' ); ?>
     </div>
   </div>

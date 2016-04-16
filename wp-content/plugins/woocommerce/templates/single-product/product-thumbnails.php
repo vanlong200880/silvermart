@@ -27,7 +27,7 @@ if ( $attachment_ids ) {
 	$loop 		= 0;
 	$columns 	= apply_filters( 'woocommerce_product_thumbnails_columns', 3 );
 	?>
-	<div class="thumbnails <?php echo 'columns-' . $columns; ?>"><?php
+	<?php
 
 		foreach ( $attachment_ids as $attachment_id ) {
 
@@ -40,6 +40,8 @@ if ( $attachment_ids ) {
 				$classes[] = 'last';
 
 			$image_link = wp_get_attachment_url( $attachment_id );
+      $full_link = wp_get_attachment_image_src($attachment_id, array(390,390));
+      $full_thumb = wp_get_attachment_image_src($attachment_id, array(390,390));
 
 			if ( ! $image_link )
 				continue;
@@ -49,16 +51,16 @@ if ( $attachment_ids ) {
 
 			$image       = wp_get_attachment_image( $attachment_id, apply_filters( 'single_product_small_thumbnail_size', 'shop_thumbnail' ), 0, $attr = array(
 				'title'	=> $image_title,
-				'alt'	=> $image_title
+				'alt'	=> $image_title,
+//        'id'  => 'gallery_01'
 				) );
 
 			$image_class = esc_attr( implode( ' ', $classes ) );
 
-			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<a href="%s" class="%s" title="%s" data-rel="prettyPhoto[product-gallery]">%s</a>', $image_link, $image_class, $image_caption, $image ), $attachment_id, $post->ID, $image_class );
-
+			echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', sprintf( '<li><a data-image="%s" class="elevatezoom-gallery" data-zoom-image="%s">%s</a></li>', $full_thumb[0], $full_link[0], $image ), $attachment_id, $post->ID, $image_class );
 			$loop++;
 		}
 
-	?></div>
+	?>
 	<?php
 }

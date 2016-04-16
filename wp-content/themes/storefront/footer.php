@@ -133,23 +133,23 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-//    $(".slider-home").owlCarousel({
-//      items : 1,
-//      itemsDesktop: [1400, 1],
-//      itemsDesktopSmall: [1100, 1],
-//      itemsTablet: [767, 1],
-//      itemsMobile: [500, 1],
-//      autoPlay: 4000,
-//      navigation : false,
-//      slideSpeed : 300,
-//      paginationSpeed : 400,
-//      pagination : true,
-//      paginationNumbers: true,
-//          //singleItem : true,
-//      navigationText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
-//      rewindNav : true,
-//      stopOnHover : true
-//    });
+    $("#interest-detail").owlCarousel({
+      items : 4,
+      itemsDesktop: [1400, 4],
+      itemsDesktopSmall: [1100, 4],
+      itemsTablet: [767, 3],
+      itemsMobile: [500, 2],
+      autoPlay: false,
+      navigation : true,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      pagination : false,
+      paginationNumbers: false,
+          //singleItem : true,
+      navigationText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+      rewindNav : true,
+      stopOnHover : true
+    });
     
     $(".header-navigation").hover(
       function () {
@@ -193,7 +193,25 @@
 				});
 			});
 		</script> 
-    
+
+    <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/jquery.elevatezoom.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/sly.min.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/plugins.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/main.js"></script>
+      <script>
+      jQuery(document).ready(function(){
+        $("#zoom_01").elevateZoom({
+          gallery:'gallery_01', 
+          cursor: 'pointer', 
+          galleryActiveClass: 'active', 
+          imageCrossfade: true, 
+          loadingIcon: false,
+          scrollZoom: true
+        });
+        //pass the images to Fancybox $("#zoom_03").bind("click", function(e) { var ez = $('#zoom_03').data('elevateZoom');	$.fancybox(ez.getGalleryList()); return false; });
+      });
+      </script>
+      
 
 
 <?php wp_footer(); ?>

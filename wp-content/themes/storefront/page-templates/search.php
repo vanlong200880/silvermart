@@ -36,7 +36,7 @@ get_header();
           }
           $the_query = new WP_Query( $args );
           if($the_query->have_posts()){  ?>
-          <ul class="row">
+          <ul class="row posts-selector-infinite-scroll">
           <?php 
           while ($the_query->have_posts()){
             $the_query->the_post(); ?>

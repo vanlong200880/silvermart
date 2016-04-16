@@ -50,6 +50,13 @@ function getTemplatePart($slug = null, $name = null, array $params = array()) {
 //function wpa83367_price_html( $price, $product ){
 //    return str_replace( '<ins>', ' <ins>', $price );
 //}
+function meks_disable_srcset( $sources ) {
+    return false;
+}
+ 
+add_filter( 'wp_calculate_image_srcset', 'meks_disable_srcset' );
 
 
-
+function woocommerce_output_related_products() {
+ woocommerce_related_products(12,2);       // Display 4 products in 2 columns
+ }

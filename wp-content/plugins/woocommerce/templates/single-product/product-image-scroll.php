@@ -27,8 +27,11 @@ global $post, $woocommerce, $product;
 		if ( has_post_thumbnail() ) {
 			$image_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
 			$image_link    = wp_get_attachment_url( get_post_thumbnail_id() );
-			$image         = get_the_post_thumbnail( $post->ID, apply_filters( 'single_product_large_thumbnail_size', 'shop_single' ), array(
-				'title'	=> get_the_title( get_post_thumbnail_id() )
+      $full_link = wp_get_attachment_image_src(get_post_thumbnail_id(), array(390,390));
+			$image         = get_the_post_thumbnail( $post->ID, array(390,390), array(
+				'title'	=> get_the_title( get_post_thumbnail_id() ),
+        'data-zoom-image' => $full_link[0],
+        'id' => 'zoom_01'
 			) );
 
 			$attachment_count = count( $product->get_gallery_attachment_ids() );
@@ -39,7 +42,7 @@ global $post, $woocommerce, $product;
 				$gallery = '';
 			}
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '">%s</a>', $image_link, $image_caption, $image ), $post->ID );
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '%s', $image ), $post->ID );
 
 		} else {
 
