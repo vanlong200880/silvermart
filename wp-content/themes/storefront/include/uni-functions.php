@@ -60,3 +60,22 @@ add_filter( 'wp_calculate_image_srcset', 'meks_disable_srcset' );
 function woocommerce_output_related_products() {
  woocommerce_related_products(12,2);       // Display 4 products in 2 columns
  }
+ 
+ function tp_custom_checkout_fields( $fields ) {
+ // Ẩn mã bưu chính
+ unset( $fields['postcode'] );
+ 
+ // Ẩn địa chỉ thứ hai
+ unset( $fields['address_2'] );
+ 
+ // Đổi tên Bang / Hạt thành Tỉnh / Thành
+ $fields['state']['label'] = 'Tỉnh / Thành';
+unset( $fields['country'] );
+ 
+ // Đổi tên Tỉnh / Thành phố thành Quận / Huyện
+ $fields['city']['label'] = 'Quận / Huyện';
+ unset( $fields['city'] );
+ 
+ return $fields;
+}
+add_filter( 'woocommerce_default_address_fields', 'tp_custom_checkout_fields' );

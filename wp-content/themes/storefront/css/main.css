@@ -331,7 +331,7 @@ ul.menu-left {
     padding-right: 10px;
     margin-top: 5px; }
     .list-category ul li .item .title p {
-      height: 46px;
+      height: 40px;
       line-height: 20px;
       border-bottom: 1px solid #DDD;
       overflow: hidden; }
@@ -526,7 +526,8 @@ ul.menu-left {
     border-bottom: 2px solid #7dad23;
     position: relative;
     bottom: -2px;
-    padding-bottom: 4px; }
+    padding-bottom: 4px;
+    width: 100%; }
 
 .cart-empty {
   min-height: 200px;
@@ -623,7 +624,8 @@ ul.menu-left {
   .entry-content #order_review {
     padding: 10px;
     border: 1px solid #DDD;
-    background: #FFF; }
+    background: #FFF;
+    float: left; }
   .entry-content #order_review .shop_table {
     width: 100%; }
     .entry-content #order_review .shop_table tbody tr {
@@ -668,6 +670,8 @@ ul.menu-left {
     padding: 10px; }
     #customer_details .col-1 p input {
       height: 40px; }
+    #customer_details .col-1 p input[name='createaccount'] {
+      height: auto; }
   #customer_details .col-1 .select2-container {
     width: 50% !important; }
   #customer_details .col-1 .country_select {
@@ -713,6 +717,50 @@ ul.menu-left {
 .col2-set {
   width: 54.9411764706% !important;
   margin-right: 3.8823529412% !important; }
+
+.form-row {
+  margin-bottom: 15px; }
+
+#ship-to-different-address .checkbox {
+  display: inline-block; }
+
+.type-page.status-publish.hentry .woocommerce table {
+  width: 100%; }
+.type-page.status-publish.hentry .woocommerce h2 {
+  border-bottom: 2px solid #7dad23;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+  padding-bottom: 5px; }
+.type-page.status-publish.hentry .woocommerce .shop_table.order_details thead th {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #f5f5f5; }
+.type-page.status-publish.hentry .woocommerce .shop_table.order_details tbody .order_item {
+  border-bottom: 1px solid #f5f5f5;
+  height: 30px;
+  line-height: 30px; }
+.type-page.status-publish.hentry .woocommerce .shop_table.order_details tfoot td,
+.type-page.status-publish.hentry .woocommerce .shop_table.order_details tfoot th {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #f5f5f5; }
+.type-page.status-publish.hentry header {
+  height: auto;
+  background: transparent;
+  border-bottom: none; }
+.type-page.status-publish.hentry header.title h3 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #7dad23;
+  margin-top: 15px; }
+.type-page.status-publish.hentry .shop_table.customer_details {
+  width: 100%; }
+  .type-page.status-publish.hentry .shop_table.customer_details tr {
+    border-bottom: 1px solid #f5f5f5; }
+    .type-page.status-publish.hentry .shop_table.customer_details tr td {
+      height: 30px; }
 
 .list-category h1 {
   border-bottom: 2px solid #7dad23;
@@ -1360,7 +1408,44 @@ footer .coppyright {
     background-color: #7dad23; }
 
   .slider-home {
-    height: auto; } }
+    height: auto; }
+
+  .list-category ul li .item .image img {
+    height: auto; }
+
+  .emty-data {
+    font-size: 18px; }
+
+  table.cart .quantity .qty {
+    width: 80px;
+    max-width: 100%; }
+
+  .col2-set {
+    width: 100% !important;
+    margin-right: 0 !important;
+    float: left; }
+
+  .entry-content #order_review_heading {
+    border: none;
+    display: block;
+    width: 100%;
+    float: left;
+    margin-top: 30px; }
+
+  .entry-content #order_review_heading {
+    padding: 10px 10px 10px 0; }
+
+  #customer_details .col-2 h3 {
+    margin-top: 15px; }
+
+  .woocommerce-thankyou-order-details.order_details li {
+    width: 50%;
+    border-right: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.1); }
+    .woocommerce-thankyou-order-details.order_details li:nth-child(1), .woocommerce-thankyou-order-details.order_details li:nth-child(2) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    .woocommerce-thankyou-order-details.order_details li:nth-child(1), .woocommerce-thankyou-order-details.order_details li:nth-child(3) {
+      border-left: none; } }
 @media (min-width: 481px) and (max-width: 767px) {
   .page-home-title a.all {
     font-size: 14px; }

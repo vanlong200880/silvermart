@@ -33,6 +33,8 @@ get_header();
           );
           if($type != 'all'){
             $args['category_name'] = $type;
+          }else{
+            $args['category_name'] = 'thoi-trang-phu-kien,lam-dep-suc-khoe,dien-gia-dung,me-va-be,cam-trai-du-lich,phu-kien-thiet-bi-so,hang-cong-nghe,tuoi-moi-moi-ngay,silver-unique';
           }
           $the_query = new WP_Query( $args );
           if($the_query->have_posts()){  ?>

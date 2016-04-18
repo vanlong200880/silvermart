@@ -86,7 +86,7 @@
             <li><a href="<?php echo home_url(); ?>/danh-muc/chong-lao-hoa/">Chống lão hóa</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/san-pham-tri-mun/">Sản phẩm trị mụn</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/bo-san-pham/">Bộ sản phẩm</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/skll/">SKLL</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/skii/">SKII</a></li>
           </ul>
         </div>
         <div class="list-item">

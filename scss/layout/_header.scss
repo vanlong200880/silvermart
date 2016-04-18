@@ -289,7 +289,7 @@ ul.menu-left{
           padding-right: 10px;
           margin-top: 5px;
           p{
-            height: 46px;
+            height: 40px;
             line-height: 20px;
             border-bottom: 1px solid #DDD;
             overflow: hidden;
@@ -554,6 +554,7 @@ ul.menu-left{
       position: relative;
       bottom: -2px;
       padding-bottom: 4px;
+      width: 100%;
     }
   }
 }
@@ -673,6 +674,7 @@ ul.menu-left{
     padding: 10px;
     border: 1px solid #DDD;
     background: #FFF;
+    float: left;
   }
   #order_review{
     .shop_table{
@@ -740,6 +742,9 @@ ul.menu-left{
       input{
         height: 40px;
       }
+      input[name='createaccount']{
+        height: auto;
+      }
     }
     .select2-container{
       width: 50% !important;
@@ -803,4 +808,74 @@ ul.menu-left{
 .col2-set {
   width: 54.9411764706% !important;
   margin-right: 3.8823529412% !important;
+}
+.form-row{
+  margin-bottom: 15px;
+}
+#ship-to-different-address{
+  .checkbox{
+    display: inline-block;
+  }
+}
+.type-page.status-publish.hentry{
+  .woocommerce{
+    table{
+      width: 100%;
+    }
+    h2{
+      border-bottom: 2px solid $color-default;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 15px;
+      padding-bottom: 5px;
+    }
+    .shop_table.order_details{
+      thead{
+        th{
+          height: 30px;
+          line-height: 30px;
+          border-bottom: 1px solid #f5f5f5;
+        }
+      }
+      tbody{
+        .order_item{
+          border-bottom: 1px solid #f5f5f5;
+          height: 30px;
+          line-height: 30px;
+        }
+      }
+      tfoot{
+        td,
+        th{
+          height: 30px;
+          line-height: 30px;
+          border-bottom: 1px solid #f5f5f5;
+        }
+      }
+    }
+  }
+  header{
+    height: auto;
+    background: transparent;
+    border-bottom: none;
+    
+  }
+  header.title{
+    h3{
+      font-size: 16px;
+      font-weight: bold;
+      padding-bottom: 3px;
+      border-bottom: 2px solid $color-default;
+      margin-top: 15px;
+    }
+  }
+  .shop_table.customer_details{
+    width: 100%;
+    tr{
+      border-bottom: 1px solid #f5f5f5;
+      td{
+        height: 30px;
+      }
+    }
+  }
 }
