@@ -1,34 +1,3 @@
-<?php
-/**
- * The template for displaying the footer.
- *
- * Contains the closing of the #content div and all content after
- *
- * @package storefront
- */
-?>
-
-<!--		</div> .col-full 
-	</div> #content 
-
-	<?php // do_action( 'storefront_before_footer' ); ?>
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="col-full">
-
-			<?php
-			/**
-			 * @hooked storefront_footer_widgets - 10
-			 * @hooked storefront_credit - 20
-			 */
-//			do_action( 'storefront_footer' ); ?>
-
-		</div> .col-full 
-	</footer> #colophon 
-
-	<?php // do_action( 'storefront_after_footer' ); ?>
-
-</div> #page -->
 <footer>
       <div class="footer-top">
         <div class="container">
@@ -91,10 +60,9 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
               <h2>KẾT NỐI VỚI SILVERMART</h2>
               <ul class="connect">
-                <li><a href="#"><span class="icon icon-social-2"></span></a></li>
-                <li><a href="#"><span class="icon icon-social"></span></a></li>
-                <li><a href="#"><span class="icon icon-social-1"></span></a></li>
-                <li><a href="#"><span class="icon icon-circle"></span></a></li>
+                <li><a href="https://www.facebook.com/silvermartvn" target="_blank"><span class="icon icon-social-2"></span></a></li>
+                <li><a href="#"><span class="icon icon-social-1" target="_blank"></span></a></li>
+                <li><a href="#"><span class="icon icon-circle" target="_blank"></span></a></li>
               </ul>
             </div>
             

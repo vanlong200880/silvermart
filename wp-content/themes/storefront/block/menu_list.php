@@ -175,7 +175,7 @@
       <?php endif; ?>
     </div>
   </li>
-  <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/cam-trai-du-lich/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-tool"></span> Cắm trại - du lịch</a>
+  <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/the-thao-du-lich/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-tool"></span> Thể thao - du lịch</a>
     <div class="menu-item">
       <div class="list-cate">
         <div class="list-item">
