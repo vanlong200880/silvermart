@@ -3,31 +3,51 @@
         <div class="container">
           <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-6">
-              <div class="icon-logo"><img src="<?php echo get_template_directory_uri() ?>/images/home_06.png"></div>
+              <div class="icon-logo">
+                <a href="<?php echo home_url() ?>/chinh-sach-chat-luong/">
+                  <img src="<?php echo get_template_directory_uri() ?>/images/home_06.png">
+                </a>
+                  </div>
               <div class="icon-text">
+                <a href="<?php echo home_url() ?>/chinh-sach-chat-luong/">
                 <h2>Sản phẩm</h2>
                 <p>Chính hãng</p>
+                </a>
               </div>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-6">
-              <div class="icon-logo"><img src="<?php echo get_template_directory_uri() ?>/images/home_08.png"></div>
+              <div class="icon-logo">
+                <a href="<?php echo home_url() ?>/quy-dinh-giao-hang/">
+                  <img src="<?php echo get_template_directory_uri() ?>/images/home_08.png">
+                </a>
+              </div>
               <div class="icon-text">
-                <h2>Giao hàng tận nơi</h2>
-                <p>63 TỈNH THÀNH</p>
+                <a href="<?php echo home_url() ?>/quy-dinh-giao-hang/">
+                  <h2>Giao hàng tận nơi</h2>
+                  <p>63 TỈNH THÀNH</p>
+                </a>
               </div>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-6">
-              <div class="icon-logo"><img src="<?php echo get_template_directory_uri() ?>/images/home_10.png"></div>
+              <div class="icon-logo">
+                <img src="<?php echo get_template_directory_uri() ?>/images/home_10.png">
+                </div>
               <div class="icon-text">
                 <h2>Tư vấn miễn phí</h2>
                 <p>090 234 1587</p>
               </div>
             </div>
             <div class="col-md-3 col-sm-3 col-xs-6">
-              <div class="icon-logo"><img src="<?php echo get_template_directory_uri() ?>/images/home_03.png"></div>
+              <div class="icon-logo">
+                <a href="<?php echo home_url() ?>/quy-dinh-bao-hanh/">
+                <img src="<?php echo get_template_directory_uri() ?>/images/home_03.png">
+                </a>
+                </div>
               <div class="icon-text">
+                <a href="<?php echo home_url() ?>/quy-dinh-bao-hanh/">
                 <h2>Chính sách đổi trả</h2>
                 <p>LINH HOẠT</p>
+                </a>
               </div>
               </div>
           </div>
@@ -61,15 +81,15 @@
               <h2>KẾT NỐI VỚI SILVERMART</h2>
               <ul class="connect">
                 <li><a href="https://www.facebook.com/silvermartvn" target="_blank"><span class="icon icon-social-2"></span></a></li>
-                <li><a href="#"><span class="icon icon-social-1" target="_blank"></span></a></li>
-                <li><a href="#"><span class="icon icon-circle" target="_blank"></span></a></li>
+                <li><a href="https://www.youtube.com/channel/UCeqmWgrp9eDU_N9c5e3rM9w"><span class="icon icon-social-1" target="_blank"></span></a></li>
+                <li><a href="https://plus.google.com/u/0/109101598917448396074"><span class="icon icon-circle" target="_blank"></span></a></li>
               </ul>
             </div>
             
             <div class="col-md-3 col-sm-6 col-xs-12">
               <h2>TRUNG TÂM KHÁCH HÀNG</h2>
               <!--<p>294 Hòa bình, P. Hiệp Tân, Q. Tân Phú, TP.HCM</p>-->
-              <p>Email: silvermartvn@gmail.com</p>
+              <p>Email: <a href="mailto:silvermartvn@gmail.com">silvermartvn@gmail.com</a></p>
               <p>Điện thoại: 098 339 8387 </p>
               
             </div>
@@ -174,7 +194,11 @@
           galleryActiveClass: 'active', 
           imageCrossfade: true, 
           loadingIcon: false,
-          scrollZoom: true
+          scrollZoom: false,
+          zoomWindowPosition: 0,
+          borderSize: 2,
+//          tint: true
+//          lenszoom: true,
         });
        
       });

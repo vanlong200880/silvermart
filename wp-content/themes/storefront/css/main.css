@@ -291,7 +291,7 @@ ul.menu-left {
   .list-category ul li .item .image {
     position: relative; }
     .list-category ul li .item .image img {
-      height: 275px; }
+      /*height: 275px;*/ }
     .list-category ul li .item .image span {
       position: absolute;
       top: 5px;
@@ -1017,7 +1017,6 @@ div.images {
 .trademark {
   margin-bottom: 5px; }
   .trademark a {
-    font-weight: bold;
     color: #7dad23; }
 
 .frame {
@@ -1137,6 +1136,8 @@ footer .footer-page h2 {
   margin-bottom: 10px; }
 footer .footer-page ul {
   line-height: 22px; }
+  footer .footer-page ul li a:hover {
+    color: #7dad23; }
 footer .footer-page ul.connect li {
   display: inline-block; }
   footer .footer-page ul.connect li a {

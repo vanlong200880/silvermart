@@ -35,6 +35,13 @@ footer{
     }
     ul{
       line-height: 22px;
+      li{
+        a{
+          &:hover{
+            color: $color-default;
+          }
+        }
+      }
     }
     ul.connect{
       li{

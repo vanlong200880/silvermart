@@ -93,6 +93,10 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="views-detail"><i class="fa fa-angle-double-down"></i> Xem chi tiết</div>
       <script type="text/javascript">
         jQuery(document).ready(function($){
+          $('html, body').animate({
+              scrollTop: $("#main").offset().top -50
+            }, 1000);
+          
           $(".views-detail").click(function() {
             $('html, body').animate({
               scrollTop: $(".page-single-content").offset().top -50

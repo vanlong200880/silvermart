@@ -23,7 +23,7 @@ get_header();
         if(!empty($type) && !empty($keyword)):
           $paged = get_query_var('paged') ? get_query_var('paged') : 1;
           $args = array(
-            'post_status' => 'published',
+            'post_status' => 'publish',
             'order'          => 'DESC',
             'orderby'        => 'menu_order,post_date',
             'post_type'      => 'product',
@@ -31,12 +31,13 @@ get_header();
             'paged'          => $paged,
             'posts_per_page' => 80
           );
-          if($type != 'all'){
-            $args['category_name'] = $type;
-          }else{
-            $args['category_name'] = 'thoi-trang-phu-kien,lam-dep-suc-khoe,dien-gia-dung,me-va-be,cam-trai-du-lich,phu-kien-thiet-bi-so,hang-cong-nghe,tuoi-moi-moi-ngay,silver-unique';
-          }
+//          if($type != 'all'){
+//            $args['category_name'] = $type;
+//          }else{
+////            $args['category_name'] = 'thoi-trang-phu-kien,lam-dep-suc-khoe,dien-gia-dung,me-va-be,cam-trai-du-lich,phu-kien-thiet-bi-so,hang-cong-nghe,tuoi-moi-moi-ngay,silver-unique';
+//          }
           $the_query = new WP_Query( $args );
+//          var_dump($the_query);
           if($the_query->have_posts()){  ?>
           <ul class="row posts-selector-infinite-scroll">
           <?php 
