@@ -57,7 +57,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
-              <h2>HỖ TRỢ KHÁCH HÀNG</h2>
+              <h2>Hỗ trợ khách hàng</h2>
               <ul>
                 <li><a href="<?php echo home_url() ?>/huong-dan-dat-hang/">Hướng dẫn đặt hàng</a></li>
                 <li><a href="<?php echo home_url() ?>/huong-dan-thanh-toan/">Hướng dẫn thanh toán</a></li>
@@ -68,17 +68,23 @@
             </div>
             
             <div class="col-md-3 col-sm-6 col-xs-12">
-              <h2>VỀ SILVERMART</h2>
+              <h2>Về Silvermart</h2>
               <ul>
                 <li><a href="<?php echo home_url() ?>/ve-chung-toi/">Về chúng tôi</a></li>
                 <li><a href="<?php echo home_url() ?>/dien-khoan-su-dung/">Điều khoản sử dụng</a></li>
                 <li><a href="<?php echo home_url() ?>/chinh-sach-chat-luong/">Chính sách chất lượng</a></li>
                 <li><a href="<?php echo home_url() ?>/bao-mat-thong-tin/">Bảo mật thông tin</a></li>
               </ul>
+              
             </div>
             
             <div class="col-md-3 col-sm-6 col-xs-12">
-              <h2>KẾT NỐI VỚI SILVERMART</h2>
+              <h2>Hợp tác & Liên kết</h2>
+              <ul>
+                <li><a href="<?php echo home_url() ?>/hop-tac-lien-ket/">Bán hàng cùng Silvermart</a></li>
+                
+              </ul>
+              <h2>Kết nối với Silvermart</h2>
               <ul class="connect">
                 <li><a href="https://www.facebook.com/silvermartvn" target="_blank"><span class="icon icon-social-2"></span></a></li>
                 <li><a href="https://www.youtube.com/channel/UCeqmWgrp9eDU_N9c5e3rM9w"><span class="icon icon-social-1" target="_blank"></span></a></li>
@@ -87,7 +93,7 @@
             </div>
             
             <div class="col-md-3 col-sm-6 col-xs-12">
-              <h2>TRUNG TÂM KHÁCH HÀNG</h2>
+              <h2>Trung tâm hỗ trợ khách hàng</h2>
               <!--<p>294 Hòa bình, P. Hiệp Tân, Q. Tân Phú, TP.HCM</p>-->
               <p>Email: <a href="mailto:silvermartvn@gmail.com">silvermartvn@gmail.com</a></p>
               <p>Điện thoại: 098 339 8387 </p>

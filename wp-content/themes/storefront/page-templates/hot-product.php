@@ -22,7 +22,7 @@ get_header();
           $args = array(
               'post_status' => 'published',
               'order'          => 'DESC',
-              'orderby'        => 'menu_order,post_date',
+              'orderby'        => 'parent,menu_order,post_date',
               'post_type'      => 'product',
               'meta_query'     => array(
                 array(

@@ -25,7 +25,7 @@ get_header();
           $args = array(
             'post_status' => 'publish',
             'order'          => 'DESC',
-            'orderby'        => 'menu_order,post_date',
+            'orderby'        => 'parent,menu_order,post_date',
             'post_type'      => 'product',
             's'              => $keyword,
             'paged'          => $paged,

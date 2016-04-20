@@ -762,6 +762,7 @@ ul.menu-left {
     .type-page.status-publish.hentry .shop_table.customer_details tr td {
       height: 30px; }
 
+.list-category h2,
 .list-category h1 {
   border-bottom: 2px solid #7dad23;
   font-size: 16px;
@@ -1130,7 +1131,6 @@ footer .footer-top {
       padding-top: 5px; }
 footer .footer-page h2 {
   font-size: 16px;
-  text-transform: uppercase;
   font-weight: bold;
   margin-top: 15px;
   margin-bottom: 10px; }

@@ -23,8 +23,41 @@ get_header(); ?>
 <?php get_template_part('block/menu'); ?>
 <div class="list-category">
   <div class="container">
-
-	<?php
+    <?php
+    $category = get_queried_object();
+    $args = array(
+      'orderby'           => 'term_id',
+      'order'             => 'ASC',
+      'parent'            => $category->term_id,
+      'taxonomy'          => 'product_cat',
+      'hide_empty'        => 0
+    );
+    $categories = get_categories( $args );
+    if($categories){
+      foreach($categories as $cat){
+        if($cat->count > 0){ ?>
+    <h2 class="page-title"><a href="<?php echo get_term_link($cat->slug, 'product_cat') ?>"><?php echo $cat->name; ?></a> <a href="<?php echo get_term_link($cat->slug, 'product_cat') ?>" class="all pull-right">Tất cả</a></h2>
+          <?php $args = array(
+            'post_status' => 'publish',
+            'order'          => 'DESC',
+            'orderby'        => 'post_date',
+            'post_type'      => 'product',
+            'product_cat'    => $cat->slug,
+            'posts_per_page' => 12
+          );
+          $the_query = new WP_Query( $args );
+            if($the_query->have_posts()){ ?>
+              <?php woocommerce_product_loop_start(); ?>
+              <?php while ($the_query->have_posts()){
+                $the_query->the_post(); ?>
+                <?php wc_get_template_part( 'content', 'product' ); ?>
+              <?php } ?>
+              <?php woocommerce_product_loop_end(); ?>
+            <?php }
+          }
+      }
+    }else{ ?>
+          <?php
 		/**
 		 * woocommerce_before_main_content hook.
 		 *
@@ -49,35 +82,38 @@ get_header(); ?>
 			 */
 			do_action( 'woocommerce_archive_description' );
 		?>
+          		<?php if (have_posts() ) : ?>
 
-		<?php if ( have_posts() ) : ?>
+              <?php woocommerce_product_loop_start(); ?>
 
-			<?php woocommerce_product_loop_start(); ?>
+                <?php //woocommerce_product_subcategories(); ?>
 
-				<?php woocommerce_product_subcategories(); ?>
+                <?php while (have_posts() ) : the_post(); ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+                  <?php wc_get_template_part( 'content', 'product' ); ?>
 
-					<?php wc_get_template_part( 'content', 'product' ); ?>
+                <?php endwhile; // end of the loop. ?>
 
-				<?php endwhile; // end of the loop. ?>
+              <?php woocommerce_product_loop_end(); ?>
 
-			<?php woocommerce_product_loop_end(); ?>
+              <?php
+                /**
+                 * woocommerce_after_shop_loop hook.
+                 *
+                 * @hooked woocommerce_pagination - 10
+                 */
+              do_action( 'woocommerce_after_shop_loop_paging' );
+              ?>
 
-			<?php
-				/**
-				 * woocommerce_after_shop_loop hook.
-				 *
-				 * @hooked woocommerce_pagination - 10
-				 */
-      do_action( 'woocommerce_after_shop_loop_paging' );
-			?>
+            <?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
 
-		<?php elseif ( ! woocommerce_product_subcategories( array( 'before' => woocommerce_product_loop_start( false ), 'after' => woocommerce_product_loop_end( false ) ) ) ) : ?>
+              <?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
-			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
-
-		<?php endif; ?>
+            <?php endif; ?>
+              <?php wp_reset_postdata(); ?>
+      
+    <?php }
+    ?>
 </div>
 </div>
 	<?php
