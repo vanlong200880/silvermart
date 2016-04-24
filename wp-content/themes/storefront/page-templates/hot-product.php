@@ -10,13 +10,12 @@
 get_header(); 
 
 ?>
-<section class="categories list-category">
+<section class="categories list-category hot-category">
 	<div class="container">
     <div class="col-md-12">
       <h1 class="page-title">Giá rẻ mỗi ngày</h1>
     </div>
 		<div class="col-md-12">
-			
 				<?php
           $paged = get_query_var('paged') ? get_query_var('paged') : 1;
           $args = array(
@@ -39,7 +38,7 @@ get_header();
           <?php 
           while ($the_query->have_posts()){
             $the_query->the_post(); ?>
-            <li class="col-md-3">
+            <li class="col-md-3 col-sm-4 col-xs-6">
               <div class="item">
                 <a  class="full-link" href="<?php the_permalink(); ?>"></a>
                 <div class="image">
@@ -52,16 +51,20 @@ get_header();
                   <?php else: ?>
                   <?php endif; ?>
                   <a href="<?php the_permalink(); ?>">Xem ngay</a>
+                  <div class="hot-countdown">
+                    <?php echo do_shortcode('[product_sale id="'.  get_the_ID().'"]'); ?>
+                  </div>
                 </div>
+                
                 <div class="title">
                   <p><a href="<?php the_permalink(); ?>" title="<?php the_title() ?>"><?php the_title() ?></a></p>
                 </div>
                 <div class="price">
                   <?php do_action('woocommerce_single_product_price'); ?>
-                  <p class="views">
+                  <div class="views">
+                    <?php do_action('woocommerce_single_product_stock'); ?>
                     <i class="fa fa-eye"></i> <?php echo getPostViews(get_the_ID()); ?>
-                  </p>
-                  
+                  </div>
                 </div>
               </div>
             </li>

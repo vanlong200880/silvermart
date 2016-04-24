@@ -289,7 +289,9 @@ ul.menu-left {
     height: 100%;
     z-index: 9; }
   .list-category ul li .item .image {
-    position: relative; }
+    position: relative;
+    height: 273px;
+    overflow: hidden; }
     .list-category ul li .item .image img {
       /*height: 275px;*/ }
     .list-category ul li .item .image span {
@@ -335,6 +337,14 @@ ul.menu-left {
       line-height: 20px;
       border-bottom: 1px solid #DDD;
       overflow: hidden; }
+  .list-category ul li .item .custom-field {
+    height: 60px;
+    line-height: 20px;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px; }
+    .list-category ul li .item .custom-field p {
+      line-height: 20px; }
   .list-category ul li .item .price {
     padding-left: 10px;
     padding-right: 10px;
@@ -363,6 +373,7 @@ ul.menu-left {
         font-style: normal; }
       .list-category ul li .item .price p.old span {
         float: right; }
+    .list-category ul li .item .price div.views,
     .list-category ul li .item .price p.views {
       position: absolute;
       right: 10px;
@@ -374,6 +385,8 @@ ul.menu-left {
   border-color: #7dad23; }
   .list-category ul li:hover .item .image a {
     display: block; }
+.list-category ul li:hover .hot-countdown {
+  display: block; }
 
 .page-home-title {
   border-bottom: 2px solid #7dad23;
@@ -784,6 +797,68 @@ ul.menu-left {
   bottom: 0;
   right: 0; }
 
+.free-shipping td {
+  padding: 5px;
+  background: #7dad23;
+  color: #FFF; }
+
+.hot-category li.product .ob_wrapper .ob_discount {
+  display: none; }
+.hot-category li.product .ob_wrapper span {
+  display: none; }
+.hot-category .hot-countdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background: #f5f5f5;
+  display: none; }
+  .hot-category .hot-countdown .ob_shortcode.woocommerce ul.products li.product {
+    margin: 0; }
+    .hot-category .hot-countdown .ob_shortcode.woocommerce ul.products li.product .counter-group {
+      margin: 0; }
+    .hot-category .hot-countdown .ob_shortcode.woocommerce ul.products li.product .shortcode_products .product {
+      margin: 0; }
+  .hot-category .hot-countdown .ob_wrapper {
+    padding: 5px 0 0 0; }
+
+.page-title .pull-right {
+  font-style: normal;
+  font-weight: normal; }
+
+.detail-content-popup .modal-dialog {
+  margin-top: 60px; }
+.detail-content-popup .modal-content .custom-field-popup {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #DDD; }
+.detail-content-popup .modal-content .custom-field-popup {
+  color: red;
+  font-size: 16px; }
+
+.loading {
+  position: fixed;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  padding-top: 50px;
+  text-align: center;
+  display: none; }
+
+.list-silver h2 {
+  font-weight: normal;
+  font-size: 14px; }
+
+.footer-page a:hover {
+  color: #7dad23; }
+
+.admin-bar .woocommerce-checkout .payment-fixed {
+  margin-left: 0 !important;
+  top: auto !important;
+  width: 41.1764705882% !important;
+  position: relative !important; }
+
 .detail-page h1 {
   font-size: 15px;
   font-weight: bold;
@@ -795,7 +870,10 @@ ul.menu-left {
   padding-bottom: 10px;
   padding-top: 10px; }
   .detail-page .price-detail div {
-    display: inline-block; }
+    display: inline-block;
+    font-size: 28px;
+    color: red;
+    font-weight: bold; }
   .detail-page .price-detail p.cost {
     font-size: 28px;
     color: red;
@@ -809,7 +887,9 @@ ul.menu-left {
   .detail-page .price-detail p.old {
     font-size: 18px;
     display: inline-block;
-    text-decoration: line-through; }
+    text-decoration: line-through;
+    color: #8C8787;
+    font-weight: normal; }
   .detail-page .price-detail p.sale {
     display: inline-block;
     vertical-align: top;
@@ -990,7 +1070,8 @@ ul.menu-left {
 
 div.images {
   position: relative;
-  margin-top: 25px; }
+  margin-top: 25px;
+  border: 1px solid #DDD; }
 
 #gallery_01 {
   height: 395px;
@@ -1100,6 +1181,13 @@ div.images {
 
 a.remove {
   font-size: 20px; }
+
+.countdown .woocommerce-tabs {
+  margin: 0;
+  padding: 0;
+  border: none; }
+.countdown .counter-group {
+  margin: 5px 0; }
 
 /*@import "layout/login";
 @import "layout/masterpage";
@@ -1218,7 +1306,13 @@ footer .coppyright {
   #menu h2 {
     font-size: 14px;
     height: 30px;
-    line-height: 30px; } }
+    line-height: 30px; }
+
+  .list-category ul li .item .image {
+    height: 227px; }
+
+  .slider-home {
+    height: 245px; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   ul.menu-left li:hover .menu-item {
     width: 728px; }
@@ -1233,7 +1327,13 @@ footer .coppyright {
 
   #menu h2 {
     height: 36px;
-    line-height: 36px; } }
+    line-height: 36px; }
+
+  .list-category ul li .item .image {
+    height: 225px; }
+
+  .slider-home {
+    height: 320px; } }
 @media (max-width: 767px) {
   .header-for-mobile {
     background: #232f3e; }
@@ -1446,7 +1546,12 @@ footer .coppyright {
     .woocommerce-thankyou-order-details.order_details li:nth-child(1), .woocommerce-thankyou-order-details.order_details li:nth-child(2) {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
     .woocommerce-thankyou-order-details.order_details li:nth-child(1), .woocommerce-thankyou-order-details.order_details li:nth-child(3) {
-      border-left: none; } }
+      border-left: none; }
+
+  #gallery_01 {
+    width: auto; }
+    #gallery_01 .frame {
+      width: auto; } }
 @media (min-width: 481px) and (max-width: 767px) {
   .page-home-title a.all {
     font-size: 14px; }
@@ -1454,8 +1559,23 @@ footer .coppyright {
     font-size: 14px; }
   .page-home-title .tabs-home ul li a {
     font-size: 14px; } }
+@media (max-width: 480px) {
+  .list-category ul li .item .image {
+    height: 189px; }
+
+  .slider-home {
+    height: 162px; } }
 @media (max-width: 320px) {
   .page-home-title .tabs-home ul li a {
-    padding: 0 3px; } }
+    padding: 0 3px; }
+
+  .list-category ul li .item .image {
+    height: 142px; }
+
+  .slider-home {
+    height: 136px; }
+
+  .page-single-content .nav-tabs li.active a, .page-single-content .nav-tabs li a {
+    font-size: 10px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -57,9 +57,10 @@ $the_query_sale = new WP_Query( $args );
                 </div>
                 <div class="price">
                   <?php do_action('woocommerce_single_product_price'); ?>
-                  <p class="views">
+                  <div class="views">
+                    <?php do_action('woocommerce_single_product_stock'); ?>
                     <i class="fa fa-eye"></i> <?php echo getPostViews(get_the_ID()); ?>
-                  </p>
+                  </div>
                   
                 </div>
               </div>
@@ -95,9 +96,10 @@ $the_query_sale = new WP_Query( $args );
                     </div>
                     <div class="price">
                       <?php do_action('woocommerce_single_product_price'); ?>
-                      <p class="views">
+                      <div class="views">
+                        <?php do_action('woocommerce_single_product_stock'); ?>
                         <i class="fa fa-eye"></i> <?php echo getPostViews(get_the_ID()); ?>
-                      </p>
+                      </div>
 
                     </div>
                   </div>
@@ -133,9 +135,10 @@ $the_query_sale = new WP_Query( $args );
                     </div>
                     <div class="price">
                       <?php do_action('woocommerce_single_product_price'); ?>
-                      <p class="views">
+                      <div class="views">
+                        <?php do_action('woocommerce_single_product_stock'); ?>
                         <i class="fa fa-eye"></i> <?php echo getPostViews(get_the_ID()); ?>
-                      </p>
+                      </div>
 
                     </div>
                   </div>
@@ -172,9 +175,10 @@ $the_query_sale = new WP_Query( $args );
                     </div>
                     <div class="price">
                       <?php do_action('woocommerce_single_product_price'); ?>
-                      <p class="views">
+                      <div class="views">
+                        <?php do_action('woocommerce_single_product_stock'); ?>
                         <i class="fa fa-eye"></i> <?php echo getPostViews(get_the_ID()); ?>
-                      </p>
+                      </div>
 
                     </div>
                   </div>

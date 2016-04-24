@@ -2,7 +2,7 @@
   <li data-category="all"><a>Tất cả</a></li>
 <?php
   $taxonomy     = 'product_cat';
-  $orderby      = 'category_menu_order';
+  $orderby      = 'id';
   $order        = 'ASC';
   $show_count   = 0;      // 1 for yes, 0 for no
   $pad_counts   = 0;      // 1 for yes, 0 for no

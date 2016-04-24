@@ -10,29 +10,30 @@
             <li><a href="<?php echo home_url(); ?>/danh-muc/dong-ho-nu/">Đồng hồ nữ</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/don-ho-unisex/">Đồng hồ unisex</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/dong-ho-be-trai/">Đồng hồ bé trai</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/dong-ho-be-gai/">Đồng hồ bé gái</a></li>
           </ul>
           <h4><a href="<?php echo home_url(); ?>/danh-muc/giay-dep/">Giầy dép</a></h4>
           <ul>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/giay-the-thao-nam/">Giày thể thao Nam</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/giay-the-thao-nu/">Giày thể thao Nữ</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/giay-the-thao-nam/">Giày thể thao nam</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/giay-the-thao-nu/">Giày thể thao nữ</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/giay-tay/">Giày tây</a></li>
           </ul>
         </div>
         <div class="list-item">
           <h4><a href="<?php echo home_url(); ?>/danh-muc/vi-tui-xach/">Ví - Túi xách</a></h4>
           <ul>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/vi-nam/">Ví Nam</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/vi-nu/">Ví Nữ</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/vi-nam/">Ví nam</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/vi-nu/">Ví nữ</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/clutch/">Clutch</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/tui-xach-nam/">Túi xách Nam</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/tui-xach-nu/">Túi xách Nữ</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/ba-lo-nam/">Ba lô Nam</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/ba-lo-nu/">Ba lô Nữ</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/tui-xach-nam/">Túi xách nam</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/tui-xach-nu/">Túi xách nữ</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/ba-lo-nam/">Ba lô nam</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/ba-lo-nu/">Ba lô nữ</a></li>
           </ul>
           <h4><a href="<?php echo home_url(); ?>/danh-muc/day-nit/">Dây nịt</a></h4>
           <ul>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/day-nit-nam/">Dây nịt Nam</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/day-nit-nu/">Dây nịt Nữ</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/day-nit-nam/">Dây nịt nam</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/day-nit-nu/">Dây nịt nữ</a></li>
           </ul>
         </div>
         <div class="list-item">
@@ -45,11 +46,12 @@
           </ul>
           <h4><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh/">Mắt kính</a></h4>
           <ul>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-nam/">Mắt Kính Nam</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-nu/">Mắt kính Nữ</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-nam/">Mắt Kính nam</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-nu/">Mắt kính nữ</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-tre-em/">Mắt kính Trẻ em</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-unisex/">Mắt kính Unisex</a></li>
           </ul>
+          <h4><a href="<?php echo home_url(); ?>/danh-muc/bat-lua/">Bật lửa</a></h4>
         </div>
       </div>
       <?php if(wpmd_is_notdevice()): ?>
@@ -63,29 +65,28 @@
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
           <ul>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/nuoc-hoa-nam/">Nước hoa Nam</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/nuoc-hoa-nu/">Nước hoa Nữ</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/nuoc-hoa-nam/">Nước hoa nam</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/nuoc-hoa-nu/">Nước hoa nữ</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/bo-san-pham/">Bộ sản phẩm</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/my-pham-danh-cho-nam/">Mỹ phẩm dành cho Nam</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/my-pham-danh-cho-nam/">Mỹ phẩm dành cho nam</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/trang-diem-mat/">Trang điểm mắt</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/mat-na-cac-loai/">Mặt nạ các loại</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/sua-rua-mat/">Sữa rửa mặt</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/kem-duong-da/">Kem dưỡng da</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/dau-goi/">Dầu gội</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/dau-goi-dau/">Dầu gội đầu</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/sua-tam/">Sữa tắm</a></li>
           </ul>
         </div>
         <div class="list-item">
           <h4> </h4>
           <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/kem-chong-nang/">Kem chống nắng</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/kem-duong-trang-da/">Kem làm trắng da</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/tao-kieu-toc/">Tạo kiểu tóc</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/xa-bong/">Xà bông</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/san-pham-chong-nang/">Sản phẩm chống nắng</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/tinh-chat-san-pham-dac-tri/">Tinh chất- sản phẩm đặc trị</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/chong-lao-hoa/">Chống lão hóa</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/san-pham-tri-mun/">Sản phẩm trị mụn</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/bo-san-pham/">Bộ sản phẩm</a></li>
           </ul>
         </div>
         <div class="list-item">
@@ -149,6 +150,7 @@
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
           <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/danh-cho-me/">Dành cho mẹ</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/sua/">Sữa</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/ta-giay-uot-sua-tam/">Tã, giấy ướt, sửa tắm</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/thuc-pham-bo-xung/">Thực phẩm bổ sung</a></li>
@@ -185,6 +187,8 @@
             <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-da-nang/">Thiết bị đa năng</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/vali/">Vali</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/xe-dap/">Xe đạp</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/den/">Đèn</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/dung-cu-the-thao/">Dụng cụ thể thao</a></li>
           </ul>
         </div>
         <div class="list-item">
@@ -207,6 +211,7 @@
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
           <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/loa/">Loa</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/tai-nghe/">Tai nghe</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/pin-sac-du-phong/">Pin sạc dự phòng</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/bao-da-op-lung/">Bao da- ốp lưng</a></li>
@@ -234,6 +239,7 @@
           <h4><a href="#">Danh mục</a></h4>
           <ul>
             <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-theo-doi-hoat-dong/">Thiết bị theo dõi hoạt động</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/may-doc-sach/">Máy đọc sách</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-thuc-te-ao-vr/">Thiết bị thực tế ảo (VR)</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/drone/">Drone</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/thiet-bi-khac/">Thiết bị khác</a></li>
@@ -242,6 +248,7 @@
         <div class="list-item">
           <h4><a href="#">Thương hiệu</a></h4>
           <ul>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/kindle/">Kindle</a></li>
             <li><a href="<?php echo home_url(); ?>/thuong-hieu/canton/">Canton</a></li>
             <li><a href="<?php echo home_url(); ?>/thuong-hieu/logitech/">Logitech</a></li>
             <li><a href="<?php echo home_url(); ?>/thuong-hieu/seninigher/">Seninigher</a></li>

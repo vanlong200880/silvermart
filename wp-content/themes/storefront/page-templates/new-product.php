@@ -39,7 +39,7 @@ get_header();
           <?php 
           while ($the_query->have_posts()){
             $the_query->the_post(); ?>
-            <li class="col-md-3">
+            <li class="col-md-3 col-sm-4 col-xs-6">
               <div class="item">
                 <a  class="full-link" href="<?php the_permalink(); ?>"></a>
                 <div class="image">
@@ -58,9 +58,10 @@ get_header();
                 </div>
                 <div class="price">
                   <?php do_action('woocommerce_single_product_price'); ?>
-                  <p class="views">
+                  <div class="views">
+                    <?php do_action('woocommerce_single_product_stock'); ?>
                     <i class="fa fa-eye"></i> <?php echo getPostViews(get_the_ID()); ?>
-                  </p>
+                  </div>
                   
                 </div>
               </div>

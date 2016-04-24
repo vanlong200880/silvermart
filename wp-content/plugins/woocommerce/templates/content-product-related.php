@@ -48,7 +48,7 @@ if ( 0 === ( $woocommerce_loop['loop'] - 1 ) % $woocommerce_loop['columns'] || 1
 if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	$classes[] = 'last';
 }
-$classes[] = 'col-md-3 col-sm-4 col-sx-6';
+$classes[] = 'col-md-3 col-sm-4 col-xs-6';
     
 ?>
 <li <?php post_class( $classes ); ?>>

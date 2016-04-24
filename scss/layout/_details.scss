@@ -12,6 +12,9 @@
     padding-top: 10px;
     div{
       display: inline-block;
+      font-size: 28px;
+      color: red;
+      font-weight: bold;
     }
     p.cost{
       font-size: 28px;
@@ -30,6 +33,8 @@
       font-size: 18px;
       display: inline-block;
       text-decoration: line-through;
+      color: #8C8787;
+      font-weight: normal;
     }
     p.sale{
       display: inline-block;
@@ -233,6 +238,7 @@
 div.images{
   position: relative;
   margin-top: 25px;
+  border: 1px solid #DDD;
 }
 #gallery_01{
   height: 395px;
@@ -363,4 +369,14 @@ div.images{
 }
 a.remove{
   font-size: 20px;
+}
+.countdown{
+  .woocommerce-tabs{
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .counter-group{
+    margin: 5px 0;
+  }
 }

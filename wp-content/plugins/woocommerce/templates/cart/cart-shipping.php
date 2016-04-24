@@ -20,6 +20,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
+<?php if(WC()->cart->subtotal <= 500000): ?>
+<tr class="free-shipping">
+  <td colspan="2">Quý khách có thể lựa chọn thêm hàng hóa đủ 500.000đ trở lên để được miễn phí vận chuyển. </td>
+</tr>
+<?php endif; ?>
 <tr class="shipping">
 	<th><?php echo wp_kses_post( $package_name ); ?></th>
 	<td data-title="<?php echo esc_attr( $package_name ); ?>">

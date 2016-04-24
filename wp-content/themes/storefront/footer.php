@@ -196,13 +196,15 @@
       jQuery(document).ready(function(){
         $("#zoom_01").elevateZoom({
           gallery:'gallery_01', 
-          cursor: 'pointer', 
+          cursor: 'pointer',
           galleryActiveClass: 'active', 
           imageCrossfade: true, 
           loadingIcon: false,
           scrollZoom: false,
           zoomWindowPosition: 0,
           borderSize: 2,
+          zoomType	: "inner", 
+          cursor: "crosshair"
 //          tint: true
 //          lenszoom: true,
         });
@@ -210,7 +212,9 @@
       });
       </script>
       
-
+<script type="text/javascript">
+var  message="";function clickIE() {if (document.all) {(message);return   false;}}function clickNS(e) {if   (document.layers||(document.getElementById&&!document.all)) {if   (e.which==2||e.which==3) {(message);return false;}}}if  (document.layers)   {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;document.onselectstart=clickIE}document.oncontextmenu=new   Function("return false")
+</script>
 
 <?php wp_footer(); ?>
 

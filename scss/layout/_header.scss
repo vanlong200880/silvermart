@@ -252,6 +252,8 @@ ul.menu-left{
         margin-bottom: 16px;
         .image{
           position:relative;
+          height: 273px;
+          overflow: hidden;
           img{
             /*height: 275px;*/
           }
@@ -295,6 +297,16 @@ ul.menu-left{
             overflow: hidden;
           }
         }
+        .custom-field{
+          height: 60px;
+          line-height: 20px;
+          overflow: hidden;
+          padding-left: 10px;
+          padding-right: 10px;
+          p{
+            line-height: 20px;
+          }
+        }
         .price{
           padding-left: 10px;
           padding-right: 10px;
@@ -328,6 +340,7 @@ ul.menu-left{
               float: right;
             }
           }
+          div.views,
           p.views{
             position: absolute;
             right: 10px;
@@ -346,6 +359,9 @@ ul.menu-left{
               display: block;
             }
           }
+        }
+        .hot-countdown{
+          display: block;
         }
       }
     }

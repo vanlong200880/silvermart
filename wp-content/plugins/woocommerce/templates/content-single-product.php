@@ -66,7 +66,9 @@ if ( ! defined( 'ABSPATH' ) ) {
           </div>
         </div>
         <div class="col-md-10 col-sm-10 col-xs-10">
-          <?php do_action('woocommerce_before_single_product_detail_img_silvermart'); ?></div>
+          <?php do_action('woocommerce_before_single_product_detail_img_silvermart'); ?>
+          <p style="text-align: center;">Chạm vào hình để phóng to</p>
+        </div>
       </div>
     </div>
     <div class="col-md-7 col-sm-7 col-xs-12">
@@ -83,6 +85,9 @@ if ( ! defined( 'ABSPATH' ) ) {
       <div class="price-detail">
         <?php do_action('woocommerce_single_product_price'); ?>
         <p class="sale"><?php do_action('woocommerce_after_shop_loop_item_sale'); ?></p>
+      </div>
+      <div class="countdown">
+        <?php do_action('woocommerce_after_single_product_countdown'); ?>
       </div>
       <div class="single">
         <?php do_action('woocommerce_single_product_single_cart'); ?>
