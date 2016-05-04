@@ -775,6 +775,7 @@ if ( ! function_exists( 'woocommerce_catalog_ordering' ) ) {
 			'price'      => __( 'Sort by price: low to high', 'woocommerce' ),
 			'price-desc' => __( 'Sort by price: high to low', 'woocommerce' )
 		) );
+var_dump($catalog_orderby_options); 
 
 		if ( ! $show_default_orderby ) {
 			unset( $catalog_orderby_options['menu_order'] );

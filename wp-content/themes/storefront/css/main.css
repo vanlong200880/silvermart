@@ -446,7 +446,7 @@ ul.menu-left {
           .page-home-title .tabs-home ul li.active a:focus, .page-home-title .tabs-home ul li.active a:hover {
             border: none; }
       .page-home-title .tabs-home ul li.tab-list:hover a {
-        background: #e6e6e6;
+        background: #7dad23;
         position: relative; }
         .page-home-title .tabs-home ul li.tab-list:hover a:before {
           content: " ";
@@ -654,6 +654,10 @@ ul.menu-left {
       border-top: 1px solid #DDD; }
       .entry-content #order_review .shop_table tfoot tr th {
         padding: 10px; }
+    .entry-content #order_review .shop_table tfoot tr.cart-discount {
+      text-align: right; }
+    .entry-content #order_review .shop_table tfoot tr.order-total {
+      color: #ff0000; }
     .entry-content #order_review .shop_table tfoot tr.order-total td,
     .entry-content #order_review .shop_table tfoot tr.cart-subtotal td {
       text-align: right; }
@@ -858,6 +862,24 @@ ul.menu-left {
   top: auto !important;
   width: 41.1764705882% !important;
   position: relative !important; }
+
+.filter-category {
+  background: #f5f5f5;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  padding: 5px; }
+  .filter-category h3 {
+    font-size: 16px;
+    font-weight: bold; }
+  .filter-category ul {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 5px; }
+    .filter-category ul li span {
+      font-weight: normal; }
 
 .detail-page h1 {
   font-size: 15px;
@@ -1070,8 +1092,12 @@ ul.menu-left {
 
 div.images {
   position: relative;
-  margin-top: 25px;
-  border: 1px solid #DDD; }
+  margin-top: 25px; }
+
+.view-zoom {
+  text-align: center;
+  font-size: 12px;
+  color: #777; }
 
 #gallery_01 {
   height: 395px;
@@ -1177,7 +1203,8 @@ div.images {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  margin-top: 15px; }
 
 a.remove {
   font-size: 20px; }

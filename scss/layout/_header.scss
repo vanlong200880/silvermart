@@ -441,7 +441,7 @@ ul.menu-left{
       li.tab-list{
         &:hover{
           a{
-            background: #e6e6e6;
+            background: $color-default;
             position: relative;
             &:before{
               content: " ";
@@ -718,6 +718,12 @@ ul.menu-left{
           th{
             padding: 10px;
           }
+        }
+        tr.cart-discount{
+          text-align: right;
+        }
+        tr.order-total{
+          color: #ff0000;
         }
         tr.order-total,
         tr.cart-subtotal{

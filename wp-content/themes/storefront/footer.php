@@ -60,10 +60,10 @@
               <h2>Hỗ trợ khách hàng</h2>
               <ul>
                 <li><a href="<?php echo home_url() ?>/huong-dan-dat-hang/">Hướng dẫn đặt hàng</a></li>
-                <li><a href="<?php echo home_url() ?>/huong-dan-thanh-toan/">Hướng dẫn thanh toán</a></li>
+                <li><a href="<?php echo home_url() ?>/huong-dan-thanh-toan/">Hướng dẫn thanh toán - Quy định giao hàng</a></li>
                 <li><a href="<?php echo home_url() ?>/quy-dinh-doi-moi-san-pham/">Quy định đổi mới sản phẩm</a></li>
                 <li><a href="<?php echo home_url() ?>/quy-dinh-bao-hanh/">Quy định bảo hành - đổi trả</a></li>
-                <li><a href="<?php echo home_url() ?>/quy-dinh-giao-hang/">Quy định giao hàng</a></li>
+                <!--<li><a href="<?php //echo home_url() ?>/quy-dinh-giao-hang/">Quy định giao hàng</a></li>-->
               </ul>
             </div>
             
@@ -124,6 +124,35 @@
 <?php if (wpmd_is_phone()): ?>
 <script src="<?php echo get_template_directory_uri() ?>/js/jquery.mCustomScrollbar.js"></script>
 <?php endif; ?>
+
+<script>
+jQuery(document).ready(function($) {
+  $("#owl-product-carousel-first").owlCarousel({
+      items : 1,
+      itemsDesktop: [1400, 1],
+      itemsDesktopSmall: [1100, 1],
+      itemsTablet: [767, 1],
+      itemsMobile: [500, 1],
+      autoPlay: 4000,
+      navigation : false,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      pagination : true,
+      paginationNumbers: false,
+          //singleItem : true,
+      navigationText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+      rewindNav : true,
+      stopOnHover : true
+  });
+
+  $("a[href='#top']").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
+});
+        
+</script>
+
 
 <script type="text/javascript">
   $(document).ready(function() {

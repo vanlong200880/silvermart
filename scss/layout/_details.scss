@@ -238,7 +238,11 @@
 div.images{
   position: relative;
   margin-top: 25px;
-  border: 1px solid #DDD;
+}
+.view-zoom{
+  text-align: center;
+  font-size: 12px;
+  color: #777;
 }
 #gallery_01{
   height: 395px;
@@ -366,6 +370,7 @@ div.images{
   text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 15px;
+  margin-top: 15px;
 }
 a.remove{
   font-size: 20px;

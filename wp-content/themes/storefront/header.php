@@ -13,6 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri() ?>/images/favicon.png">
 <?php if (wpmd_is_phone()): ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/jquery.mCustomScrollbar.css">
 <?php endif; ?>
@@ -65,9 +66,11 @@
             <?php 
                 global $woocommerce;
                 ?>
-            <span class="icon icon-shopping"><var class="shoping-number"><?php echo $woocommerce->cart->cart_contents_count; ?></var></span> <a href="<?php echo home_url() ?>/gio-hang/">Giỏ hàng</a>
-            
-            
+            <a href="<?php echo home_url() ?>/gio-hang/">
+            <span class="icon icon-shopping">
+              <var class="shoping-number"><?php echo $woocommerce->cart->cart_contents_count; ?></var></span> 
+              Giỏ hàng
+              </a>
           </div>
         </div>
       </div>
@@ -156,7 +159,10 @@
             <?php 
             global $woocommerce;
             ?>
-            <span class="icon icon-shopping"><var class="shoping-number"><?php echo $woocommerce->cart->cart_contents_count; ?></var></span> <a href="<?php echo home_url() ?>/gio-hang/">Giỏ hàng</a>
+            <a href="<?php echo home_url() ?>/gio-hang/">
+            <span class="icon icon-shopping"><var class="shoping-number">
+              <?php echo $woocommerce->cart->cart_contents_count; ?></var></span> 
+            Giỏ hàng</a>
           </div>
         </div>
       </div>
@@ -176,7 +182,11 @@
               <?php 
                 global $woocommerce;
                 ?>
-                <span class="icon icon-shopping"><var class="shoping-number"><?php echo $woocommerce->cart->cart_contents_count; ?></var></span> <a href="<?php echo home_url() ?>/gio-hang/">Giỏ hàng</a>
+              <a href="<?php echo home_url() ?>/gio-hang/">
+                <span class="icon icon-shopping">
+                  <var class="shoping-number"><?php echo $woocommerce->cart->cart_contents_count; ?></var>
+                </span> 
+              Giỏ hàng</a>
             </div>
             <div class="col-xs-2 mobile-list">
               <i class="fa fa-bars"></i>

@@ -67,7 +67,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
         <div class="col-md-10 col-sm-10 col-xs-10">
           <?php do_action('woocommerce_before_single_product_detail_img_silvermart'); ?>
-          <p style="text-align: center;">Chạm vào hình để phóng to</p>
+          <p class="view-zoom">Chạm vào hình để phóng to</p>
         </div>
       </div>
     </div>

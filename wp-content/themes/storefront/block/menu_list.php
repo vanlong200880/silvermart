@@ -18,6 +18,12 @@
             <li><a href="<?php echo home_url(); ?>/danh-muc/giay-the-thao-nu/">Giày thể thao nữ</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/giay-tay/">Giày tây</a></li>
           </ul>
+          <h4><a href="<?php echo home_url(); ?>/danh-muc/munon/">Mũ & Nón</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/munon-nam-munon/">Mũ & Nón nam</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/munon-nu/">Mũ & Nón nữ</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/munon-unisex/">Mũ & Nón unisex</a></li>
+          </ul>
         </div>
         <div class="list-item">
           <h4><a href="<?php echo home_url(); ?>/danh-muc/vi-tui-xach/">Ví - Túi xách</a></h4>
@@ -201,7 +207,7 @@
         </div>
       </div>
       <?php if(wpmd_is_notdevice()): ?>
-      <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'cam-trai-du-lich') ); ?>
+      <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'the-thao-du-lich') ); ?>
       <?php endif; ?>
     </div>
   </li>
