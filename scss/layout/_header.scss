@@ -441,8 +441,9 @@ ul.menu-left{
       li.tab-list{
         &:hover{
           a{
-            background: $color-default;
+            /*background: $color-default;*/
             position: relative;
+            color: $color-default;
             &:before{
               content: " ";
               border-bottom: 8px solid $color-default;;

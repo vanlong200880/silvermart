@@ -64,7 +64,6 @@ $classes[] = 'col-md-3 col-sm-4 col-xs-6';
         the_post_thumbnail(array(280, 280)); ?>
       <?php else: ?>
       <?php endif; ?>
-      <a href="<?php the_permalink(); ?>">Xem ngay</a>
     </div>
     <div class="title">
       <p><a href="<?php the_permalink(); ?>" title="<?php the_title() ?>"><?php the_title() ?></a></p>

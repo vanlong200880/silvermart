@@ -446,8 +446,9 @@ ul.menu-left {
           .page-home-title .tabs-home ul li.active a:focus, .page-home-title .tabs-home ul li.active a:hover {
             border: none; }
       .page-home-title .tabs-home ul li.tab-list:hover a {
-        background: #7dad23;
-        position: relative; }
+        /*background: $color-default;*/
+        position: relative;
+        color: #7dad23; }
         .page-home-title .tabs-home ul li.tab-list:hover a:before {
           content: " ";
           border-bottom: 8px solid #7dad23;

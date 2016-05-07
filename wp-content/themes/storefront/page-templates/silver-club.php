@@ -93,7 +93,6 @@ get_header();
                               the_post_thumbnail(array(315, 315)); ?>
                             <?php else: ?>
                             <?php endif; ?>
-                            <a href="javascript:void(0)">Xem ngay</a>
                           </div>
                           <div class="title">
                             <p><a href="javascript:void(0)" title="<?php the_title() ?>"><?php the_title() ?></a></p>

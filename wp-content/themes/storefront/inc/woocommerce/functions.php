@@ -144,7 +144,7 @@ function storefront_thumbnail_columns() {
  * @since  1.0.0
  */
 function storefront_products_per_page() {
-	return intval( apply_filters( 'storefront_products_per_page', 12 ) );
+	return intval( apply_filters( 'storefront_products_per_page', 32 ) );
 }
 
 /**

@@ -50,7 +50,6 @@ get_header();
 										the_post_thumbnail(array(315, 315)); ?>
                   <?php else: ?>
                   <?php endif; ?>
-                  <a href="<?php the_permalink(); ?>">Xem ngay</a>
                   <div class="hot-countdown">
                     <?php echo do_shortcode('[product_sale id="'.  get_the_ID().'"]'); ?>
                   </div>

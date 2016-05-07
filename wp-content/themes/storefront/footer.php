@@ -60,7 +60,7 @@
               <h2>Hỗ trợ khách hàng</h2>
               <ul>
                 <li><a href="<?php echo home_url() ?>/huong-dan-dat-hang/">Hướng dẫn đặt hàng</a></li>
-                <li><a href="<?php echo home_url() ?>/huong-dan-thanh-toan/">Hướng dẫn thanh toán - Quy định giao hàng</a></li>
+                <li><a href="<?php echo home_url() ?>/huong-dan-thanh-toan/">Hướng dẫn thanh toán <br> Quy định giao hàng</a></li>
                 <li><a href="<?php echo home_url() ?>/quy-dinh-doi-moi-san-pham/">Quy định đổi mới sản phẩm</a></li>
                 <li><a href="<?php echo home_url() ?>/quy-dinh-bao-hanh/">Quy định bảo hành - đổi trả</a></li>
                 <!--<li><a href="<?php //echo home_url() ?>/quy-dinh-giao-hang/">Quy định giao hàng</a></li>-->
@@ -81,7 +81,7 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
               <h2>Hợp tác & Liên kết</h2>
               <ul>
-                <li><a href="<?php echo home_url() ?>/hop-tac-lien-ket/">Bán hàng cùng Silvermart</a></li>
+                <li><a href="<?php echo home_url() ?>/ban-hang-cung-silvermart/">Bán hàng cùng Silvermart</a></li>
                 
               </ul>
               <h2>Kết nối với Silvermart</h2>

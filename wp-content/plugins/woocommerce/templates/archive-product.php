@@ -67,7 +67,7 @@ get_header(); ?>
         * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
         * @hooked woocommerce_breadcrumb - 20
         */
-       do_action( 'woocommerce_before_main_content' );
+       //do_action( 'woocommerce_before_main_content' );
      ?>
 
        <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
@@ -211,55 +211,105 @@ get_header(); ?>
 		?>
         <?php
 //    var_dump($category); die;
+        $min = $_GET['min'];
+        $max = $_GET['max'];
+        $m = $_GET['m'];
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $args = array(
-        
-        'post_type' => 'product',
-//        'orderby' => 'id',
-//        'product_cat' => $category->slug,
-//        'order' => 'DESC',
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'product_cat',
-                'field' => 'slug',
-                'terms' => $category->slug,
-                'operator' => 'IN'
-            )
-        ),
-        'meta_query' => array(
-            'relation' => 'AND',
-            array(
+          'post_type' => 'product',
+          'orderby' => 'id',
+  //        'product_cat' => $category->slug,
+          'order' => 'DESC',
+          'tax_query' => array(
+              array(
+                  'taxonomy' => 'product_cat',
+                  'field' => 'slug',
+                  'terms' => $category->slug,
+                  'operator' => 'IN'
+              )
+          ),
+          'meta_query' => array(
+              'relation' => 'AND',
+              array(
+                  'key'     => '_price',
+                'value'   => $min,
+                'type' => 'numeric',
+                'compare' => '>=',
+              ),
+              array(
                 'key'     => '_price',
-              'value'   => 0,
-              'type' => 'numeric',
-              'compare' => '>=',
+                'value'   => $max,
+                'type' => 'numeric',
+                'compare' => '<=',
+              ),
+          ),
+          'paged'          => $paged,
+          'posts_per_page' => 32,
+//        'paged'          => $paged,
+//        'posts_per_page' => 80
+      );
+        
+        if($m){
+          $args = array(
+            'post_type' => 'product',
+            'orderby' => 'id',
+    //        'product_cat' => $category->slug,
+            'order' => 'DESC',
+            'tax_query' => array(
+                array(
+                    'taxonomy' => 'product_cat',
+                    'field' => 'slug',
+                    'terms' => $category->slug,
+                    'operator' => 'IN'
+                )
             ),
-            array(
-              'key'     => '_price',
-              'value'   => 1500000,
-              'type' => 'numeric',
-              'compare' => '<=',
+            'meta_query' => array(
+                'relation' => 'AND',
+                array(
+                    'key'     => '_price',
+                  'value'   => $min,
+                  'type' => 'numeric',
+                  'compare' => '>=',
+                ),
+                array(
+                  'key'     => '_price',
+                  'value'   => $max,
+                  'type' => 'numeric',
+                  'compare' => '<=',
+                ),
+                array(
+                  'key'     => 'chat_lieu',
+                  'value'   => $m,
+                  'compare' => '=',
+                ),
             ),
-        ),
-        'posts_per_page' => 48,
-    );
+            'paged'          => $paged,
+            'posts_per_page' => 32,
+          
+  //        'posts_per_page' => 80
+        );
+        }
 
-
-    $loop = new WP_Query($args);
+    query_posts($args);
+//    $loop = new WP_Query($args);
+//    var_dump($loop); die;
 //    var_dump($loop); die;
         ?>
-          		<?php if ($loop->have_posts() ) : ?>
+          		<?php if (have_posts() ) : ?>
 
               <?php woocommerce_product_loop_start(); ?>
 
-                <?php //woocommerce_product_subcategories(); ?>
+                <?php woocommerce_product_subcategories(); ?>
 
-                <?php while ($loop->have_posts() ) : $loop->the_post(); ?>
+                <?php while (have_posts() ) : the_post(); ?>
 
                   <?php wc_get_template_part( 'content', 'product' ); ?>
 
                 <?php endwhile; // end of the loop. ?>
 
-              <?php woocommerce_product_loop_end(); ?>
+              <?php 
+              //wp_reset_query();
+              woocommerce_product_loop_end(); ?>
 
               <?php
                 /**
