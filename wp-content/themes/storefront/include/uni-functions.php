@@ -70,12 +70,15 @@ function woocommerce_output_related_products() {
  
  // Đổi tên Bang / Hạt thành Tỉnh / Thành
  $fields['state']['label'] = 'Tỉnh / Thành';
+$fields['first_name']['label'] = 'Họ và tên';
 unset( $fields['country'] );
  
  // Đổi tên Tỉnh / Thành phố thành Quận / Huyện
  $fields['city']['label'] = 'Quận / Huyện';
  unset( $fields['city'] );
- 
+  unset( $fields['company'] );
+  unset( $fields['last_name'] );
+  
  return $fields;
 }
 add_filter( 'woocommerce_default_address_fields', 'tp_custom_checkout_fields' );

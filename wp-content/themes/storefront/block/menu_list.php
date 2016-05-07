@@ -119,7 +119,7 @@
     </div>
   </li>
   <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/dien-gia-dung/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-electricity"></span> Điện gia dụng</a>
-    <div class="menu-item">
+    <div class="menu-item item-tablet">
       <div class="list-cate">
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
@@ -145,13 +145,13 @@
           </ul>
         </div>
       </div>
-      <?php if(wpmd_is_notdevice()): ?>
+      <?php if(!wpmd_is_phone()): ?>
       <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'dien-gia-dung') ); ?>
       <?php endif; ?>
     </div>
   </li>
   <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/me-va-be/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-food"></span> Mẹ và bé</a>
-    <div class="menu-item">
+    <div class="menu-item item-tablet">
       <div class="list-cate">
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
@@ -177,13 +177,13 @@
           </ul>
         </div>
       </div>
-      <?php if(wpmd_is_notdevice()): ?>
+      <?php if(!wpmd_is_phone()): ?>
       <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'me-va-be') ); ?>
       <?php endif; ?>
     </div>
   </li>
   <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/the-thao-du-lich/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-tool"></span> Thể thao - du lịch</a>
-    <div class="menu-item">
+    <div class="menu-item item-tablet">
       <div class="list-cate">
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
@@ -206,13 +206,13 @@
           </ul>
         </div>
       </div>
-      <?php if(wpmd_is_notdevice()): ?>
+      <?php if(!wpmd_is_phone()): ?>
       <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'the-thao-du-lich') ); ?>
       <?php endif; ?>
     </div>
   </li>
   <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/phu-kien-thiet-bi-so/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-cellphone"></span> Phụ kiện - thiết bị số</a>
-    <div class="menu-item">
+    <div class="menu-item item-tablet">
       <div class="list-cate">
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
@@ -233,13 +233,13 @@
           </ul>
         </div>
       </div>
-      <?php if(wpmd_is_notdevice()): ?>
+      <?php if(!wpmd_is_phone()): ?>
       <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'phu-kien-thiet-bi-so') ); ?>
       <?php endif; ?>
     </div>
   </li>
   <li><a href="<?php if(wpmd_is_notdevice()){?><?php echo home_url(); ?>/danh-muc/hang-cong-nghe/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-computer"></span> Hàng công nghệ</a>
-    <div class="menu-item">
+    <div class="menu-item item-tablet">
       <div class="list-cate">
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
@@ -262,13 +262,13 @@
           </ul>
         </div>
       </div>
-      <?php if(wpmd_is_notdevice()): ?>
+      <?php if(!wpmd_is_phone()): ?>
       <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'hang-cong-nghe') ); ?>
       <?php endif; ?>
     </div>
   </li>
   <li><a href="<?php if(wpmd_is_notdevice()){?> <?php echo home_url(); ?>/danh-muc/tuoi-moi-moi-ngay/<?php }else{ ?>javascript:void(0)<?php } ?>"><span class="icon icon-two"></span> Tươi mới mỗi ngày</a>
-    <div class="menu-item">
+    <div class="menu-item item-tablet">
       <div class="list-cate">
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
@@ -281,7 +281,7 @@
           </ul>
         </div>
       </div>
-      <?php if(wpmd_is_notdevice()): ?>
+      <?php if(!wpmd_is_phone()): ?>
       <?php getTemplatePart('block/slider-category-menu',  null, array('category_slug' => 'tuoi-moi-moi-ngay') ); ?>
       <?php endif; ?>
     </div>

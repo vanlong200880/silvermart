@@ -154,20 +154,45 @@ get_header(); ?>
                 </label>
                 
               </li>
+              <li>
+                <label for="k-13">
+                  <input id="k-13" type="checkbox" data-key="khac">
+                  <span>Khác</span>
+                </label>
+                
+              </li>
             </ul>
           </div>
-          
+          <div class="filter-gender">
+            <h3>Lọc theo giới tính</h3>
+            <ul class="gender">
+              <li>
+                <label for="k-11">
+                  <input id="k-11" type="checkbox" data-key="nam">
+                  <span>Nam</span>
+                </label>
+              </li>
+              <li>
+                <label for="k-12">
+                  <input id="k-12" type="checkbox" data-key="nu">
+                  <span>Nữ</span>
+                </label>
+              </li>
+            </ul>
+          </div>
         </div>
         <script type="text/javascript">
           jQuery(document).ready(function($){
             var datamin = "<?php echo (isset($_GET['min']))? $_GET['min']:'' ?>";
             var datamax = "<?php echo (isset($_GET['max']))? $_GET['max']:'' ?>";
             var datam = "<?php echo (isset($_GET['m']))? $_GET['m']:'' ?>";
+            var datagender = "<?php echo (isset($_GET['gender']))? $_GET['gender']:'' ?>";
             var urlcurrent = "<?php echo get_term_link($category->slug, 'product_cat') ?>";
             $(".filter-category ul.f-price > li input").on('click' ,function(){
               var vmin ='';
               var vmax= ''; 
               var vm = '';
+              var vgender = '';
               datamin = $(this).attr('data-min');
               datamax = $(this).attr('data-max');
               if(datamin != '')
@@ -176,14 +201,18 @@ get_header(); ?>
                 vmax = '&max='+datamax;
               if(datam != '')
                 vm = '&m='+datam;
+              
+              if(datagender != '')
+                vgender = '&gender='+datagender;
 
-              var link = urlcurrent+ '?'+ vmin + vmax + vm;
+              var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender;
               window.location.href = link;
             });
             $(".filter-category ul.m-price > li input").on('click' ,function(){
               var vmin ='';
               var vmax= ''; 
               var vm = '';
+              var vgender = '';
               datam = $(this).attr('data-key');
               if(datamin != '')
                 vmin = '&min='+datamin;
@@ -191,7 +220,27 @@ get_header(); ?>
                 vmax = '&max='+datamax;
               if(datam != '')
                 vm = '&m='+datam;
-              var link = urlcurrent+ '?'+ vmin + vmax + vm;
+              if(datagender != '')
+                vgender = '&gender='+datagender;
+              var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender;
+              window.location.href  = link;
+            });
+            
+            $(".filter-category ul.gender > li input").on('click' ,function(){
+              var vmin ='';
+              var vmax= ''; 
+              var vm = '';
+              var vgender = '';
+              datagender = $(this).attr('data-key');
+              if(datamin != '')
+                vmin = '&min='+datamin;
+              if(datamax != '')
+                vmax = '&max='+datamax;
+              if(datam != '')
+                vm = '&m='+datam;
+              if(datagender != '')
+                vgender = '&gender='+datagender;
+              var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender;
               window.location.href  = link;
             });
 
@@ -214,7 +263,45 @@ get_header(); ?>
         $min = $_GET['min'];
         $max = $_GET['max'];
         $m = $_GET['m'];
+        $gender = $_GET['gender'];
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+        $meta_query = array('relation' => 'AND');
+        if($gender){
+          $meta_query[] = array(
+            'key'     => 'gioi_tinh',
+            'value'   => $gender,
+            'type' => 'numeric',
+            'compare' => '=',
+          );
+        }
+        
+        if($m){
+          $meta_query[] = array(
+            'key'     => 'chat_lieu',
+            'value'   => $m,
+            'type' => 'numeric',
+            'compare' => '=',
+          );
+        }
+        
+        if($min || $min == 0){
+          $meta_query[] = array(
+            'key'     => '_price',
+            'value'   => $min,
+            'type' => 'numeric',
+            'compare' => '>=',
+          );
+        }
+        
+        if($max){
+          $meta_query[] = array(
+            'key'     => '_price',
+            'value'   => $max,
+            'type' => 'numeric',
+            'compare' => '<=',
+          );
+        }
+        
         $args = array(
           'post_type' => 'product',
           'orderby' => 'id',
@@ -228,72 +315,13 @@ get_header(); ?>
                   'operator' => 'IN'
               )
           ),
-          'meta_query' => array(
-              'relation' => 'AND',
-              array(
-                  'key'     => '_price',
-                'value'   => $min,
-                'type' => 'numeric',
-                'compare' => '>=',
-              ),
-              array(
-                'key'     => '_price',
-                'value'   => $max,
-                'type' => 'numeric',
-                'compare' => '<=',
-              ),
-          ),
+          'meta_query' => $meta_query,
           'paged'          => $paged,
           'posts_per_page' => 32,
 //        'paged'          => $paged,
 //        'posts_per_page' => 80
       );
-        
-        if($m){
-          $args = array(
-            'post_type' => 'product',
-            'orderby' => 'id',
-    //        'product_cat' => $category->slug,
-            'order' => 'DESC',
-            'tax_query' => array(
-                array(
-                    'taxonomy' => 'product_cat',
-                    'field' => 'slug',
-                    'terms' => $category->slug,
-                    'operator' => 'IN'
-                )
-            ),
-            'meta_query' => array(
-                'relation' => 'AND',
-                array(
-                    'key'     => '_price',
-                  'value'   => $min,
-                  'type' => 'numeric',
-                  'compare' => '>=',
-                ),
-                array(
-                  'key'     => '_price',
-                  'value'   => $max,
-                  'type' => 'numeric',
-                  'compare' => '<=',
-                ),
-                array(
-                  'key'     => 'chat_lieu',
-                  'value'   => $m,
-                  'compare' => '=',
-                ),
-            ),
-            'paged'          => $paged,
-            'posts_per_page' => 32,
-          
-  //        'posts_per_page' => 80
-        );
-        }
-
     query_posts($args);
-//    $loop = new WP_Query($args);
-//    var_dump($loop); die;
-//    var_dump($loop); die;
         ?>
           		<?php if (have_posts() ) : ?>
 

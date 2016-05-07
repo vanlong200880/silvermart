@@ -174,7 +174,7 @@ header {
       padding: 5px 15px 5px 0;
       color: #FFF; }
       header .menu-news ul li a:hover {
-        color: red; }
+        color: #7dad23; }
     header .menu-news ul li:last-child a {
       color: red; }
 
@@ -407,6 +407,8 @@ ul.menu-left {
       font-size: 16px; }
   .page-home-title a.all {
     padding: 10px; }
+    .page-home-title a.all:hover {
+      color: #7dad23; }
   .page-home-title .tabs-home {
     display: inline-block;
     float: left; }
@@ -779,6 +781,21 @@ ul.menu-left {
     border-bottom: 1px solid #f5f5f5; }
     .type-page.status-publish.hentry .shop_table.customer_details tr td {
       height: 30px; }
+
+.status-publish ul.woocommerce-thankyou-order-details .order strong {
+  color: #ff0000; }
+.status-publish table thead .product-total {
+  color: #ff0000; }
+.status-publish table tfoot tr:last-child td {
+  font-weight: bold;
+  color: #ff0000; }
+
+.order-print {
+  text-align: right; }
+  .order-print a {
+    padding: 5px 10px;
+    background: #F00;
+    border-radius: 3px; }
 
 .list-category h2,
 .list-category h1 {
@@ -1331,6 +1348,28 @@ footer .coppyright {
     ul.menu-left li a span.icon {
       font-size: 13px; }
 
+  ul.menu-left li:hover a:after {
+    border-left: 16px solid #ff6600;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent; }
+
+  ul.menu-left li:hover .menu-item {
+    height: 340px;
+    top: -31px; }
+    ul.menu-left li:hover .menu-item .list-cate {
+      padding: 10px 10px 10px 30px; }
+      ul.menu-left li:hover .menu-item .list-cate .list-item ul li {
+        height: 25px;
+        line-height: 25px; }
+  ul.menu-left li:hover .menu-item.item-tablet {
+    height: 302px; }
+    ul.menu-left li:hover .menu-item.item-tablet .list-cate {
+      width: 70%; }
+      ul.menu-left li:hover .menu-item.item-tablet .list-cate .list-item {
+        width: 50%; }
+    ul.menu-left li:hover .menu-item.item-tablet .list-ads {
+      width: 30%; }
+
   #menu h2 {
     font-size: 14px;
     height: 30px;
@@ -1361,7 +1400,24 @@ footer .coppyright {
     height: 225px; }
 
   .slider-home {
-    height: 320px; } }
+    height: 320px; }
+
+  ul.menu-left li:hover .menu-item {
+    height: 335px;
+    top: -37px; }
+    ul.menu-left li:hover .menu-item .list-cate {
+      padding: 10px 10px 10px 30px; }
+      ul.menu-left li:hover .menu-item .list-cate .list-item ul li {
+        height: 25px;
+        line-height: 25px; }
+  ul.menu-left li:hover .menu-item.item-tablet {
+    height: 335px; }
+    ul.menu-left li:hover .menu-item.item-tablet .list-cate {
+      width: 70%; }
+      ul.menu-left li:hover .menu-item.item-tablet .list-cate .list-item {
+        width: 50%; }
+    ul.menu-left li:hover .menu-item.item-tablet .list-ads {
+      width: 30%; } }
 @media (max-width: 767px) {
   .header-for-mobile {
     background: #232f3e; }

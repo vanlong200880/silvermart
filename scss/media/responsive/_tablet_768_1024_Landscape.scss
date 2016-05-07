@@ -39,3 +39,37 @@ ul.menu-left {
 .slider-home{
   height: 320px;
 }
+
+ul.menu-left {
+  li{
+    &:hover {
+      .menu-item {
+        height: 335px;
+        top: -37px;
+        .list-cate {
+          padding: 10px 10px 10px 30px;
+          .list-item {
+            ul {
+              li {
+                height: 25px;
+                line-height: 25px;
+              }
+            }
+          }
+        }
+      }
+      .menu-item.item-tablet{
+        height: 335px;
+        .list-cate {
+          width: 70%;
+          .list-item{
+            width: 50%;
+          }
+        }
+        .list-ads{
+          width: 30%;
+        }
+      }
+    }
+  }
+}

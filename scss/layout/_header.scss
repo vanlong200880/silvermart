@@ -94,7 +94,7 @@ header{
             padding: 5px 15px 5px 0;
             color: #FFF;
             &:hover{
-              color: red;
+              color: $color-default;
             }
           }
           &:last-child{
@@ -388,6 +388,9 @@ ul.menu-left{
   }
   a.all{
     padding: 10px;
+    &:hover{
+      color: $color-default;
+    }
   }
   .tabs-home{
     display: inline-block;
@@ -900,5 +903,40 @@ ul.menu-left{
         height: 30px;
       }
     }
+  }
+}
+.status-publish{
+  ul.woocommerce-thankyou-order-details{
+    .order{
+      strong{
+        color: #ff0000;
+      }
+    }
+  }
+  table{
+    thead{
+      .product-total{
+        color: #ff0000;
+      }
+    }
+    
+    tfoot{
+      tr{
+        &:last-child{
+          td{
+            font-weight: bold;
+            color: #ff0000;
+          }
+        }
+      }
+    }
+  }
+}
+.order-print{
+  text-align: right;
+  a{
+    padding: 5px 10px;
+    background: #F00;
+    border-radius: 3px;
   }
 }

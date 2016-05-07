@@ -24,7 +24,7 @@
               <div class="icon-text">
                 <a href="<?php echo home_url() ?>/quy-dinh-giao-hang/">
                   <h2>Giao hàng tận nơi</h2>
-                  <p>63 TỈNH THÀNH</p>
+                  <p>64 TỈNH THÀNH</p>
                 </a>
               </div>
             </div>
@@ -106,7 +106,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <p>Coppyright © 2015 silvermart. All Rights Reserved. By design <a href="http://thietkechuyennghiep.net">PhamLong</a></p>
+              <p>Coppyright © <?php echo date('Y'); ?> silvermart. All Rights Reserved. By design <a href="http://thietkechuyennghiep.net">PhamLong</a></p>
             </div>
           </div>
         </div>

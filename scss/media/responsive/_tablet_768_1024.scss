@@ -35,6 +35,56 @@ ul.menu-left {
     }
   }
 }
+ul.menu-left {
+  li{
+    &:hover{
+      a{
+        &:after{
+          border-left: 16px solid #ff6600;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+        }
+      }
+    }
+  }
+}
+
+
+ul.menu-left {
+  li{
+    &:hover {
+      .menu-item {
+        height: 340px;
+        top: -31px;
+        .list-cate {
+          padding: 10px 10px 10px 30px;
+          .list-item {
+            ul {
+              li {
+                height: 25px;
+                line-height: 25px;
+              }
+            }
+          }
+        }
+      }
+      .menu-item.item-tablet{
+        height: 302px;
+        .list-cate {
+          width: 70%;
+          .list-item{
+            width: 50%;
+          }
+        }
+        .list-ads{
+          width: 30%;
+        }
+      }
+    }
+  }
+}
+
+
 #menu {
   h2{
     font-size: 14px;
