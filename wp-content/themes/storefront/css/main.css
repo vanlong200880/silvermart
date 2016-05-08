@@ -797,6 +797,14 @@ ul.menu-left {
     background: #F00;
     border-radius: 3px; }
 
+.woocommerce-variation-price ins {
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+  text-decoration: none; }
+.woocommerce-variation-price del {
+  color: #B9B9B9; }
+
 .list-category h2,
 .list-category h1 {
   border-bottom: 2px solid #7dad23;

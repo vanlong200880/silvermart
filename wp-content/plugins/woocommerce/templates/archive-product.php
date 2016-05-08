@@ -180,6 +180,41 @@ get_header(); ?>
               </li>
             </ul>
           </div>
+          
+          <div class="filter-size">
+            <?php 
+              $size = get_terms(array('taxonomy' => 'pa_size'));
+            ?>
+            <h3>Lọc theo size</h3>
+            <ul class="size">
+              <?php foreach ($size as $s): ?>
+              <li>
+                <label for="k-<?php echo $s->term_id; ?>">
+                  <input id="k-<?php echo $s->term_id; ?>" type="checkbox" data-key="<?php echo $s->slug; ?>">
+                  <span><?php echo $s->name; ?></span>
+                </label>
+              </li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+          
+          <div class="filter-color">
+            <?php 
+              $color = get_terms(array('taxonomy' => 'pa_mau'));
+            ?>
+            <h3>Lọc theo màu sắc</h3>
+            <ul class="color">
+              <?php foreach ($color as $c): ?>
+              <li>
+                <label for="k-<?php echo $c->term_id; ?>">
+                  <input id="k-<?php echo $c->term_id; ?>" type="checkbox" data-key="<?php echo $c->slug; ?>">
+                  <span><?php echo $c->name; ?></span>
+                </label>
+              </li>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+          
         </div>
         <script type="text/javascript">
           jQuery(document).ready(function($){
@@ -187,12 +222,16 @@ get_header(); ?>
             var datamax = "<?php echo (isset($_GET['max']))? $_GET['max']:'' ?>";
             var datam = "<?php echo (isset($_GET['m']))? $_GET['m']:'' ?>";
             var datagender = "<?php echo (isset($_GET['gender']))? $_GET['gender']:'' ?>";
+            var datasize = "<?php echo (isset($_GET['size']))? $_GET['size']:'' ?>";
+            var datacolor = "<?php echo (isset($_GET['color']))? $_GET['color']:'' ?>";
             var urlcurrent = "<?php echo get_term_link($category->slug, 'product_cat') ?>";
             $(".filter-category ul.f-price > li input").on('click' ,function(){
               var vmin ='';
               var vmax= ''; 
               var vm = '';
               var vgender = '';
+              var vcolor = '';
+              var vsize = '';
               datamin = $(this).attr('data-min');
               datamax = $(this).attr('data-max');
               if(datamin != '')
@@ -204,8 +243,12 @@ get_header(); ?>
               
               if(datagender != '')
                 vgender = '&gender='+datagender;
+              if(datacolor != '')
+                vcolor = '&color='+datacolor;
+              if(datasize != '')
+                vsize = '&size='+datasize;
 
-              var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender;
+              var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender + vcolor + vsize;
               window.location.href = link;
             });
             $(".filter-category ul.m-price > li input").on('click' ,function(){
@@ -213,6 +256,8 @@ get_header(); ?>
               var vmax= ''; 
               var vm = '';
               var vgender = '';
+              var vcolor = '';
+              var vsize = '';
               datam = $(this).attr('data-key');
               if(datamin != '')
                 vmin = '&min='+datamin;
@@ -222,7 +267,11 @@ get_header(); ?>
                 vm = '&m='+datam;
               if(datagender != '')
                 vgender = '&gender='+datagender;
-              var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender;
+              if(datacolor != '')
+                vcolor = '&color='+datacolor;
+              if(datasize != '')
+                vsize = '&size='+datasize;
+              var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender + vcolor + vsize;
               window.location.href  = link;
             });
             
@@ -231,6 +280,8 @@ get_header(); ?>
               var vmax= ''; 
               var vm = '';
               var vgender = '';
+              var vcolor = '';
+              var vsize = '';
               datagender = $(this).attr('data-key');
               if(datamin != '')
                 vmin = '&min='+datamin;
@@ -240,7 +291,59 @@ get_header(); ?>
                 vm = '&m='+datam;
               if(datagender != '')
                 vgender = '&gender='+datagender;
-              var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender;
+              if(datacolor != '')
+                vcolor = '&color='+datacolor;
+              if(datasize != '')
+                vsize = '&size='+datasize;
+              var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender + vcolor + vsize;
+              window.location.href  = link;
+            });
+            
+            $(".filter-category ul.color > li input").on('click' ,function(){
+              var vmin ='';
+              var vmax= ''; 
+              var vm = '';
+              var vgender = '';
+              var vcolor = '';
+              var vsize = '';
+              datacolor = $(this).attr('data-key');
+              if(datamin != '')
+                vmin = '&min='+datamin;
+              if(datamax != '')
+                vmax = '&max='+datamax;
+              if(datam != '')
+                vm = '&m='+datam;
+              if(datagender != '')
+                vgender = '&gender='+datagender;
+              if(datacolor != '')
+                vcolor = '&color='+datacolor;
+              if(datasize != '')
+                vsize = '&size='+datasize;
+              var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender + vcolor + vsize;
+              window.location.href  = link;
+            });
+            
+            $(".filter-category ul.size > li input").on('click' ,function(){
+              var vmin ='';
+              var vmax= ''; 
+              var vm = '';
+              var vgender = '';
+              var vcolor = '';
+              var vsize = '';
+              datasize = $(this).attr('data-key');
+              if(datamin != '')
+                vmin = '&min='+datamin;
+              if(datamax != '')
+                vmax = '&max='+datamax;
+              if(datam != '')
+                vm = '&m='+datam;
+              if(datagender != '')
+                vgender = '&gender='+datagender;
+              if(datacolor != '')
+                vcolor = '&color='+datacolor;
+              if(datasize != '')
+                vsize = '&size='+datasize;
+              var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender + vcolor + vsize;
               window.location.href  = link;
             });
 
@@ -264,6 +367,8 @@ get_header(); ?>
         $max = $_GET['max'];
         $m = $_GET['m'];
         $gender = $_GET['gender'];
+        $color = $_GET['color'];
+        $size = $_GET['size'];
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $meta_query = array('relation' => 'AND');
         if($gender){
@@ -302,6 +407,24 @@ get_header(); ?>
           );
         }
         
+        if($color){
+          $meta_query[] = array(
+            'key'     => 'mau',
+            'value'   => $color,
+            'compare' => 'like',
+            
+          );
+        }
+        
+        if($size){
+          $meta_query[] = array(
+            'key'     => 'size',
+            'value'   => $size,
+            'compare' => 'like',
+            
+          );
+        }
+        
         $args = array(
           'post_type' => 'product',
           'orderby' => 'id',
@@ -313,7 +436,12 @@ get_header(); ?>
                   'field' => 'slug',
                   'terms' => $category->slug,
                   'operator' => 'IN'
-              )
+              ),
+//              array(
+//                  'taxonomy' => 'pa_mau',
+//                  'field' => 'slug',
+//                  'terms' => 'bac'
+//              )
           ),
           'meta_query' => $meta_query,
           'paged'          => $paged,
