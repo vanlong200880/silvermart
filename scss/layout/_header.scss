@@ -22,13 +22,13 @@ header{
     .form-submit{
       width: 40px;
       height: 40px;
-      background: #ff0000;
+      background: #FF4606;
       display: inline-block;
     }
     span.input-group-btn{
       .btn.btn-default{
-        background: #ff0000;
-        border-color: #ff0000;
+        background: #FF4606;
+        border-color: #FF4606;
         box-shadow: none;
         -moz-box-shadow: none;
         -webkit-box-shadow: none;
@@ -61,7 +61,7 @@ header{
       font-size: 32px;
       position: relative;
       .shoping-number{
-        background: red;
+        background: #FF4606;
         padding: 0px 10px;
         position: absolute;
         display: inline-block;
@@ -73,7 +73,7 @@ header{
           content: " ";
           width: 0;
           height: 0;
-          border-top: 5px solid red;
+          border-top: 5px solid #FF4606;
           border-right: 5px solid transparent;
           border-left: 5px solid transparent;
           position: absolute;
@@ -99,7 +99,7 @@ header{
           }
           &:last-child{
             a{
-              color: red;
+              color: $color-default;
             }
           }
         }
@@ -266,7 +266,7 @@ ul.menu-left{
             height: 40px;
             line-height: 40px;
             text-align: center;
-            background: red;
+            background: #FF4606;
             color: #FFF;
           }
           a{
@@ -315,11 +315,11 @@ ul.menu-left{
           overflow: hidden;
           position:relative;
           font-size: 20px;
-          color: red;
+          color: #FF4606;
           font-weight: bold;
           p.cost{
             font-size: 20px;
-            color: red;
+            color: #FF4606;
             font-weight: bold;
             span{
               position: relative;
@@ -348,6 +348,9 @@ ul.menu-left{
             font-size: 14px;
             font-weight: normal;
             color: #000;
+            i{
+              color: $color-default;
+            }
           }
         }
       }
@@ -727,7 +730,7 @@ ul.menu-left{
           text-align: right;
         }
         tr.order-total{
-          color: #ff0000;
+          color: #FF4606;
         }
         tr.order-total,
         tr.cart-subtotal{
@@ -909,23 +912,23 @@ ul.menu-left{
   ul.woocommerce-thankyou-order-details{
     .order{
       strong{
-        color: #ff0000;
+        color: #FF4606;
       }
     }
   }
   table{
     thead{
       .product-total{
-        color: #ff0000;
       }
     }
     
     tfoot{
       tr{
         &:last-child{
+          th,
           td{
             font-weight: bold;
-            color: #ff0000;
+            color: #FF4606;
           }
         }
       }
@@ -934,20 +937,44 @@ ul.menu-left{
 }
 .order-print{
   text-align: right;
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
   a{
-    padding: 5px 10px;
-    background: #F00;
+    width: 50px;
+    height: 30px;
+    background: #FF4606 url('../images/printer.png') center no-repeat;
+    background-size: 18px;
     border-radius: 3px;
+    display: inline-block;
+    text-indent: 99999px;
+    position: relative;
+    &:hover{
+      background: $color-default url('../images/printer.png') center no-repeat;
+      background-size: 18px;
+    }
   }
 }
 .woocommerce-variation-price{
   ins{
     font-size: 24px;
-    color: red;
+    color: #FF4606;
     font-weight: bold;
     text-decoration: none;
   }
   del{
     color: #B9B9B9;
+  }
+}
+.item-pament{
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%;
+  li{
+    width: 33.33333333%;
+    float: left;
+    img{
+      width: 120px;
+    }
   }
 }

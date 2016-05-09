@@ -60,7 +60,34 @@ if ( $order ) : ?>
 
 	<?php endif; ?>
 
-	<?php do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
+	<?php //do_action( 'woocommerce_thankyou_' . $order->payment_method, $order->id ); ?>
+    <h2>Thông tin tài khoản ngân hàng của chúng tôi</h2>
+    <ul class="item-pament">
+      <li>
+        <div>
+          <p><img src="<?php echo get_template_directory_uri(); ?>/images/Logo_VN_Chuan.jpg"></p>
+          <p>Số tài khoản: </p>
+          <p>Chủ tài khoản: </p>
+          <p>Ngân hàng: </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p><img src="<?php echo get_template_directory_uri(); ?>/images/logoacb.jpg"></p>
+          <p>Số tài khoản: </p>
+          <p>Chủ tài khoản: </p>
+          <p>Ngân hàng: </p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <p><img src="<?php echo get_template_directory_uri(); ?>/images/logo-ngan-hang-agribank.jpg"></p>
+          <p>Số tài khoản: </p>
+          <p>Chủ tài khoản: </p>
+          <p>Ngân hàng: </p>
+        </div>
+      </li>
+    </ul>
 	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
 
 <?php else : ?>

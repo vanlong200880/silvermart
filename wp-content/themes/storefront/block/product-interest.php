@@ -39,7 +39,7 @@ $the_query = new WP_Query( $args ); ?>
                 <?php do_action('woocommerce_single_product_price'); ?>
                 <div class="views">
                   <?php do_action('woocommerce_single_product_stock'); ?>
-                  <i class="fa fa-eye"></i> <?php echo getPostViews(get_the_ID()); ?>
+                  <i class="fa fa-heart"></i> <?php echo getPostViews(get_the_ID()); ?>
                 </div>
 
               </div>

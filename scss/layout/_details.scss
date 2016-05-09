@@ -13,12 +13,12 @@
     div{
       display: inline-block;
       font-size: 28px;
-      color: red;
+      color: #FF4606;
       font-weight: bold;
     }
     p.cost{
       font-size: 28px;
-      color: red;
+      color: #FF4606;
       font-weight: bold;
       var{
         font-size: 22px;
@@ -41,7 +41,7 @@
       vertical-align: top;
       position: relative;
       span{
-        background: red;
+        background: #FF4606;
         color: #FFF;
         @include border-radius(5px);
         padding: 3px 15px;
@@ -53,7 +53,7 @@
         top: 4px;
         &:before{
           content: " ";
-          border-right: 12px solid red;
+          border-right: 12px solid #FF4606;
           border-top: 7px solid transparent;
           border-bottom: 7px solid transparent;
           position: absolute;

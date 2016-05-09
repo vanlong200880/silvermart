@@ -52,10 +52,10 @@
           </ul>
           <h4><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh/">Mắt kính</a></h4>
           <ul>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-nam/">Mắt Kính nam</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-nam/">Mắt kính nam</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-nu/">Mắt kính nữ</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-tre-em/">Mắt kính Trẻ em</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-unisex/">Mắt kính Unisex</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-tre-em/">Mắt kính trẻ em</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/mat-kinh-unisex/">Mắt kính unisex</a></li>
           </ul>
           <h4><a href="<?php echo home_url(); ?>/danh-muc/bat-lua/">Bật lửa</a></h4>
         </div>
@@ -273,6 +273,7 @@
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
           <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/hoa-tuoi/">Hoa tươi</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/dac-san-vung-mien/">Đặc sản vùng, miền</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/thuy-hai-san/">Thủy hải sản</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/banh-ngot/">Bánh ngọt</a></li>

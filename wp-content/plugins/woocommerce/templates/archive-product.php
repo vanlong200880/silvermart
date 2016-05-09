@@ -77,6 +77,7 @@ get_header(); ?>
        <?php endif; ?>
 
     <div class="row">
+      <?php if($category->slug != 'silver-unique'): ?>
       <div class="col-md-2">
         <div class="filter-category">
           <div class="filter-price">
@@ -178,12 +179,19 @@ get_header(); ?>
                   <span>Nữ</span>
                 </label>
               </li>
+              <li>
+                <label for="k-199">
+                  <input id="k-199" type="checkbox" data-key="unisex">
+                  <span>Unisex</span>
+                </label>
+              </li>
             </ul>
           </div>
           
           <div class="filter-size">
             <?php 
-              $size = get_terms(array('taxonomy' => 'pa_size'));
+              $size = get_terms(array('taxonomy' => 'pa_size'), array('orderby' => 'term_id', 'order' => 'ASC'));
+//              var_dump($size);
             ?>
             <h3>Lọc theo size</h3>
             <ul class="size">
@@ -206,9 +214,8 @@ get_header(); ?>
             <ul class="color">
               <?php foreach ($color as $c): ?>
               <li>
-                <label for="k-<?php echo $c->term_id; ?>">
+                <label style="background: <?php echo $c->description ?>" for="k-<?php echo $c->term_id; ?>">
                   <input id="k-<?php echo $c->term_id; ?>" type="checkbox" data-key="<?php echo $c->slug; ?>">
-                  <span><?php echo $c->name; ?></span>
                 </label>
               </li>
               <?php endforeach; ?>
@@ -350,7 +357,14 @@ get_header(); ?>
           });
         </script>
       </div>
-      <div class="col-md-10">
+      <?php endif; ?>
+      <?php if ($category->slug == 'silver-unique'): 
+        $class = 'col-md-12';
+      else:
+        $class = 'col-md-10';
+      endif;
+?>
+      <div class="sdf <?php echo $class; ?>">
        
 		<?php
 			/**

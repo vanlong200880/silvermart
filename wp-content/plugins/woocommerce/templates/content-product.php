@@ -71,7 +71,7 @@ $classes[] = 'col-md-3 col-sm-4 col-xs-6 product-item';
     <div class="price">
       <?php do_action('woocommerce_single_product_price'); ?>
       <p class="views">
-        <i class="fa fa-eye"></i> <?php echo getPostViews(get_the_ID()); ?>
+        <i class="fa fa-heart"></i> <?php echo getPostViews(get_the_ID()); ?>
       </p>
 
     </div>

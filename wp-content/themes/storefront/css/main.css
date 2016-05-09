@@ -118,11 +118,11 @@ header {
     header .form .form-submit {
       width: 40px;
       height: 40px;
-      background: #ff0000;
+      background: #FF4606;
       display: inline-block; }
     header .form span.input-group-btn .btn.btn-default {
-      background: #ff0000;
-      border-color: #ff0000;
+      background: #FF4606;
+      border-color: #FF4606;
       box-shadow: none;
       -moz-box-shadow: none;
       -webkit-box-shadow: none;
@@ -148,7 +148,7 @@ header {
       font-size: 32px;
       position: relative; }
       header .shoppingcart span .shoping-number {
-        background: red;
+        background: #FF4606;
         padding: 0px 10px;
         position: absolute;
         display: inline-block;
@@ -160,7 +160,7 @@ header {
           content: " ";
           width: 0;
           height: 0;
-          border-top: 5px solid red;
+          border-top: 5px solid #FF4606;
           border-right: 5px solid transparent;
           border-left: 5px solid transparent;
           position: absolute;
@@ -176,7 +176,7 @@ header {
       header .menu-news ul li a:hover {
         color: #7dad23; }
     header .menu-news ul li:last-child a {
-      color: red; }
+      color: #7dad23; }
 
 #menu h2 {
   text-transform: uppercase;
@@ -307,7 +307,7 @@ ul.menu-left {
       height: 40px;
       line-height: 40px;
       text-align: center;
-      background: red;
+      background: #FF4606;
       color: #FFF; }
     .list-category ul li .item .image a {
       position: absolute;
@@ -353,11 +353,11 @@ ul.menu-left {
     overflow: hidden;
     position: relative;
     font-size: 20px;
-    color: red;
+    color: #FF4606;
     font-weight: bold; }
     .list-category ul li .item .price p.cost {
       font-size: 20px;
-      color: red;
+      color: #FF4606;
       font-weight: bold; }
       .list-category ul li .item .price p.cost span {
         position: relative;
@@ -381,6 +381,9 @@ ul.menu-left {
       font-size: 14px;
       font-weight: normal;
       color: #000; }
+      .list-category ul li .item .price div.views i,
+      .list-category ul li .item .price p.views i {
+        color: #7dad23; }
 .list-category ul li:hover .item {
   border-color: #7dad23; }
   .list-category ul li:hover .item .image a {
@@ -660,7 +663,7 @@ ul.menu-left {
     .entry-content #order_review .shop_table tfoot tr.cart-discount {
       text-align: right; }
     .entry-content #order_review .shop_table tfoot tr.order-total {
-      color: #ff0000; }
+      color: #FF4606; }
     .entry-content #order_review .shop_table tfoot tr.order-total td,
     .entry-content #order_review .shop_table tfoot tr.cart-subtotal td {
       text-align: right; }
@@ -783,27 +786,47 @@ ul.menu-left {
       height: 30px; }
 
 .status-publish ul.woocommerce-thankyou-order-details .order strong {
-  color: #ff0000; }
-.status-publish table thead .product-total {
-  color: #ff0000; }
+  color: #FF4606; }
+.status-publish table tfoot tr:last-child th,
 .status-publish table tfoot tr:last-child td {
   font-weight: bold;
-  color: #ff0000; }
+  color: #FF4606; }
 
 .order-print {
-  text-align: right; }
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px; }
   .order-print a {
-    padding: 5px 10px;
-    background: #F00;
-    border-radius: 3px; }
+    width: 50px;
+    height: 30px;
+    background: #FF4606 url("../images/printer.png") center no-repeat;
+    background-size: 18px;
+    border-radius: 3px;
+    display: inline-block;
+    text-indent: 99999px;
+    position: relative; }
+    .order-print a:hover {
+      background: #7dad23 url("../images/printer.png") center no-repeat;
+      background-size: 18px; }
 
 .woocommerce-variation-price ins {
   font-size: 24px;
-  color: red;
+  color: #FF4606;
   font-weight: bold;
   text-decoration: none; }
 .woocommerce-variation-price del {
   color: #B9B9B9; }
+
+.item-pament {
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 100%; }
+  .item-pament li {
+    width: 33.33333333%;
+    float: left; }
+    .item-pament li img {
+      width: 120px; }
 
 .list-category h2,
 .list-category h1 {
@@ -862,7 +885,7 @@ ul.menu-left {
   padding-bottom: 5px;
   border-bottom: 1px solid #DDD; }
 .detail-content-popup .modal-content .custom-field-popup {
-  color: red;
+  color: #FF4606;
   font-size: 16px; }
 
 .loading {
@@ -898,7 +921,7 @@ ul.menu-left {
   -ms-border-radius: 3px;
   padding: 5px; }
   .filter-category h3 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold; }
   .filter-category ul {
     margin-bottom: 10px;
@@ -906,6 +929,17 @@ ul.menu-left {
     padding-left: 5px; }
     .filter-category ul li span {
       font-weight: normal; }
+  .filter-category ul.color li {
+    display: inline-block; }
+    .filter-category ul.color li input[type='checkbox'] {
+      display: none; }
+    .filter-category ul.color li label {
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+      border: 1px solid transparent; }
+      .filter-category ul.color li label:hover {
+        border-color: #7dad23; }
 
 .detail-page h1 {
   font-size: 15px;
@@ -920,11 +954,11 @@ ul.menu-left {
   .detail-page .price-detail div {
     display: inline-block;
     font-size: 28px;
-    color: red;
+    color: #FF4606;
     font-weight: bold; }
   .detail-page .price-detail p.cost {
     font-size: 28px;
-    color: red;
+    color: #FF4606;
     font-weight: bold; }
     .detail-page .price-detail p.cost var {
       font-size: 22px;
@@ -943,7 +977,7 @@ ul.menu-left {
     vertical-align: top;
     position: relative; }
     .detail-page .price-detail p.sale span {
-      background: red;
+      background: #FF4606;
       color: #FFF;
       border-radius: 5px;
       -webkit-border-radius: 5px;
@@ -959,7 +993,7 @@ ul.menu-left {
       top: 4px; }
       .detail-page .price-detail p.sale span:before {
         content: " ";
-        border-right: 12px solid red;
+        border-right: 12px solid #FF4606;
         border-top: 7px solid transparent;
         border-bottom: 7px solid transparent;
         position: absolute;
@@ -1296,7 +1330,7 @@ footer .coppyright {
   position: fixed;
   bottom: 0;
   right: 0;
-  background: #e41111;
+  background: #FF4606;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   color: #FFF;
