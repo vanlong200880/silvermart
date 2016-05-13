@@ -66,28 +66,30 @@ if ( $order ) : ?>
       <li>
         <div>
           <p><img src="<?php echo get_template_directory_uri(); ?>/images/Logo_VN_Chuan.jpg"></p>
-          <p>Số tài khoản: </p>
-          <p>Chủ tài khoản: </p>
-          <p>Ngân hàng: </p>
+          <p>Số tài khoản: <strong>0441000615241</strong> </p>
+          <p>chủ tài khoản: <strong>Lê Huỳnh Đức</strong></p>
+          <p>Vietcombank - Chi nhánh Tân Bình</p>
         </div>
       </li>
       <li>
         <div>
           <p><img src="<?php echo get_template_directory_uri(); ?>/images/logoacb.jpg"></p>
-          <p>Số tài khoản: </p>
-          <p>Chủ tài khoản: </p>
-          <p>Ngân hàng: </p>
+          <p>Số tài khoản: <strong>211224979</strong></p>
+          <p>chủ tài khoản: <strong>Lê Huỳnh Đức</strong></p>
+          <p>ACB - phòng giao dịch Maximark Cộng Hòa</p>
         </div>
       </li>
       <li>
         <div>
           <p><img src="<?php echo get_template_directory_uri(); ?>/images/logo-ngan-hang-agribank.jpg"></p>
-          <p>Số tài khoản: </p>
-          <p>Chủ tài khoản: </p>
-          <p>Ngân hàng: </p>
+          <p>Số tài khoản: <strong>1606207001025</strong></p>
+          <p>chủ tài khoản: <strong>Lê Huỳnh Đức</strong></p>
+          <p>Agribank - Chi nhánh An Phú </p>
         </div>
       </li>
     </ul>
+    <p><strong><em>Lưu ý:</em></strong></p>
+    <p>Nội dung chuyển khoản: <strong>HỌ VÀ TÊN + SỐ ĐƠN HÀNG</strong></p>
 	<?php do_action( 'woocommerce_thankyou', $order->id ); ?>
 
 <?php else : ?>

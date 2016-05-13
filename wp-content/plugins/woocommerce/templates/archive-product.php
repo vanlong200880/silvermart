@@ -99,26 +99,40 @@ get_header(); ?>
               <li>
                 <label for="k-3">
                   <input id="k-3" type="checkbox" data-min="500000" data-max="1000000">
-                  <span>500k - 1,000k</span>
+                  <span>500k - 1.000k</span>
                 </label>
               </li>
               <li>
                 <label for="k-4">
                   <input id="k-4" type="checkbox" data-min="1000000" data-max="1500000">
-                  <span>1,000k - 1,500k</span>
+                  <span>1.000k - 1.500k</span>
                 </label>
               </li>
               <li>
-                <label for="k-5">
-                  <input id="k-5" type="checkbox" data-min="1500000" data-max="5000000">
-                  <span>1,500k - 5,000k</span>
+                <label for="k-53">
+                  <input id="k-53" type="checkbox" data-min="1500000" data-max="2000000">
+                  <span>1.500k - 2.000k</span>
+                </label>
+                
+              </li>
+              <li>
+                <label for="k-54">
+                  <input id="k-54" type="checkbox" data-min="2000000" data-max="3000000">
+                  <span>2.000k - 3.000k</span>
+                </label>
+                
+              </li>
+              <li>
+                <label for="k-55">
+                  <input id="k-55" type="checkbox" data-min="3000000" data-max="5000000">
+                  <span>3.000k - 5.000k</span>
                 </label>
                 
               </li>
               <li>
                 <label for="k-6">
                   <input id="k-6" type="checkbox" data-min="5000000" data-max=''>
-                  <span>Trên 5,000k</span>
+                  <span>Trên 5.000k</span>
                 </label>
                 
               </li>
@@ -190,8 +204,9 @@ get_header(); ?>
           
           <div class="filter-size">
             <?php 
-              $size = get_terms(array('taxonomy' => 'pa_size'), array('orderby' => 'term_id', 'order' => 'ASC'));
+              $size = get_terms(array('taxonomy' => 'pa_size'), array('orderby' => 'description', 'order' => 'ASC'));
 //              var_dump($size);
+//              array('orderby' => 'name', 'order' => 'ASC')
             ?>
             <h3>Lọc theo size</h3>
             <ul class="size">

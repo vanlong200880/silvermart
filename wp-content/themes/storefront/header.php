@@ -24,6 +24,9 @@
 <body <?php body_class(); ?>>
   <?php if(wpmd_is_phone()): ?>
   <div class="menu-mobile-cat">
+<?php get_template_part('block/user-menu'); ?>
+    
+    
     <h2><i class="fa fa-bars"></i> Danh mục <span class="close-menu"><i class="fa fa-times"></i></span></h2>
     <div class="menu-sp-left mCustomScrollbar">
       <?php get_template_part('block/menu_list_mobile'); ?>
@@ -155,7 +158,8 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-2 col-sm-2 shoppingcart">
+          <div class="col-md-2 col-sm-2">
+            <div class="shoppingcart">
             <?php 
             global $woocommerce;
             ?>
@@ -163,6 +167,9 @@
             <span class="icon icon-shopping"><var class="shoping-number">
               <?php echo $woocommerce->cart->cart_contents_count; ?></var></span> 
             Giỏ hàng</a>
+              </div>
+            
+            <?php get_template_part('block/user-menu'); ?>
           </div>
         </div>
       </div>

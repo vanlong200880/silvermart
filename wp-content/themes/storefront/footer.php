@@ -112,9 +112,9 @@
         </div>
       </div>
     </footer>
-    <div class="support">
+<!--    <div class="support">
       <p><span class="icon icon-technology"></span> Tư vấn bán hàng <span>090 234 1587 </span></p>
-    </div>
+    </div>-->
 </div>
 <script src="<?php echo get_template_directory_uri() ?>/js/jquery.js"></script>
 <!-- Bootstrap JavaScript -->
@@ -244,7 +244,7 @@ jQuery(document).ready(function($) {
 <script type="text/javascript">
 var  message="";function clickIE() {if (document.all) {(message);return   false;}}function clickNS(e) {if   (document.layers||(document.getElementById&&!document.all)) {if   (e.which==2||e.which==3) {(message);return false;}}}if  (document.layers)   {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;document.onselectstart=clickIE}document.oncontextmenu=new   Function("return false")
 </script>
-
+<script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",41703]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>
 <?php wp_footer(); ?>
 
 </body>

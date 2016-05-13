@@ -120,7 +120,7 @@ footer{
   background: #f2f2f2;
   height: 100%;
   position: fixed;
-  z-index: 9999;
+  z-index: 9999999;
   -webkit-transition: margin-left 0.35s ease;
   -moz-transition: margin-left 0.35s ease;
   -o-transition: margin-left 0.35s ease;
@@ -296,5 +296,27 @@ table.cart {
   width: auto;
   .frame{
     width: auto;
+  }
+}
+.menu-mobile-cat{
+  .login{
+    a.mb{
+      width: 100%;
+      height: 35px;
+      line-height: 35px;
+      padding-right: 5px;
+      background: $color-default;
+      color: #FFF;
+    }
+    ul{
+      li{
+        .profile-user{
+          position: relative;
+          width: 100%;
+          border: none;
+          display: block;
+        }
+      }
+    }
   }
 }

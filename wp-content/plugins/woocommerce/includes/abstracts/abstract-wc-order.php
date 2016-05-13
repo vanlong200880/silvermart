@@ -1005,7 +1005,6 @@ abstract class WC_Abstract_Order {
 	 */
 	public function get_formatted_billing_address() {
 		if ( ! $this->formatted_billing_address ) {
-
 			// Formatted Addresses.
 			$address = apply_filters( 'woocommerce_order_formatted_billing_address', array(
 				'first_name'    => $this->billing_first_name,
@@ -1020,8 +1019,8 @@ abstract class WC_Abstract_Order {
 			), $this );
 
 			$this->formatted_billing_address = WC()->countries->get_formatted_address( $address );
+      
 		}
-
 		return $this->formatted_billing_address;
 	}
 

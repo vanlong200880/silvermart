@@ -29,8 +29,25 @@ $page_title   = ( $load_address === 'billing' ) ? __( 'Billing Address', 'woocom
 	<?php wc_get_template( 'myaccount/my-address.php' ); ?>
 
 <?php else : ?>
-
-	<form method="post">
+<div class="row">
+  <div class="col-md-3">
+    <div class="fullname">Xin chào <strong><?php echo $current_user->display_name; ?></strong></div>
+    <div class="info-user">
+      <p>Từ trang quản lý tài khoản, bạn có thể xem các đơn đặt hàng gần nhất, quản lý địa chỉ thanh toán, nhận hàng và thay đổi thông tin tài khoản cùng mật khẩu.</p>
+    </div>
+    <div class="update-profile">
+      <a href="<?php echo home_url(); ?>/tai-khoan/edit-account/"><strong>Sửa tài khoản</strong></a>
+    </div>
+    <div class="update-profile">
+      <a href="<?php echo home_url(); ?>/tai-khoan/edit-address/thanh-toan"><strong>Sửa tài khoản thanh toán</strong></a>
+    </div>
+    
+    <div class="logout-profile">
+      <a href="<?php echo home_url(); ?>/tai-khoan/customer-logout/"><strong>Thoát</strong></a>
+    </div>
+  </div>
+<div class="col-md-9">
+  <form method="post" class="address-edit">
 
 		<h3><?php echo apply_filters( 'woocommerce_my_account_edit_address_title', $page_title ); ?></h3>
 
@@ -51,5 +68,9 @@ $page_title   = ( $load_address === 'billing' ) ? __( 'Billing Address', 'woocom
 		</p>
 
 	</form>
+</div>
+
+</div>
+	
 
 <?php endif; ?>

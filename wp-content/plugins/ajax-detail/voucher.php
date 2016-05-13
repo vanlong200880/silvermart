@@ -34,7 +34,7 @@ function detail_action(){
     $result['status'] = true;
     $result['id'] = $id;
     $post = get_post($id);
-    query_posts( array('post__in' => array($id), 'post_type' => 'product'));
+    query_posts( array('post__in' => array($id), 'post_type' => 'post'));
     while (have_posts()): the_post();
       $result['title'] = get_the_title();
       $result['content'] = get_the_content();

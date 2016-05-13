@@ -14,6 +14,7 @@
  * @package 	WooCommerce/Templates
  * @version     2.5.1
  */
+global $current_user;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -22,7 +23,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php wc_print_notices(); ?>
 
-<form class="edit-account" action="" method="post">
+<div class="row">
+  <div class="col-md-3">
+    <div class="fullname">Xin chào <strong><?php echo $current_user->display_name; ?></strong></div>
+    <div class="info-user">
+      <p>Từ trang quản lý tài khoản, bạn có thể xem các đơn đặt hàng gần nhất, quản lý địa chỉ thanh toán, nhận hàng và thay đổi thông tin tài khoản cùng mật khẩu.</p>
+    </div>
+    <div class="update-profile">
+      <a href="<?php echo home_url(); ?>/tai-khoan/edit-account/"><strong>Sửa tài khoản</strong></a>
+    </div>
+    <div class="update-profile">
+      <a href="<?php echo home_url(); ?>/tai-khoan/edit-address/thanh-toan"><strong>Sửa tài khoản thanh toán</strong></a>
+    </div>
+    
+    <div class="logout-profile">
+      <a href="<?php echo home_url(); ?>/tai-khoan/customer-logout/"><strong>Thoát</strong></a>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <form class="edit-account" action="" method="post">
 
 	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
 
@@ -70,3 +89,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
 
 </form>
+  </div>
+</div>

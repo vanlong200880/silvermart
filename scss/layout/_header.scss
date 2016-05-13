@@ -55,7 +55,7 @@ header{
   .shoppingcart{
     color: #FFF;
     text-align: right;
-    padding-top: 25px;
+    padding-top: 15px;
     position: relative;
     span{
       font-size: 32px;
@@ -566,7 +566,7 @@ ul.menu-left{
 .hentry{
   header.entry-header{
     background: #FFF;
-    border-bottom: 2px solid #e24545;
+    border-bottom: 2px solid #FF4606;
     height: auto;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -634,21 +634,23 @@ ul.menu-left{
         .coupon{
           #coupon_code{
             height: 40px;
-            border: 1px solid #232f3e;
+            border: 1px solid $color-default;
             float: left;
           }
           .button{
             height: 40px;
             padding: 0 5px;
             border: none;
+            background: $color-default;
           }
         }
         .button[name='update_cart']{
-          background: #232f3e;
+          background: $color-default;
           @include border-radius(5px);
           height: 40px;
           text-align: center;
           padding: 0 30px;
+          border-color: $color-default;
         }
       }
       
@@ -661,7 +663,7 @@ ul.menu-left{
       text-transform: uppercase;
       font-size: 16px;
       font-weight: bold;
-      border-bottom: 3px solid #e24545;
+      border-bottom: 3px solid #FF4606;
       padding-bottom: 5px;
     }
     table{
@@ -676,7 +678,7 @@ ul.menu-left{
       a{
         display: inline-block;
         @include border-radius(5px);
-        background: #e24545;
+        background: #FF4606;
         padding: 10px 30px;
         margin-top: 15px;
       }
@@ -746,7 +748,7 @@ ul.menu-left{
       }
     }
     #place_order{
-      background: #e24545;
+      background: #FF4606;
       padding: 10px 0;
       border: none;
       @include border-radius(5px);
@@ -832,7 +834,7 @@ ul.menu-left{
 .form-row.woocommerce-invalid input.input-text,
 .form-row.woocommerce-validated input.input-text{
   box-shadow: none !important;
-  border-color: #e24545;
+  border-color: #FF4606;
 }
 .col2-set {
   width: 54.9411764706% !important;
@@ -976,5 +978,108 @@ ul.menu-left{
     img{
       width: 120px;
     }
+  }
+}
+.login{
+  text-align: right;
+  color: $color-default;
+  a{
+    color: #FFF;
+    display: inline-block;
+    padding-bottom: 5px;
+    &:hover{
+      color: $color-default;
+
+    }
+  }
+  ul{
+    li{
+      position: relative;
+      .profile-user{
+        display: none;
+        position: absolute;
+        z-index: 999;
+        width: 170px;
+        right: 0;
+        @include border-radius(3px);
+        background: #FFF;
+        border: 1px solid #DDD;
+        ul{
+          position: relative;
+          &:after{
+            content: " ";
+            border-bottom: 7px solid #FFF;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            position: absolute;
+            top: -6px;
+            right: 5px;
+          }
+          li{
+            text-align: right;
+            padding: 10px;
+            a{
+              color: #000;
+              &:hover{
+                color: $color-default;
+              }
+            }
+          }
+        }
+      }
+        &:hover{
+          .profile-user{
+            display: block;
+          }
+        }
+    }
+  }
+}
+table.my_account_orders{
+  thead{
+    tr{
+      th{
+        height: 30px;
+        background: #f5f5f5;
+      }
+    }
+  }
+  tbody{
+    tr{
+      td{
+        text-align: left;
+        padding: 10px 0;
+        border-bottom: 1px solid #f5f5f5;
+      }
+      td.order-actions{
+        text-align: right !important;
+        a{
+          background: $color-default;
+          color: #FFF;
+          @include border-radius(3px);
+          display: inline-block;
+          padding: 2px 5px;
+        }
+      }
+    }
+  }
+}
+.list-order-profile{
+  h2.title-my-profile{
+    margin-top: 15px;
+  }
+}
+.address-edit,
+.edit-account{
+  input{
+    height: 40px;
+    border: 1px solid #DDD;
+    padding: 5px;
+  }
+  input[type='submit']{
+    padding: 0 15px;
+    background: #ff4406;
+    @include border-radius(3px);
+    border: none;
   }
 }
