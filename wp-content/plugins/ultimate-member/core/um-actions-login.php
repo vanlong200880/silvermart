@@ -234,7 +234,7 @@
 		<div class="um-col-alt">
 
 			<?php if ( isset( $args['show_rememberme'] ) && $args['show_rememberme'] ) {
-					echo $ultimatemember->fields->checkbox('rememberme', __('Keep me signed in','ultimatemember') );
+					echo $ultimatemember->fields->checkbox('rememberme', __('Nhớ tài khoản','ultimatemember') );
 					echo '<div class="um-clear"></div>';
 			} ?>
 

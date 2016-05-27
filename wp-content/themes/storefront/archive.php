@@ -10,29 +10,31 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div class="container list-news">
+  <div class="row">
+    <div class="col-md-12">
+      <section id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+        <?php if ( have_posts() ) : ?>
+            <h1 class="page-title">
+              Tin tức
+            </h1>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php the_archive_title(); ?>
-				</h1>
+            <?php the_archive_description(); ?>
 
-				<?php the_archive_description(); ?>
-			</header><!-- .page-header -->
+          <?php get_template_part( 'loop' ); ?>
 
-			<?php get_template_part( 'loop' ); ?>
+        <?php else : ?>
 
-		<?php else : ?>
+          <?php get_template_part( 'content', 'none' ); ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+        <?php endif; ?>
 
-		<?php endif; ?>
+        </main><!-- #main -->
+      </section><!-- #primary -->
+    </div>
+  </div>
+</div>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php do_action( 'storefront_sidebar' ); ?>
 <?php get_footer(); ?>

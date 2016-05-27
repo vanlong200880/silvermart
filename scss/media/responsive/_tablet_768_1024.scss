@@ -105,3 +105,31 @@ ul.menu-left {
   height: 245px;
 }
 
+header {
+  .menu-news {
+    ul {
+      li {
+        a{
+          padding: 5px 9px 5px 0;
+        }
+      }
+    }
+  }
+}
+.login {
+  a{
+    font-size: 11px;
+  }
+}
+.backtotop{
+  bottom: 60px;
+  right: 20px;
+}
+.email-subscribers{
+  font-size: 12px;
+}
+.frame,
+#gallery_01{
+  width: 50px;
+}
+

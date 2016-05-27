@@ -710,7 +710,7 @@ ul.menu-left {
     padding-bottom: 5px;
     margin-bottom: 10px; }
   #customer_details .col-2 #order_comments {
-    height: 200px; }
+    height: 100px; }
   #customer_details .col-2 .shipping_address p input {
     height: 40px; }
   #customer_details .col-2 .shipping_address .select2-container {
@@ -913,6 +913,12 @@ table.my_account_orders tbody tr td.order-actions {
   -ms-border-radius: 3px;
   border: none; }
 
+.list-category .filter-page ul li .item .image {
+  height: 226px; }
+
+.item-pament li .agri img {
+  width: 170px; }
+
 .list-category h2,
 .list-category h1 {
   border-bottom: 2px solid #7dad23;
@@ -1006,25 +1012,217 @@ table.my_account_orders tbody tr td.order-actions {
   -ms-border-radius: 3px;
   padding: 5px; }
   .filter-category h3 {
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold; }
   .filter-category ul {
     margin-bottom: 10px;
-    margin-top: 10px;
-    padding-left: 5px; }
+    margin-top: 10px; }
     .filter-category ul li span {
-      font-weight: normal; }
+      font-weight: normal;
+      font-size: 13px; }
   .filter-category ul.color li {
     display: inline-block; }
     .filter-category ul.color li input[type='checkbox'] {
       display: none; }
     .filter-category ul.color li label {
-      width: 15px;
-      height: 15px;
+      width: 22px;
+      height: 22px;
       cursor: pointer;
       border: 1px solid transparent; }
       .filter-category ul.color li label:hover {
         border-color: #7dad23; }
+  .filter-category ul.color li#color-276 label {
+    border-color: #7dad23; }
+  .filter-category ul.color li#color-206 label {
+    background: url("../images/bac.png") no-repeat !important; }
+  .filter-category ul.color li#color-254 label {
+    background: url("../images/nhieu-mau.png") no-repeat !important; }
+  .filter-category ul.color li#color-351 label {
+    background: url("../images/gold.png") no-repeat !important; }
+  .filter-category ul.color li#color-187 label {
+    background: url("../images/vang-hong.png") no-repeat !important; }
+  .filter-category ul.color li#color-254 label {
+    background: url("../images/nhieu-mau.png") no-repeat !important; }
+
+.post-related .title-details {
+  margin-top: 15px;
+  border-bottom: 2px solid #DDD; }
+.post-related ul {
+  display: inline-block;
+  width: 100%; }
+  .post-related ul li {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px !important;
+    border-bottom: 1px solid #DDD; }
+    .post-related ul li a.img {
+      width: 30%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 5px;
+      float: left;
+      margin-right: 0px; }
+    .post-related ul li .relate {
+      width: 70%;
+      float: left; }
+    .post-related ul li a.title {
+      font-weight: bold;
+      width: auto;
+      text-transform: initial; }
+    .post-related ul li:last-child {
+      border-bottom: none; }
+
+.email-subscribers .emails {
+  border-bottom: 1px solid #DDD;
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0; }
+.email-subscribers ul.subscribers li {
+  display: inline-block;
+  font-weight: bold; }
+  .email-subscribers ul.subscribers li img {
+    width: 32px;
+    vertical-align: text-bottom; }
+.email-subscribers .es_textbox {
+  width: 70%;
+  float: left;
+  padding: 0;
+  margin: 0; }
+.email-subscribers .es_button {
+  width: 30%;
+  float: left;
+  padding: 0;
+  margin: 0; }
+.email-subscribers .es_textbox input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid #FF4406;
+  padding: 0 5px; }
+.email-subscribers .es_button input {
+  height: 30px;
+  width: 60px;
+  border: 1px solid #FF4406;
+  background: #FF4406;
+  color: #FFF; }
+  .email-subscribers .es_button input:hover {
+    color: #000; }
+
+.backtotop {
+  background: rgba(0, 0, 0, 0.5);
+  width: 45px;
+  bottom: 35px;
+  right: 12px;
+  min-height: 42px;
+  overflow: hidden;
+  z-index: 40;
+  position: fixed;
+  display: block;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+
+.backtotop.hidden-top {
+  bottom: -100px; }
+
+.backtotop i {
+  font-size: 36px;
+  margin: 1px 0 0 0 !important;
+  color: #fff;
+  display: inline-block; }
+
+.backtotop:hover {
+  background-color: #ff6825; }
+
+.list-news ul {
+  margin-top: 15px; }
+  .list-news ul li {
+    margin-bottom: 30px; }
+    .list-news ul li .item-new {
+      width: 100%;
+      display: inline-block; }
+.list-news h1 {
+  font-size: 16px;
+  font-weight: normal;
+  border-bottom: 2px solid #7dad23;
+  text-transform: uppercase;
+  margin-top: 15px; }
+.list-news .img {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  float: left;
+  margin-right: 5px; }
+.list-news a.title {
+  font-weight: bold;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  height: 40px;
+  line-height: 20px;
+  overflow: hidden; }
+  .list-news a.title:hover {
+    color: #7dad23; }
+.list-news .author {
+  color: #969191; }
+.list-news a.readmore {
+  font-style: italic;
+  float: right; }
+  .list-news a.readmore:hover {
+    color: #7dad23; }
+
+.detail-news h1 {
+  margin-bottom: 15px;
+  font-weight: bold; }
+.detail-news .content-new p {
+  line-height: 24px;
+  margin-bottom: 10px;
+  text-align: justify; }
+
+#slider-range, #slider-range2 {
+  margin-top: 10px; }
+
+.filter-category #amount {
+  width: 100%;
+  background: #f5f5f5;
+  border: 0;
+  color: #f6931f;
+  margin-bottom: 10px;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  font-size: 12px; }
+.filter-category .filter-range {
+  padding: 0 10px; }
+.filter-category .ui-widget-content {
+  background: #7DAD23;
+  border: none;
+  height: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px; }
+  .filter-category .ui-widget-content .ui-state-default,
+  .filter-category .ui-widget-content .ui-widget-content .ui-state-default,
+  .filter-category .ui-widget-content .ui-widget-header .ui-state-default {
+    background: #FF4606;
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    outline: none; }
+
+#payment .payment_methods li p {
+  text-align: justify; }
 
 .detail-page h1 {
   font-size: 15px;
@@ -1401,7 +1599,7 @@ footer .footer-page ul {
 footer .footer-page ul.connect li {
   display: inline-block; }
   footer .footer-page ul.connect li a {
-    font-size: 40px;
+    font-size: 31px;
     padding-right: 10px; }
 footer .coppyright {
   background: #f5f5f5;
@@ -1506,7 +1704,24 @@ footer .coppyright {
     height: 227px; }
 
   .slider-home {
-    height: 245px; } }
+    height: 245px; }
+
+  header .menu-news ul li a {
+    padding: 5px 9px 5px 0; }
+
+  .login a {
+    font-size: 11px; }
+
+  .backtotop {
+    bottom: 60px;
+    right: 20px; }
+
+  .email-subscribers {
+    font-size: 12px; }
+
+  .frame,
+  #gallery_01 {
+    width: 50px; } }
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   ul.menu-left li:hover .menu-item {
     width: 728px; }
@@ -1676,6 +1891,8 @@ footer .coppyright {
       padding-left: 15px; }
     .menu-sp-left ul li ul li ul li a {
       padding-left: 30px; }
+      .menu-sp-left ul li ul li ul li a:active, .menu-sp-left ul li ul li ul li a:visited, .menu-sp-left ul li ul li ul li a:hover {
+        color: #7dad23; }
 
   .wmp {
     width: 100%;
@@ -1775,7 +1992,19 @@ footer .coppyright {
     position: relative;
     width: 100%;
     border: none;
-    display: block; } }
+    display: block; }
+
+  .subscribers br {
+    display: none; }
+
+  .login {
+    padding: 3px 5px; }
+    .login a {
+      color: #000; }
+
+  .backtotop {
+    bottom: 60px;
+    right: 20px; } }
 @media (min-width: 481px) and (max-width: 767px) {
   .page-home-title a.all {
     font-size: 14px; }

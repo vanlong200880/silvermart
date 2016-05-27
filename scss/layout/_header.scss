@@ -794,7 +794,7 @@ ul.menu-left{
       margin-bottom: 10px;
     }
     #order_comments{
-      height: 200px;
+      height: 100px;
     }
     .shipping_address{
       p{
@@ -1081,5 +1081,27 @@ table.my_account_orders{
     background: #ff4406;
     @include border-radius(3px);
     border: none;
+  }
+}
+.list-category{
+  .filter-page{
+    ul {
+      li {
+        .item {
+          .image{
+            height: 226px;
+          }
+        }
+      }
+    }
+  }
+}
+.item-pament {
+  li {
+    .agri{
+      img{
+        width: 170px;
+      }
+    }
   }
 }

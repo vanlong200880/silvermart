@@ -79,60 +79,127 @@ get_header(); ?>
     <div class="row">
       <?php if($category->slug != 'silver-unique'): ?>
       <div class="col-md-2">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  
         <div class="filter-category">
           <div class="filter-price">
             <h3>Lọc theo giá</h3>
+            <div class="filter-range">
+              <div id="slider-range"></div>
+            </div>
+            <input type="text" id="amount">
+            <script type="text/javascript">
+            jQuery(document).ready(function($) {
+              var datamin = "<?php echo (isset($_GET['min']))? $_GET['min']:'0' ?>";
+              var datamax = "<?php echo (isset($_GET['max']))? $_GET['max']:'30000000' ?>";
+              var datam = "<?php echo (isset($_GET['m']))? $_GET['m']:'' ?>";
+              var datagender = "<?php echo (isset($_GET['gender']))? $_GET['gender']:'' ?>";
+              var datasize = "<?php echo (isset($_GET['size']))? $_GET['size']:'' ?>";
+              var datacolor = "<?php echo (isset($_GET['color']))? $_GET['color']:'' ?>";
+              var urlcurrent = "<?php echo get_term_link($category->slug, 'product_cat') ?>";
+              function formatNumber (num) {
+                return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+              }
+              $(function() {
+                $( "#slider-range" ).slider({
+                  range: true,
+                  min: 0,
+                  max: 30000000,
+                  step: 100000,
+                  values: [ datamin, datamax ],
+                  slide: function( event, ui ) {
+                    $( "#amount" ).val(formatNumber(ui.values[ 0 ]) + "đ - " + formatNumber(ui.values[ 1 ]) +'đ' );
+                  },
+                  change: function( event, ui ) {
+                    var vmin ='';
+                    var vmax= ''; 
+                    var vm = '';
+                    var vgender = '';
+                    var vcolor = '';
+                    var vsize = '';
+                    datamin = ui.values[ 0 ];
+                    datamax = ui.values[ 1 ];
+                    if(datamin != '')
+                      vmin = 'min='+datamin;
+                    if(datamax != '')
+                      vmax = '&max='+datamax;
+                    if(datam != '')
+                      vm = '&m='+datam;
+
+                    if(datagender != '')
+                      vgender = '&gender='+datagender;
+                    if(datacolor != '')
+                      vcolor = '&color='+datacolor;
+                    if(datasize != '')
+                      vsize = '&size='+datasize;
+
+                    var link = urlcurrent+ '?'+ vmin + vmax + vm + vgender + vcolor + vsize;
+                    window.location.href = link;
+                  }
+                });
+//                var value = $( "#amount" ).slider( "option", "value" );
+//                alert(value);
+                $( "#amount" ).val( formatNumber($( "#slider-range" ).slider( "values", 0 )) +
+                  "đ - " + formatNumber($( "#slider-range" ).slider( "values", 1 ))+ 'đ' );
+              });
+
+            });
+            </script>
+            
             <ul class="f-price">
               <li>
                 <label for="k-1">
                   <input id="k-1" type="checkbox" data-min="0" data-max="100000">
-                  <span>Dưới 100k</span>
+                  <span>Dưới 100 nghìn</span>
                 </label>
               </li>
               <li>
                 <label for="k-2">
                   <input id="k-2" type="checkbox" data-min="100000" data-max="500000">
-                  <span>100K - 500K</span>
+                  <span>100 nghìn - 500 nghìn</span>
                 </label>
                 
               </li>
               <li>
                 <label for="k-3">
                   <input id="k-3" type="checkbox" data-min="500000" data-max="1000000">
-                  <span>500k - 1.000k</span>
+                  <span>500 nghìn - 1 triệu</span>
                 </label>
               </li>
               <li>
                 <label for="k-4">
                   <input id="k-4" type="checkbox" data-min="1000000" data-max="1500000">
-                  <span>1.000k - 1.500k</span>
+                  <span>1 triệu - 1.5 triệu</span>
                 </label>
               </li>
               <li>
                 <label for="k-53">
                   <input id="k-53" type="checkbox" data-min="1500000" data-max="2000000">
-                  <span>1.500k - 2.000k</span>
+                  <span>1.5 triệu - 2 triệu</span>
                 </label>
                 
               </li>
               <li>
                 <label for="k-54">
                   <input id="k-54" type="checkbox" data-min="2000000" data-max="3000000">
-                  <span>2.000k - 3.000k</span>
+                  <span>2 triệu - 3 triệu</span>
                 </label>
                 
               </li>
               <li>
                 <label for="k-55">
                   <input id="k-55" type="checkbox" data-min="3000000" data-max="5000000">
-                  <span>3.000k - 5.000k</span>
+                  <span>3 triệu - 5 triệu</span>
                 </label>
                 
               </li>
               <li>
                 <label for="k-6">
                   <input id="k-6" type="checkbox" data-min="5000000" data-max=''>
-                  <span>Trên 5.000k</span>
+                  <span>Trên 5 triệu</span>
                 </label>
                 
               </li>
@@ -228,8 +295,8 @@ get_header(); ?>
             <h3>Lọc theo màu sắc</h3>
             <ul class="color">
               <?php foreach ($color as $c): ?>
-              <li>
-                <label style="background: <?php echo $c->description ?>" for="k-<?php echo $c->term_id; ?>">
+              <li id="color-<?php echo $c->term_id ?>">
+                <label style="background: <?php echo $c->description ?>" title="<?php echo $c->name; ?>" for="k-<?php echo $c->term_id; ?>">
                   <input id="k-<?php echo $c->term_id; ?>" type="checkbox" data-key="<?php echo $c->slug; ?>">
                 </label>
               </li>
@@ -379,7 +446,7 @@ get_header(); ?>
         $class = 'col-md-10';
       endif;
 ?>
-      <div class="sdf <?php echo $class; ?>">
+      <div class="filter-page <?php echo $class; ?>">
        
 		<?php
 			/**

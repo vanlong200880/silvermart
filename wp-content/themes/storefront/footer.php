@@ -24,7 +24,7 @@
               <div class="icon-text">
                 <a href="<?php echo home_url() ?>/quy-dinh-giao-hang/">
                   <h2>Giao hàng tận nơi</h2>
-                  <p>64 TỈNH THÀNH</p>
+                  <p>TOÀN QUỐC</p>
                 </a>
               </div>
             </div>
@@ -50,6 +50,26 @@
                 </a>
               </div>
               </div>
+          </div>
+        </div>
+      </div>
+      <div class="email-subscribers">
+        <div class="container">
+          <div class="emails">
+            <div class="row">
+              <div class="col-md-3 col-sm-3 col-xs-12">
+                <ul class="subscribers">
+                  <li><img src="<?php echo get_template_directory_uri(); ?>/images/mail.png"></li>
+                  <li>Đăng ký nhận <br>bản tin Silvermart</li>
+                </ul>
+
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <p>Cập nhật thông tin khuyến mãi nhanh nhất</p>
+                <p>Hưởng quyền lợi giảm giá riêng biệt</p>
+              </div>
+              <div class="col-md-5 col-sm-5 col-xs-12"><?php echo do_shortcode('[email-subscribers namefield="NO" desc="" group="Public"]'); ?></div>
+            </div>
           </div>
         </div>
       </div>
@@ -86,17 +106,22 @@
               </ul>
               <h2>Kết nối với Silvermart</h2>
               <ul class="connect">
-                <li><a href="https://www.facebook.com/silvermartvn" target="_blank"><span class="icon icon-social-2"></span></a></li>
-                <li><a href="https://www.youtube.com/channel/UCeqmWgrp9eDU_N9c5e3rM9w"><span class="icon icon-social-1" target="_blank"></span></a></li>
-                <li><a href="https://plus.google.com/u/0/109101598917448396074"><span class="icon icon-circle" target="_blank"></span></a></li>
+                <li><a href="https://www.facebook.com/silvermartvn" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCeqmWgrp9eDU_N9c5e3rM9w" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                <li><a href="https://plus.google.com/u/0/109101598917448396074" target="_blank"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
+                
               </ul>
             </div>
+            
             
             <div class="col-md-3 col-sm-6 col-xs-12">
               <h2>Trung tâm hỗ trợ khách hàng</h2>
               <!--<p>294 Hòa bình, P. Hiệp Tân, Q. Tân Phú, TP.HCM</p>-->
               <p>Email: <a href="mailto:silvermartvn@gmail.com">silvermartvn@gmail.com</a></p>
               <p>Điện thoại: 098 339 8387 </p>
+              <p>Thứ Hai - Thứ Sáu 9h-20h, Thứ Bảy 9h-18h</p>
               
             </div>
           </div>
@@ -112,6 +137,9 @@
         </div>
       </div>
     </footer>
+<a id="yt-totop" class="backtotop hidden-top" href="#">
+    <i class="fa fa-angle-up"></i>
+</a>
 <!--    <div class="support">
       <p><span class="icon icon-technology"></span> Tư vấn bán hàng <span>090 234 1587 </span></p>
     </div>-->
@@ -222,7 +250,7 @@ jQuery(document).ready(function($) {
     <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/plugins.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/main.js"></script>
       <script>
-      jQuery(document).ready(function(){
+      jQuery(document).ready(function($){
         $("#zoom_01").elevateZoom({
           gallery:'gallery_01', 
           cursor: 'pointer',
@@ -238,13 +266,29 @@ jQuery(document).ready(function($) {
 //          lenszoom: true,
         });
        
+    
+        $(".backtotop").addClass("hidden-top");
+            jQuery(window).scroll(function () {
+            if ($(this).scrollTop() === 0) {
+                $(".backtotop").addClass("hidden-top")
+            } else {
+                $(".backtotop").removeClass("hidden-top")
+            }
+        });
+        
+        $('.backtotop').click(function () {
+          $('body,html').animate({
+              scrollTop:0
+          }, 1000);
+          return false;
+        });
+    
       });
       </script>
       
 <script type="text/javascript">
 var  message="";function clickIE() {if (document.all) {(message);return   false;}}function clickNS(e) {if   (document.layers||(document.getElementById&&!document.all)) {if   (e.which==2||e.which==3) {(message);return false;}}}if  (document.layers)   {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;}else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;document.onselectstart=clickIE}document.oncontextmenu=new   Function("return false")
 </script>
-<script type='text/javascript'>window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",41703]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);</script>
 <?php wp_footer(); ?>
 
 </body>

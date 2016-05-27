@@ -129,16 +129,16 @@
   @include border-radius(3px);
   padding: 5px;
   h3{
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
   }
   ul{
     margin-bottom: 10px;
     margin-top: 10px;
-    padding-left: 5px;
     li{
       span{
         font-weight: normal;
+        font-size: 13px;
       }
     }
   }
@@ -149,8 +149,8 @@
         display: none;
       }
       label{
-        width: 15px;
-        height: 15px;
+        width: 22px;
+        height: 22px;
         cursor: pointer;
         border: 1px solid transparent;
         &:hover{
@@ -158,6 +158,264 @@
         }
       }
     }
-    
+    li#color-276{
+      label{
+        border-color: $color-default;
+      }
+    }
+    li#color-206{
+      label{
+        background: url('../images/bac.png') no-repeat !important;
+      }
+    }
+    li#color-254{
+      label{
+        background: url('../images/nhieu-mau.png') no-repeat !important;
+      }
+    }
+    li#color-351{
+      label{
+        background: url('../images/gold.png') no-repeat !important;
+      }
+    }
+    li#color-187{
+      label{
+        background: url('../images/vang-hong.png') no-repeat !important;
+      }
+    }
+    li#color-254{
+      label{
+        background: url('../images/nhieu-mau.png') no-repeat !important;
+      }
+    }
   }
 }
+
+.post-related{
+  .title-details{
+    margin-top: 15px;
+    border-bottom: 2px solid #DDD;
+  }
+  ul{
+    display: inline-block;
+    width: 100%;
+    li{
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 20px !important;
+      a.img{
+        width: 30%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 5px;
+        float: left;
+        margin-right: 0px;
+      }
+      .relate{
+        width: 70%;
+        float: left;
+      }
+      a.title{
+        font-weight: bold;
+        width: auto;
+        text-transform: initial;
+      }
+      border-bottom: 1px solid #DDD;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+}
+.email-subscribers{
+  .emails{
+    border-bottom: 1px solid #DDD;
+    display: inline-block;
+    width: 100%;
+    padding: 15px 0;
+  }
+  ul.subscribers{
+    li{
+      display: inline-block;
+      img{
+        width: 32px;
+        vertical-align: text-bottom;
+      }
+      font-weight: bold;
+    }
+  }
+  .es_textbox{
+    width: 70%;
+    float: left;
+    padding: 0;
+    margin: 0;
+  }
+  .es_button{
+    width: 30%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    
+  }
+  .es_textbox{
+    input{
+      width: 100%;
+      height: 30px;
+      border: 1px solid #FF4406;
+      padding: 0 5px;
+    }
+  }
+  .es_button{
+    input{
+      height: 30px;
+      width: 60px;
+      border: 1px solid #FF4406;
+      background: #FF4406;
+      color: #FFF;
+      &:hover{
+        color: #000;
+      }
+    }
+  }
+}
+
+.backtotop {
+  background: rgba(0,0,0, 0.5);
+  width: 45px;
+  bottom: 35px;
+  right: 12px;
+  min-height: 42px;
+  overflow: hidden;
+  z-index: 40;
+  position: fixed;
+  display: block;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -o-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.backtotop.hidden-top {
+  bottom: -100px;
+}
+.backtotop i {
+  font-size: 36px;
+  margin: 1px 0 0 0 !important;
+  color: #fff;
+  display: inline-block;
+}
+.backtotop:hover {
+  background-color: #ff6825;
+}
+.list-news{
+  ul{
+    margin-top: 15px;
+    li{
+      margin-bottom: 30px;
+      .item-new{
+        width: 100%;
+        display: inline-block;
+      }
+    }
+  }
+  h1{
+    font-size: 16px;
+    font-weight: normal;
+    border-bottom: 2px solid $color-default;
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+  .img{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 5px;
+    float: left;
+    margin-right: 5px;
+  }
+  a.title{
+    font-weight: bold;
+    width: 100%;
+    display: inline-block;
+    text-transform: uppercase;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+    &:hover{
+      color: $color-default;
+    }
+  }
+  .author{
+    color: #969191;
+  }
+  a.readmore{
+    font-style: italic;
+    float: right;
+    &:hover{
+      color: $color-default;
+    }
+  }
+}
+.detail-news{
+  h1{
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  .content-new{
+    p{
+      line-height: 24px;
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+  }
+}
+
+#slider-range, #slider-range2 {
+  margin-top:10px;
+}
+
+.filter-category{
+  #amount{
+    width: 100%;
+    background: #f5f5f5;
+    border:0; 
+    color:#f6931f; 
+    margin-bottom: 10px;
+    border-bottom: 1px solid;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .filter-range{
+    padding: 0 10px;
+  }
+  .ui-widget-content{
+    background: #7DAD23;
+    border: none;
+    height: 5px;
+    @include border-radius(5px);
+    .ui-state-default, 
+    .ui-widget-content .ui-state-default, 
+    .ui-widget-header .ui-state-default{
+      background: #FF4606;
+      border: none;
+      @include border-radius(50%);
+      width: 15px;
+      height: 15px;
+      outline: none;
+    }
+  }
+}
+#payment {
+  .payment_methods {
+    li {
+      p{
+        text-align: justify;
+      }
+    }
+  }
+}
+
+

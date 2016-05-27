@@ -10,7 +10,8 @@
 <html <?php language_attributes(); ?> <?php storefront_html_tag_schema(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<meta name="viewport" content="width=device-width, user-scalable=no" />
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri() ?>/images/favicon.png">
@@ -19,6 +20,16 @@
 <?php endif; ?>
 
 <?php wp_head(); ?>
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){
+z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+$.src='//v2.zopim.com/?3vTnI08klCi1aEU6Ju0UPgH3lXar6KLV';z.t=+new Date;$.
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<!--End of Zopim Live Chat Script-->
 </head>
 
 <body <?php body_class(); ?>>
@@ -154,7 +165,8 @@
                 <li><a href="<?php echo home_url() ?>/san-pham-moi/">Sản phẩm mới</a></li>
                 <li><a href="<?php echo home_url() ?>/khuyen-mai-hot/">Khuyến mãi HOT</a></li>
                 <li><a href="<?php echo home_url() ?>/gia-re-moi-ngay/">Giá rẻ mỗi ngày</a></li>
-                  <li><a href="<?php echo home_url() ?>/silver-club/">Silver Club</a></li>
+                <li><a href="<?php echo home_url() ?>/silver-club/">Silver Club</a></li>
+                <li><a href="<?php echo home_url() ?>/tin-tuc/">S-press</a></li>
               </ul>
             </div>
           </div>

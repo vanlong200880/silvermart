@@ -1,4 +1,11 @@
 <ul>
+  <li><a href="<?php echo home_url() ?>/san-pham-moi/">Sản phẩm mới</a></li>
+  <li><a href="<?php echo home_url() ?>/khuyen-mai-hot/">Khuyến mãi HOT</a></li>
+  <li><a href="<?php echo home_url() ?>/gia-re-moi-ngay/">Giá rẻ mỗi ngày</a></li>
+  <li><a href="<?php echo home_url() ?>/silver-club/">Silver Club</a></li>
+  <li><a href="<?php echo home_url() ?>/tin-tuc/">S-press</a></li>
+</ul>
+<ul>
   <?php
 
   $taxonomy     = 'product_cat';

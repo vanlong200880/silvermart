@@ -81,7 +81,7 @@ if ( $order ) : ?>
       </li>
       <li>
         <div>
-          <p><img src="<?php echo get_template_directory_uri(); ?>/images/logo-ngan-hang-agribank.jpg"></p>
+          <p class="agri"><img src="<?php echo get_template_directory_uri(); ?>/images/logo-ngan-hang-agribank.jpg"></p>
           <p>Số tài khoản: <strong>1606207001025</strong></p>
           <p>chủ tài khoản: <strong>Lê Huỳnh Đức</strong></p>
           <p>Agribank - Chi nhánh An Phú </p>

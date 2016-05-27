@@ -12,12 +12,12 @@
             <li><a href="<?php echo home_url(); ?>/danh-muc/dong-ho-be-trai/">Đồng hồ bé trai</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/dong-ho-be-gai/">Đồng hồ bé gái</a></li>
           </ul>
-          <h4><a href="<?php echo home_url(); ?>/danh-muc/giay-dep/">Giầy dép</a></h4>
-          <ul>
+          <!--<h4><a href="<?php echo home_url(); ?>/danh-muc/giay-dep/">Giầy dép</a></h4>-->
+<!--          <ul>
             <li><a href="<?php echo home_url(); ?>/danh-muc/giay-the-thao-nam/">Giày thể thao nam</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/giay-the-thao-nu/">Giày thể thao nữ</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/giay-tay/">Giày tây</a></li>
-          </ul>
+          </ul>-->
           <h4><a href="<?php echo home_url(); ?>/danh-muc/munon/">Mũ & Nón</a></h4>
           <ul>
             <li><a href="<?php echo home_url(); ?>/danh-muc/munon-nam-munon/">Mũ & Nón nam</a></li>
@@ -223,12 +223,17 @@
             <li><a href="<?php echo home_url(); ?>/danh-muc/bao-da-op-lung/">Bao da- ốp lưng</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/phu-kien-khac/">Phụ Kiện khác</a></li>
           </ul>
+          <h4><a href="<?php echo home_url(); ?>/danh-muc/dien-thoai-may-tinh-bang/">Điện thoại - Máy tính bảng</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/loa/">Điện thoại di động</a></li>
+          </ul>
         </div>
         <div class="list-item">
           <h4><a href="#">Thương hiệu</a></h4>
           <ul>
             <li><a href="<?php echo home_url(); ?>/thuong-hieu/canon/">Canon</a></li>
             <li><a href="<?php echo home_url(); ?>/thuong-hieu/sony/">Sony</a></li>
+            <li><a href="<?php echo home_url(); ?>/thuong-hieu/apple/">Apple</a></li>
             <li><a href="<?php echo home_url(); ?>/thuong-hieu/samsung/">Samsung</a></li>
           </ul>
         </div>
@@ -273,12 +278,28 @@
         <div class="list-item">
           <h4><a href="#">Danh mục</a></h4>
           <ul>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/hoa-tuoi/">Hoa tươi</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/dac-san-vung-mien/">Đặc sản vùng, miền</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/thuy-hai-san/">Thủy hải sản</a></li>
-            <li><a href="<?php echo home_url(); ?>/danh-muc/banh-ngot/">Bánh ngọt</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/ca-phe/">Cà phê</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/day-tay-dalat/">Dâu Tây Dalat</a></li>
             <li><a href="<?php echo home_url(); ?>/danh-muc/yaout/">Yaout</a></li>
+          </ul>
+          <h4><a href="<?php echo home_url(); ?>/danh-muc/banh-tuoi/">Bánh tươi</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/banh-ngot/">Bánh ngọt</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/day-tay-dalat/">Bánh mặn/a></li>
+          </ul>
+        </div>
+        <div class="list-item">
+          <h4><a href="<?php echo home_url(); ?>/danh-muc/hoa-tuoi-cao-cap/">Hoa tươi cao cấp</a></h4>
+          <ul>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/hoa-bo/">Hoa bó</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/hoa-cam-binh/">Hoa cắm bình</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/hoa-cam-gio/">Hoa cắm giỏ</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/hoa-co-dau/">Hoa cô dâu</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/hop-hoa-giay/">Họp hoa giấy</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/ke-hoa/">Kệ hoa</a></li>
+            <li><a href="<?php echo home_url(); ?>/danh-muc/hoa-va-trai-cay/">Hoa và trái cây</a></li>
           </ul>
         </div>
       </div>
